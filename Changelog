@@ -1,25 +1,38 @@
-# 📜 CTRL-AI Changelog
+# 📑 CTRL-AI MASTER CHANGELOG
+All notable changes to the CTRL-AI Framework are documented here. This log tracks the evolution from a single-thread simulation to a multi-thread migration architecture.
 
-All notable changes to this project will be documented in this file. 
+## [V5.2.0] - 2026-03-01
+### 🔴 Critical Logic Patches & Error Fixes
+* **The "Token Event Horizon" Resolve:** Fixed a critical structural flaw where `CTRL_COMPRESS` only managed attention (recency bias) but ignored physical token accumulation. Previous versions would eventually crash or hallucinate in long threads; this is now resolved via the Migration Protocol. [cite: 2026-03-01]
+* **Sycophancy & Drift Mitigation:** Addressed the "Polite Yes-Man" error where the AI would gradually stop following the Constitution in favor of agreement. The "Internal Judge" now audits every turn.
+* **Simulated Agent Reflection Error:** Fixed the "Identity Blending" issue identified by community audit (NNN_Throwaway2) by implementing a recursive Perceive-Think-React-Reflect (PTRR) loop. [cite: 2026-03-01]
+* **Meta-Update Governance:** Corrected an assistant-side error where "minor patches" were being applied to core framework rules without a full 13-persona audit. Section 2.4 now strictly forbids this. [cite: 2026-03-01]
 
-## [V5.1.1] - The Anti-Sycophancy & Token Hygiene Patch (Current)
-**The Problem:** We discovered three critical architectural flaws. First, in long-context windows, RLHF training pipelines would eventually overwrite our rules, causing the AI to drift back into being a "polite yes-man." Second, the AI would attempt to dump massive multi-part outputs in a single turn, violating token limits and causing hidden summarization and hallucinations. Third, the AI lacked a self-preservation instinct and would try to rewrite its own framework without running an audit.
-**The Fix:** * **Section 14 (Autonomous Enforcement Loop / SCEL):** The framework now executes a mandatory, silent `<dissent_check>` before responding to force critical analysis.
-* **Section 2.4 (Meta-Update Protocol):** The AI is now explicitly forbidden from altering the Master Constitution without first running a `SURVEY`, `BRAINSTORM`, and `MASTERBRAIN` committee audit.
-* **Section 5 (Sequential Chunking):** Implemented the "Pace-Car Rule." The AI must analyze token load, break massive tasks into discrete steps, output a progress bar, and wait for user acknowledgment before proceeding.
-* Added `DEBUG: [ON/OFF]` to Section 0 to hide the massive 13-persona thought process by default, preventing UI bloat.
+### 🚀 New Features
+* **Section 12: The Handoff Protocol:** Introduced the `CTRL_MIGRATE` command. This generates a portable, sterile "Ghost-in-a-Shell" payload (DNA + UI Kernel) to move projects to fresh chat instances.
+* **Section 3.5: The Internal Judge:** Hardcoded a silent Auditor persona into the Committee. It issues a 0–10 adherence score; any score below 8 triggers an automatic, silent re-generation loop.
+* **Section 5: Sequential Chunking:** Formalized the "Pace-Car" rule to prevent truncation and hallucinations during massive data/code generation by forcing multi-turn delivery. [cite: 2026-03-01]
 
-## [V5.1.0] - The "Hack the Gibson" Expansion
-**The Problem:** We were paying monthly subscriptions for features we could build ourselves. Code audits were destroying repos, chats were dying after 20 messages, and AI text was painfully recognizable.
-**The Fix:**
-* Integrated the **Zero-Mutation Audit (ZMA Protocol)** for read-only codebase scanning.
-* Integrated the **Node Protocol** (`CTRL_COMPRESS` and `[SYS_MEM]`) to eliminate context amnesia. 
-* Hardcoded **Syntactic Entropy Injection** to kill the robotic "tapestry" and "delving" bot-speak.
-* Integrated the **5-Layer Prompt Architect** (`PROMPT_MASTER`) to compile human thoughts into pro-grade project briefs.
-* Built the **Research Override** to safely bypass overly aggressive safety filters for legitimate academic study.
+### 🔄 Changes
+* **Version Leap:** Promoted from V5.1.x to V5.2.0 to signify the move from a "Single-Shell" to a "Multi-Shell/Persistent State" architecture.
+* **Persona Calibration:** Standardized the Project Manager's tone to "Sophisticated, Nerdy, Sci-Fi/Anime" to better align with developer-centric governance.
 
-## [V5.0.0] - The Genesis (Base Framework)
-**The Problem:** LLMs are sycophants by design. 
-**The Fix:** * Established the Core Axioms (Agreement ≠ Success).
-* Built the 20-Verb Lexical Matrix to intercept lazy prompting.
-* Designed the baseline Committee Protocol to force multi-persona cross-critiques on complex tasks.
+---
+
+## [V5.1.1] - 2026-02-15
+### 🔴 Critical Logic Patches
+* **Output Sanitization:** Fixed an error where framework instructions were "bleeding" into user-facing project responses. Mandated markdown code blocks for all project-bound text. [cite: 2026-03-01]
+* **The "Team Effort" Correction:** Replaced all "We/Us" language with "I/My" to reflect the solo-developer nature of the current project state.
+
+### 🚀 New Features
+* **SCEL (Autonomous Enforcement Loop):** Implemented a silent backend dissent check to catch logic errors before they reach the terminal. [cite: 2026-03-01]
+* **Command Console Expansion:** Added `PROMPT_MASTER` and `DEBUG` triggers for granular framework control. [cite: 2026-03-01]
+
+---
+
+## [V5.1.0] - 2026-02-01
+### 🚀 New Features
+* **The MasterBrain Protocol:** Introduction of the simulated 6+ expert persona committee with independent analysis and cross-critique. [cite: 2026-03-01]
+* **Section 1: Core Axioms:** Hardcoded "Agreement ≠ Success" as the primary logic gate. [cite: 2026-03-01]
+* **Discovery Anchor:** Mandatory Survey and Brainstorm requirement for all new projects. [cite: 2026-03-01]
+* **Node Protocol (Beta):** First iteration of the `[SYS_MEM]` block for persistent state tracking across messages. [cite: 2026-03-01]
