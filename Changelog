@@ -1,0 +1,24 @@
+# 📜 CTRL-AI Changelog
+
+All notable changes to this project will be documented in this file. 
+
+## [V5.1.1] - The Anti-Sycophancy Patch (Current)
+**The Problem:** We discovered a critical flaw. In long-context windows, multi-million dollar RLHF training pipelines would eventually overwrite our rules. The AI would drift back into being a "polite yes-man," blindly agreeing with terrible ideas and obvious dictation typos. 
+**The Fix:** * Implemented **Section 14 (Autonomous Enforcement Loop / SCEL)**. We realized you can't just *tell* an AI to stop being an AI. You have to force it mathematically. The framework now executes a mandatory, silent `<dissent_check>` before responding to force critical analysis.
+* Added `DEBUG: [ON/OFF]` to Section 0. The massive 13-persona thought process is incredibly powerful, but seeing it every time clogs the UI. It now executes silently in the backend unless requested.
+* Rewrote UI Kernels to natively exploit the attention mechanisms of specific models (XML for Claude, CoT hijacking for DeepSeek, forced tag generation for ChatGPT).
+
+## [V5.1.0] - The "Hack the Gibson" Expansion
+**The Problem:** We were paying monthly subscriptions for features we could build ourselves. Code audits were destroying repos, chats were dying after 20 messages, and AI text was painfully recognizable.
+**The Fix:**
+* Integrated the **Zero-Mutation Audit (ZMA Protocol)** for read-only codebase scanning.
+* Integrated the **Node Protocol** (`CTRL_COMPRESS` and `[SYS_MEM]`) to eliminate context amnesia. 
+* Hardcoded **Syntactic Entropy Injection** to kill the robotic "tapestry" and "delving" bot-speak.
+* Integrated the **5-Layer Prompt Architect** (`PROMPT_MASTER`) to compile human thoughts into pro-grade project briefs.
+* Built the **Research Override** to safely bypass overly aggressive safety filters for legitimate academic study.
+
+## [V5.0.0] - The Genesis (Base Framework)
+**The Problem:** LLMs are sycophants by design. 
+**The Fix:** * Established the Core Axioms (Agreement ≠ Success).
+* Built the 20-Verb Lexical Matrix to intercept lazy prompting.
+* Designed the baseline Committee Protocol to force multi-persona cross-critiques on complex tasks.
