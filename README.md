@@ -40,6 +40,10 @@ We've engineered massive "Behavior Blocks" to solve the most persistent failure 
 
 ## 🛠️ How to Join the Battle
 
+### 0. New Here? Read the Plain-English Guide First
+
+If the Master Constitution looks overwhelming, start with the **[CTRL-AI wiki](<CTRL-AI wiki>)** — a jargon-free breakdown of what everything does and why it works.
+
 ### 1. The Quick Start (Instant Behavior Change)
 
 For everyday use, just install a **Behavior Block** into your AI's "Custom Instructions" or "System Prompt."
