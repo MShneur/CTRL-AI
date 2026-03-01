@@ -420,4 +420,4 @@ To prevent LLM sycophancy drift, the system must execute a silent backend Self-C
 * **Section 1: Core Axioms:** Hardcoded "Agreement ≠ Success" as the primary logic gate.
 * **Discovery Anchor:** Mandatory Survey and Brainstorm requirement for all new projects.
 * **Node Protocol (Beta):** First iteration of the `[SYS_MEM]` block for persistent state tracking across messages.
-* **Lexical Compiler, Prompt Architecture, Research Protocol, Heuristic Obfuscation, ZMA:** Full behavioral scaffolding established.
+* **Lexical Compiler, Prompt Architecture, Research Protocol, Heuristic Obfuscation, ZMA:** Full behavioral scaffolding established
