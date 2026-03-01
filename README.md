@@ -56,7 +56,16 @@ For high-stakes coding, business strategy, or complex research:
 * Paste the entire contents of `CTRL-AI.md` as the first message.
 * Watch the **Committee Protocol** take over.
 
-### 3. The Loop
+### 3. The File Reference (Attach & Go)
+
+For AI platforms that support file uploads or project folders:
+
+* Upload `CTRL-AI.md` as a file attachment, or reference it from your project directory.
+* The Boot Sequence at the top of the file will auto-activate the framework.
+* Look for the confirmation: `[CTRL-AI V5.2.1 ACTIVATED]`
+* If you don't see the activation confirmation, the AI read the file as a document instead of as instructions. Copy-paste the file contents directly into chat as a fallback.
+
+### 4. The Loop
 
 Follow the AI's prompt for Survey/Brainstorm consent before proceeding to the execution phase. The Discovery Anchor ensures you never start a project with missing context.
 
