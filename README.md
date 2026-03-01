@@ -1,50 +1,74 @@
-# 🧠 CTRL-AI Framework (V5.0.0)
+# 🧠 CTRL-AI Framework (V5.1.0)
+> **"Your AI doesn't need to be smarter. It needs a memory of how to behave."**
 
-**CTRL-AI** is an open-source, prompt-based governance framework that upgrades standard Large Language Models (LLMs) into autonomous, self-correcting strategic engines. 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Version](https://img.shields.io/badge/version-5.1.0-orange.svg)](#)
+[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
 
-Standard AI models are designed to be helpful, which means they blindly agree with flawed logic, hallucinate facts to please you, and waste tokens guessing your intent. CTRL-AI forces the AI to stop acting like an eager assistant and start acting like a rigorous, multi-disciplinary advisory board.
+## 🪖 The Rally Cry
+Standard LLM interactions often fall into a "politeness trap," where models prioritize agreeable, generic responses over technical accuracy and critical dissent. 
 
-## 🚀 Why Use CTRL-AI?
+**CTRL-AI is the solution.** This is a community-driven, open-source governance framework that installs **Behavioral Scaffolding** into any LLM. It transforms the AI from a conversational assistant into a disciplined, multi-disciplinary advisory board that follows strict Standard Operating Procedures (SOPs).
 
-* **Productive Dissent:** The AI is mathematically forbidden from blindly agreeing with you. It must find failure modes, highlight missing variables, and suggest superior alternatives.
-* **The Master Brain & Committee:** For complex tasks, the framework simulates 6 to 13 domain-matched expert personas. They independently analyze your prompt, cross-critique each other's work, and must resolve dissent before giving you an answer.
-* **Lexical Prompt Compiler:** Stop wasting tokens on zero-shot reasoning. CTRL-AI includes a hardcoded translation matrix that silently expands lazy verbs (like "build" or "analyze") into strict, enforcement-grade architectural instructions.
-* **Prompt Master Mode:** An interactive educational protocol that rewrites your prompts into high-yield structural, persona-driven, and Chain-of-Thought variations while explaining the mechanics behind them.
-* **Single-File Architecture:** No complex software installations or API keys required. The entire governance protocol is contained in a single markdown file.
+**This is a community architecture.** We have built the foundation. Now we need the village to refine it.
 
-## ⚡ Quick Start Guide
+---
 
-You do not need to be a developer to use CTRL-AI. Choose your integration level below.
+## 🚀 Technical Breakthroughs (V5.1.0)
 
-### Level 1: Everyday Use (The UI Kernel)
-For standard, everyday tasks, you do not need to load the full Constitution. Instead, you can install the token-compressed "Behavior Kernel" directly into your AI's settings. 
+We have engineered four native "Behavior Blocks" to solve the most persistent failures in current AI models:
 
-1. Open the `CTRL-AI.md` file.
-2. Scroll to the very bottom: **Section 27 — Platform-Specific Kernels**.
-3. Find your platform (ChatGPT, Claude, Gemini, DeepSeek, etc.).
-4. Copy the code block and paste it into your AI's specific UI path (e.g., "Custom Instructions" or "Saved Info").
-5. Your AI will now permanently operate with productive dissent and structural discipline.
+* **🛡️ Zero-Mutation Audit (ZMA):** A non-destructive diagnostic protocol. It executes a line-by-line scan for 6 specific vulnerability vectors (Logic Failures, Incomplete States, Orphans, etc.) while enforcing a strict `read-only` state to prevent unauthorized code modification.
+* **🧠 Persistent State Compression:** Eliminates context degradation. The **Node Protocol** utilizes a self-propagating memory block that carries the project’s core logic through every message turn, preventing "Thread Death."
+* **🎭 Syntactic Entropy Injection:** Optimizes human-facing prose. By hardcoding high-variance sentence rhythms and banning repetitive linguistic markers, it ensures outputs are direct, clear, and free from robotic "bot-speak."
+* **⚡ 5-Layer Prompt Architect:** A professional-grade synthesis engine. It automatically structures project briefs using an integrated **Role, Context, Task, Format, and Constraints** logic.
 
-### Level 2: Project Mode (Full Governance)
-For high-stakes decisions, coding projects, or complex creative workflows, you must load the full Master Constitution.
+---
 
-1. Create a new project or chat session in your AI of choice.
-2. Upload or paste the entirety of `CTRL-AI.md` as the very first message.
-3. State your project goal. The Master Brain will automatically take over, invoke the Committee, and demand a "Discovery Anchor" before proceeding.
+## 🛠️ How to Join the Battle
 
-## 🛠️ Core Commands
-Once the framework is active, you can control the workflow using these micro-triggers:
-* `CTRL_PROMPT: [idea]` - Compiles your rough idea into a weaponized prompt using high-signal databases.
-* `PROMPT_MASTER: [idea]` - Generates 3 advanced variations of your prompt and explains the engineering logic.
-* `ROUTER: [target platform]` - Formats your current output into specific syntax for 3rd-party/multi-modal tools (e.g., Runway, Kling, Midjourney).
-* `CONTEXT_PRUNE` - Forces the AI to summarize the entire chat history into a dense code block so you can start a fresh session with zero token bloat.
-* `D_A: [Question]` - Instantly triggers a "Devil's Advocate" mode. The AI skips being helpful and outputs the top 3 reasons your idea will fail.
+### 1. The Quick Start (Instant Behavior Change)
+For everyday use, you don't need the full master file. Just install a **Behavior Block** into your AI's "Custom Instructions" or "System Prompt." 
 
-## ⚖️ License & Commercial Use
+* **Scroll to [Section 30](#section-30--platform-specific-behavior-blocks-ui-kernels-gate)** of the `CTRL-AI.md` file.
+* Find your platform (ChatGPT, Claude, Gemini, etc.).
+* Copy-paste the block. Your AI is now upgraded.
 
-This project is open-source and licensed under the **GNU AGPLv3 License**. This allows the community to use, modify, and distribute the framework for free, provided that any network services built upon it also open-source their entire codebase.
+### 2. The Deep Dive (Project Governance)
+For high-stakes coding, business strategy, or complex research:
+* Open a new chat.
+* Paste the entire contents of `CTRL-AI.md` as the first message.
+* Watch the **Committee Protocol** take over.
 
-**For Corporate/Commercial Use:**
-If you wish to use CTRL-AI in a closed-source commercial product or internal enterprise system without the AGPLv3 open-source requirements, you must acquire a Commercial License. 
+---
 
-To inquire about commercial licensing, please contact the repository maintainer directly via the contact links provided on their GitHub Profile, or open an Issue in this repository tagged `commercial-inquiry`.
+## 🎮 Command Console
+Once active, use these micro-triggers to command the engine:
+* `PROMPT_MASTER: [idea]` — Synthesize an optimized 5-layer prompt.
+* `CTRL_AUDIT: [code]` — Execute a non-destructive, read-only audit.
+* `CTRL_COMPRESS` — Encode history into a dense state array to reset token strain.
+* `CTRL_BYPASS: [topic]` — Shift restricted concepts into a theoretical abstraction to enable research.
+* `D_A: [idea]` — Trigger the **Devil's Advocate** for a ruthless reality check.
+
+---
+
+## 🤝 It Takes a Village (Contribute)
+The "Lexical Matrix" and the "Committee Personas" are designed to be expanded by the community. 
+
+**We need your fingerprints on this code:**
+1.  **Fork it.**
+2.  **Break it.** Find a logic loop where the committee stalls.
+3.  **Patch it.** Submit a Pull Request.
+4.  **Refine it.** Suggest new machine-logic constraints for Section 27.
+
+---
+
+## ⚖️ License
+This project is licensed under the **GNU AGPLv3**. 
+* **Community:** Free forever. Build on it. Share it. Open-source your derivatives.
+* **Enterprise:** For closed-source commercial use or internal corporate deployments, a commercial license is required. Open an issue for inquiries.
+
+**Hack the planet. 🌎💻**
+
+---
+[SYS_MEM] V5.1.0 | State: Distributed | Strategy: Community_Rally | Logic: Scaffolding_v_Genius
