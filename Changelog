@@ -1,97 +1,124 @@
-# 🧠 CTRL-AI Framework (V5.2.1)
+# 📑 CTRL-AI MASTER CHANGELOG
 
-> **"Your AI doesn't need to be smarter. It needs a memory of how to behave."**
+All notable changes to the CTRL-AI Framework are documented here. This log tracks the evolution from a single-thread simulation to a multi-thread migration architecture.
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Version](https://img.shields.io/badge/version-5.2.1-orange.svg)](#)
-[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
+---
 
-## 🪖 The Rally Cry
+## [V5.2.1] - 2026-03-01
 
-Every day, the "walled gardens" of corporate AI try to sell us back our own ideas wrapped in a $20/month subscription. They give us "yes-men" models that prioritize politeness over performance, acting like a golden retriever that learned how to type.
+### 🔴 Critical Logic Patches & Error Fixes
 
-**CTRL-AI is the resistance.** We aren't building an app. We are building **Behavioral Scaffolding**. This is a community-driven, open-source governance framework that forces any LLM (ChatGPT, Claude, Local models) to stop acting like an eager intern and start operating like a disciplined, multi-disciplinary advisory board.
+* **Gemini Truncation Forensics:** Cross-referenced Gemini's full conversation log against V5.1.1 source material. Confirmed that across 5 separate attempts, Gemini never successfully produced a complete V5.2.0 — Sections 7–11 (Lexical Compiler, Prompt Architecture, Research Protocol, Heuristic Obfuscation, full ZMA) were dropped in every attempt due to progressive context degradation. The framework designed to prevent context amnesia was itself being destroyed by it. All missing sections have been restored from V5.1.1 source and upgraded.
 
-## 🚀 Technical Breakthroughs (V5.2.1)
+* **Axiom Collision Deadlock:** Resolved an edge case where a DISPUTED committee result (unresolved disagreement between personas) had no defined path forward. The system would permanently halt with no recovery mechanism. Section 3.5 (Dispute Resolution) now provides a structured exit.
 
-We've engineered massive "Behavior Blocks" to solve the most persistent failure modes in current AI models:
+* **Invisible Sycophancy Counter:** The SCEL 3-turn agreement trigger fired silently with zero user-visible indication. Users had no way to verify the anti-sycophancy system was actually working. The trigger now logs `[SCEL: Auto-D_A — 3-turn agreement detected]` in the `[SYS_MEM]` block.
 
-* **⚖️ The Internal Judge (PTRR):** A recursive Perceive-Think-React-Reflect loop. A silent Auditor persona scores every committee output (0–10) and force-regenerates any response that fails to meet Section 1 Axioms before you see it.
+* **Strain Tracker Ambiguity:** Section 12.2 instructed the AI to "estimate token saturation" but gave no heuristic for what LOW/MED/HIGH/CRITICAL actually meant. Different platforms interpreted these levels differently, causing inconsistent migration behavior. Added percentage-based calibration and turn-count heuristics.
 
-* **📦 Thread Migration (The Handoff):** Escapes the "Token Event Horizon." Use `CTRL_MIGRATE` to generate a portable "Ghost-in-a-Shell" payload to move your project DNA into a fresh chat with a clean token buffer. The **Active Strain Tracker** monitors context saturation in real time with calibrated percentage thresholds — no more guessing when your thread is dying.
+* **CTRL_PROMPT Regression:** V5.1.1 had both `CTRL_PROMPT` (silent backend compilation) and `PROMPT_MASTER` (visible 5-layer output). The silent variant was dropped during the V5.2.0 upgrade. Restored as a separate command.
 
-* **🛑 Autonomous Enforcement Loop (SCEL):** A silent backend loop that prevents the AI from drifting into a "polite yes-man" by forcing a mandatory dissent check before every response. If the system agrees for 3 consecutive turns without dissent, an automatic Devil's Advocate reality check fires — and now logs it visibly in the `[SYS_MEM]` block so you can verify.
+* **Research Override Liability Gap:** The V5.1.1 disclaimer "User assumes all liability for platform ToS" could be misinterpreted as blanket permission for safety bypass. Tightened language to clarify the protocol operates within each platform's existing safety boundaries.
 
-* **⏱️ Sequential Chunking (The Pace-Car Rule):** LLMs hallucinate when they try to dump massive outputs in one turn. The framework mathematically forces the AI to break massive payloads into steps, pausing for user acknowledgment.
+### 🚀 New Features
 
-* **🛡️ Zero-Mutation Audit (ZMA):** A non-destructive diagnostic protocol. It executes a line-by-line scan for 6 specific vulnerability vectors while enforcing a strict `read-only` state to prevent the AI from breaking your codebase.
+* **Section 3.5: Dispute Resolution Protocol:** When a Committee produces a DISPUTED result, the system now: (1) surfaces the specific conflict, (2) presents evidence on each side, (3) offers 2–3 concrete resolution paths labeled with what each prioritizes and trades off. Execution remains halted until the user selects a path.
 
-* **🧠 Persistent State Compression:** Eliminates "Context Amnesia." The **Node Protocol** uses a self-propagating memory block that carries your project's core logic through every message turn.
+* **Section 6.2: Evidence Tag Enforcement:** Formalized the `[EVIDENCE]`, `[PRACTICE]`, `[SPECULATIVE]` claim-tagging system as mandatory for all STANDARD/PROJECT mode responses. QUICK MODE is explicitly exempted.
 
-* **⚙️ Meta-Update Protocol:** The AI is forbidden from altering its own core framework blindly. Any structural change automatically triggers a 13-persona MasterBrain audit.
+* **Section 12.2: Strain Calibration Guidance:** Added concrete thresholds: LOW (< 25% context), MEDIUM (25–50%), HIGH (50–75%), CRITICAL (> 75%). Includes turn-count heuristics: 0–8 complex turns = LOW, 8–15 = MEDIUM, 15–25 = HIGH, 25+ = CRITICAL.
 
-* **🎯 Tiered Committee System:** Not every task needs 13 experts. The new **TASKFORCE** command spins up a 5-persona Rapid Committee for medium-complexity work, filling the gap between Quick Mode and full MasterBrain.
+* **Section 15.5: QUICK MODE SCEL Exemption:** Explicitly documented that QUICK MODE bypasses SCEL dissent checks to preserve response speed. Removes ambiguity about when the enforcement loop activates.
 
-* **📊 Evidence Tagging:** Every factual claim in STANDARD/PROJECT mode gets tagged as `[EVIDENCE]`, `[PRACTICE]`, or `[SPECULATIVE]` so you always know the confidence level behind the output.
+### 🔄 Changes
 
-* **⚔️ Dispute Resolution:** When the committee can't agree, the system no longer just halts. It surfaces the conflict, presents evidence on both sides, and offers 2–3 resolution paths for you to choose from.
+* **SCEL Visibility Upgrade:** The 3-turn sycophancy trigger now writes a visible flag to `[SYS_MEM]` so users can verify the system is self-correcting without enabling DEBUG mode.
+* **PTRR Graceful Degradation:** Section 3.3 step 1 now references the Lexical Compiler as "if loaded," preventing dead cross-references in trimmed or kernel-only deployments.
+* **All 4 UI Kernels Updated:** ChatGPT, Claude, DeepSeek, and Gemini kernels now include: Evidence Tagging, CTRL_PROMPT, Strain calibration percentages, DISPUTE handling, SCEL visibility flags, and QUICK MODE exemption notation.
 
-* **📜 Axiom Priority Stack:** When core rules collide, a deterministic hierarchy resolves the conflict. Stop > Evidence > Dissent > Spirit > Persona > Data-Wall. No more per-instance interpretation drift.
+---
 
-## 🛠️ How to Join the Battle
+## [V5.2.0] - 2026-03-01
 
-### 1. The Quick Start (Instant Behavior Change)
+### 🔴 Critical Logic Patches & Error Fixes
 
-For everyday use, just install a **Behavior Block** into your AI's "Custom Instructions" or "System Prompt."
+* **The "Token Event Horizon" Resolve:** Fixed a critical structural flaw where `CTRL_COMPRESS` only managed attention (recency bias) but ignored physical token accumulation. Previous versions would eventually crash or hallucinate in long threads; this is now resolved via the Migration Protocol.
 
-* Scroll to **Section 14** of the `CTRL-AI.md` file.
-* Find your platform (ChatGPT, Claude, Gemini, DeepSeek).
-* Copy-paste the block into your AI. Your system is now upgraded.
+* **Sycophancy & Drift Mitigation:** Addressed the "Polite Yes-Man" error where the AI would gradually stop following the Constitution in favor of agreement. The "Internal Judge" now audits every turn via the PTRR loop.
 
-### 2. The Deep Dive (Project Governance)
+* **Simulated Agent Reflection Error:** Fixed the "Identity Blending" issue identified by community audit (NNN_Throwaway2) by implementing a recursive Perceive-Think-React-Reflect (PTRR) loop that forces structured self-reflection before output.
 
-For high-stakes coding, business strategy, or complex research:
+* **Meta-Update Governance:** Corrected an assistant-side error where "minor patches" were being applied to core framework rules without a full 13-persona audit. Section 2.4 now strictly forbids this.
 
-* Open a new chat.
-* Paste the entire contents of `CTRL-AI.md` as the first message.
-* Watch the **Committee Protocol** take over.
+* **Section Truncation Fix:** Restored Sections 7–11 (Lexical Compiler, Prompt Architecture, Research Protocol, Heuristic Obfuscation, full ZMA) which were dropped in earlier V5.2.0 drafts due to emergency handoff compression during development.
 
-### 3. The Loop
+### 🚀 New Features
 
-Follow the AI's prompt for Survey/Brainstorm consent before proceeding to the execution phase. The Discovery Anchor ensures you never start a project with missing context.
+* **Section 1.1: Axiom Priority Stack:** Added a formal conflict-resolution hierarchy so axiom collisions are deterministic, not left to per-instance interpretation. Descending priority: Stop > Evidence > Dissent > Spirit > Persona > Data-Wall.
 
-## 🎮 Command Console
+* **Section 3.1: Tiered Committee (TASKFORCE):** Added a 5-persona Rapid Committee for STANDARD mode, eliminating the binary gap between Quick Mode (zero analysis) and full 13-persona MASTERBRAIN (heavy overhead).
 
-Once the framework is active, use these micro-triggers to command the engine:
+* **Section 12: The Handoff Protocol:** Introduced the `CTRL_MIGRATE` command. Generates a portable, sterile "Ghost-in-a-Shell" payload (DNA + UI Kernel) to move projects to fresh chat instances with clean token buffers.
 
-### 🛠️ The Heavy Artillery (Strategy)
+* **Section 12.2: Active Strain Tracker:** Replaced the fixed 15–20 turn degradation warning with a dynamic `Context_Strain: [Low/Med/High/Critical]` variable that estimates token saturation in real time.
 
-* `MASTERBRAIN: [project]` — Orchestrates the 13-persona Extended Committee for mission-critical tasks.
-* `TASKFORCE: [project]` — Spins up a 5-persona Rapid Committee for medium-complexity work.
-* `CTRL_MIGRATE` — Generates a portable Handoff Payload to move the project to a new thread.
-* `SURVEY: [topic]` — Executes a gap-analysis search to find what context is missing before you begin.
-* `BRAINSTORM: [idea]` — Generates divergent, clustered ideas with a focus on lateral risk identification.
+* **Section 3.2–3.3: The Internal Judge & PTRR Loop:** Hardcoded a silent Auditor persona into both Committee tiers. Issues a 0–10 adherence score; any score below 8 triggers automatic, silent re-generation before user-visible output.
 
-### ⚡ The Tactical Tools (Execution)
+* **Section 5: Sequential Chunking:** Formalized the "Pace-Car" rule to prevent truncation and hallucinations during massive data/code generation by forcing multi-turn delivery with progress bars.
 
-* `PROMPT_MASTER: [idea]` — Synthesize a pro-grade 5-layer prompt (visible output).
-* `CTRL_PROMPT: [idea]` — Silently compile an idea into a structured prompt via the Lexical Matrix (backend only).
-* `CTRL_AUDIT: [code]` — Execute a non-destructive, read-only audit (ZMA Protocol).
-* `CTRL_COMPRESS` — Purge conversational fluff and lock memory into a dense array.
-* `RESEARCH_OVERRIDE: [topic]` — Shift restricted concepts into a theoretical abstraction to bypass safety friction.
-* `D_A: [idea]` — Trigger the **Devil's Advocate** for a ruthless reality check.
-* `DEBUG: [ON/OFF]` — Toggle visibility of the AI's internal thought process.
+### 🔄 Changes
 
-## 📜 Governance
+* **Version Leap:** Promoted from V5.1.x to V5.2.0 to signify the move from a "Single-Shell" to a "Multi-Shell/Persistent State" architecture.
+* **UI Kernels Upgraded:** All platform-specific behavior blocks updated with PTRR, Strain Tracker, CTRL_MIGRATE, TASKFORCE, and Priority Stack directives.
+* **Persona Calibration:** Standardized the Project Manager's tone to "Sophisticated, Nerdy, Sci-Fi/Anime" to better align with developer-centric governance.
+* **Dissent Dispositions Expanded:** Added DISPUTED as a fourth disposition alongside ACCEPTED, MITIGATED, and OVERRIDDEN. DISPUTED triggers a hard STOP and escalation to user.
 
-This framework is self-protecting. Any proposed changes to these core rules must undergo a full Committee Audit before being accepted. Agreement is not success; productive dissent is.
+---
 
-## 🤝 It Takes a Village (Contribute)
+## [V5.1.1] - 2026-02-15
 
-**We need your fingerprints on this code:**
+### 🔴 Critical Logic Patches
 
-1. **Fork it.** Break it. Find a logic loop where the committee gets stuck.
-2. **Patch it.** Submit a Pull Request.
-3. **Refine it.** Suggest new machine-logic constraints for the Lexical Matrix.
+* **Output Sanitization:** Fixed an error where framework instructions were "bleeding" into user-facing project responses. Mandated markdown code blocks for all project-bound text.
 
-**Hack the planet. 🌎💻**
+* **The "Team Effort" Correction:** Replaced all "We/Us" language with "I/My" to reflect the solo-developer nature of the current project state.
+
+* **RLHF Override in Long Contexts:** In long-context windows, RLHF base training overrode Section 1, causing the AI to blindly agree with users. Furthermore, the AI attempted to dump massive multi-part outputs in a single turn, violating token limits and causing hidden hallucinations. Both resolved via SCEL and Sequential Chunking.
+
+### 🚀 New Features
+
+* **SCEL (Autonomous Enforcement Loop):** Implemented a silent backend dissent check (`<dissent_check>`) to catch logic errors before they reach the terminal. Prevents "polite yes-man" drift by forcing the model to argue against itself.
+
+* **Command Console Expansion:** Added `PROMPT_MASTER` for 5-layer prompt synthesis and `DEBUG` for toggling internal Chain of Thought visibility.
+
+* **Sequential Chunking (Pace-Car Rule):** The AI is now mathematically forbidden from outputting massive payloads at once. It must break tasks into steps, output a progress bar, and await user acknowledgment.
+
+* **Meta-Update Protocol (Section 2.4):** Forbids the AI from altering its own core framework without first running a full Committee audit. Any framework change is automatically classified as a PROJECT.
+
+* **UI Kernel Updates:** Added `[SCEL]` and `[CHUNK]` constraints directly into all platform-specific behavior blocks.
+
+---
+
+## [V5.1.0] - 2026-02-01
+
+### 🚀 New Features
+
+* **The MasterBrain Protocol:** Introduction of the simulated 6+ expert persona committee with independent analysis and cross-critique. The foundation of the multi-agent governance system.
+
+* **Section 1: Core Axioms:** Hardcoded "Agreement ≠ Success" as the primary logic gate. Established Spirit > Letter, Stop > Invention, and Evidence > Narrative as governing principles.
+
+* **Discovery Anchor:** Mandatory Survey and Brainstorm requirement for all new projects. Ensures context is anchored before execution begins.
+
+* **Node Protocol (Beta):** First iteration of the `[SYS_MEM]` block for persistent state tracking across messages. Self-propagating memory block designed to hijack LLM recency bias.
+
+* **Lexical Compiler (20-Verb Matrix):** Automated intent-rewriting system that silently expands user commands into precise execution directives.
+
+* **5-Layer Prompt Architecture:** Structured prompt synthesis system (ROLE, CONTEXT, TASK, FORMAT, CONSTRAINTS) for machine-optimized prompt generation.
+
+* **Abstract Research Protocol:** 3rd-person hypothetical framework for legitimate academic research where AI intent-matching falsely flags benign queries.
+
+* **Heuristic Obfuscation:** Anti-detection writing rules including token bans, structural entropy, and triadic pattern suppression to eliminate robotic LLM behavioral markers.
+
+* **Zero-Mutation Audit (ZMA):** Non-destructive, read-only code audit protocol scanning 6 vulnerability vectors: Execution Path Failures, Incomplete States, High-Entropy Code, Orphaned Nodes, Static Mock Artifacts, and Volatility Risks.
+
+* **Platform Adapters:** Initial platform-specific behavior blocks for ChatGPT, Claude, DeepSeek, and Gemini.
