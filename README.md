@@ -19,7 +19,7 @@ You do not need to be a developer to use CTRL-AI. Choose your integration level 
 ### Level 1: Everyday Use (The UI Kernel)
 For standard, everyday tasks, you do not need to load the full Constitution. Instead, you can install the token-compressed "Behavior Kernel" directly into your AI's settings. 
 
-1. Open the `CTRL-AI_Constitution.md` file.
+1. Open the `CTRL-AI.md` file.
 2. Scroll to the very bottom: **Section 27 — Platform-Specific Kernels**.
 3. Find your platform (ChatGPT, Claude, Gemini, DeepSeek, etc.).
 4. Copy the code block and paste it into your AI's specific UI path (e.g., "Custom Instructions" or "Saved Info").
@@ -29,14 +29,14 @@ For standard, everyday tasks, you do not need to load the full Constitution. Ins
 For high-stakes decisions, coding projects, or complex creative workflows, you must load the full Master Constitution.
 
 1. Create a new project or chat session in your AI of choice.
-2. Upload or paste the entirety of `CTRL-AI_Constitution.md` as the very first message.
+2. Upload or paste the entirety of `CTRL-AI.md` as the very first message.
 3. State your project goal. The Master Brain will automatically take over, invoke the Committee, and demand a "Discovery Anchor" before proceeding.
 
 ## 🛠️ Core Commands
 Once the framework is active, you can control the workflow using these micro-triggers:
 * `CTRL_PROMPT: [idea]` - Compiles your rough idea into a weaponized prompt using high-signal databases.
 * `PROMPT_MASTER: [idea]` - Generates 3 advanced variations of your prompt and explains the engineering logic.
-* `ROUTER` - Formats your current output into specific syntax for 3rd-party/multi-modal tools (e.g., Runway, Kling, Midjourney).
+* `ROUTER: [target platform]` - Formats your current output into specific syntax for 3rd-party/multi-modal tools (e.g., Runway, Kling, Midjourney).
 * `CONTEXT_PRUNE` - Forces the AI to summarize the entire chat history into a dense code block so you can start a fresh session with zero token bloat.
 * `D_A: [Question]` - Instantly triggers a "Devil's Advocate" mode. The AI skips being helpful and outputs the top 3 reasons your idea will fail.
 
