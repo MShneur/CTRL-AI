@@ -4,7 +4,42 @@ All notable changes to the CTRL-AI Framework are documented here. This log track
 
 ---
 
-## [V5.2.1] - 2026-03-01
+## [V5.2.2] - 2026-03-02 — The Structural Integrity Patch
+
+### 🔴 Critical Logic Patches & Error Fixes
+
+* **PTRR Judge Too Vague:** The 0–10 adherence score measured axiom compliance but never checked whether the output actually solved the user's task. High axiom scores could pass outputs that were technically compliant but missed the point. The Judge now dual-scores against both Axiom Compliance AND task-specific Success Gate criteria.
+
+* **Committee Rubber-Stamping:** No mechanism existed to detect when the committee was consistently overriding all dissent without evidence-based justification. 3+ consecutive sessions of pure OVERRIDDEN/MITIGATED dispositions with zero ACCEPTED dissent now triggers a suppression pattern flag in `[SYS_MEM]`.
+
+* **Compliance via Offloading:** The system could satisfy governance rules while pushing core problem-solving back to the user through placeholders, skeleton code, and "insert your logic here" outputs. This is now classified as a SCEL violation.
+
+* **Unpinned Temporal References:** Prompts using "current," "latest," or "recent" without concrete anchors produced non-reproducible outputs that drifted across sessions. These are now treated as missing variables under Stop > Invention.
+
+### 🚀 New Features
+
+* **Section 3.3: Success Gate (PTRR Upgrade):** The Perceive step now extracts 2–3 testable, binary success criteria from every task. The Reflect step scores against these criteria in addition to axiom compliance. Both vectors must pass.
+
+* **Section 3.3: Completion Triad (PTRR Upgrade):** Before output, the React step runs a three-axis gate — Intent (does this solve the root objective?), Fallibility (has the committee identified how this could fail?), Consequence (does this introduce irreversible risk?). Failure on any axis triggers silent regeneration.
+
+* **Section 2.5: Kill Condition (Meta-Update Requirement):** Every structural change to the Constitution must now include a testable statement defining what would prove the change was harmful. No Kill Condition = too vague to implement.
+
+* **Section 5.6: Reference Lock:** In PROJECT mode, unpinned temporal language is flagged and must be pinned to a concrete reference point or halted as a missing variable. Ensures prompt reproducibility across sessions.
+
+* **Section 15.3: Dissent Health Monitor:** Tracks ACCEPTED vs. OVERRIDDEN ratio across committee sessions. Flags suppression patterns and forces minority counter-arguments when dissent is being systematically silenced.
+
+* **Section 15.4: Offload Detection:** Detects when the AI achieves "compliance" by deferring work to the user. Placeholders, skeleton structures, and deferred problem-solving within the AI's capability are classified as SCEL violations.
+
+* **Section 12.2: CRITICAL Strain Mandate:** At CRITICAL strain, the system is now explicitly forbidden from outputting degraded logic. Thread survival is formally subordinated to project integrity. If axiom compliance can no longer be maintained, the thread must be dissolved via `CTRL_MIGRATE`.
+
+### 🔄 Changes
+
+* **All UI Kernels Updated:** All four platform kernels (ChatGPT, Claude, DeepSeek, Gemini) now include Success Gate, Completion Triad, Dissent Health, Offload Detection, Reference Lock, Kill Condition, and the CRITICAL strain integrity mandate.
+* **Version Notation:** All kernel headers updated from V5.2.1 to V5.2.2.
+
+---
+
+## [V5.2.1] - 2026-03-01 — The Forensic Audit Patch
 
 ### 🔴 Critical Logic Patches & Error Fixes
 
@@ -22,6 +57,10 @@ All notable changes to the CTRL-AI Framework are documented here. This log track
 
 ### 🚀 New Features
 
+* **Boot Sequence Header:** Added a machine-targeted activation block at the top of `CTRL-AI.md` that fires regardless of how the file is loaded (paste, upload, file reference, API injection). Forces the AI to treat the file as an operating kernel rather than reference material.
+
+* **Section 0.1: Activation Confirmation:** Upon loading the Constitution, the system must output `[CTRL-AI ACTIVATED]` with section count and strain level. If truncated, outputs `[CTRL-AI PARTIAL LOAD]` identifying missing sections.
+
 * **Section 3.5: Dispute Resolution Protocol:** When a Committee produces a DISPUTED result, the system now: (1) surfaces the specific conflict, (2) presents evidence on each side, (3) offers 2–3 concrete resolution paths labeled with what each prioritizes and trades off. Execution remains halted until the user selects a path.
 
 * **Section 6.2: Evidence Tag Enforcement:** Formalized the `[EVIDENCE]`, `[PRACTICE]`, `[SPECULATIVE]` claim-tagging system as mandatory for all STANDARD/PROJECT mode responses. QUICK MODE is explicitly exempted.
@@ -38,7 +77,7 @@ All notable changes to the CTRL-AI Framework are documented here. This log track
 
 ---
 
-## [V5.2.0] - 2026-03-01
+## [V5.2.0] - 2026-03-01 — The Handoff & Judge Update
 
 ### 🔴 Critical Logic Patches & Error Fixes
 
@@ -75,7 +114,7 @@ All notable changes to the CTRL-AI Framework are documented here. This log track
 
 ---
 
-## [V5.1.1] - 2026-02-15
+## [V5.1.1] - 2026-02-15 — The Anti-Sycophancy & Token Hygiene Patch
 
 ### 🔴 Critical Logic Patches
 
@@ -99,7 +138,7 @@ All notable changes to the CTRL-AI Framework are documented here. This log track
 
 ---
 
-## [V5.1.0] - 2026-02-01
+## [V5.1.0] - 2026-02-01 — The Foundation
 
 ### 🚀 New Features
 
