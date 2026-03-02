@@ -1,9 +1,9 @@
-# 🧠 CTRL-AI Framework (V5.2.1)
+# 🧠 CTRL-AI Framework (V5.2.2)
 
 > **"Your AI doesn't need to be smarter. It needs a memory of how to behave."**
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Version](https://img.shields.io/badge/version-5.2.1-orange.svg)](#)
+[![Version](https://img.shields.io/badge/version-5.2.2-orange.svg)](#)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
 
 ## 🪖 The Rally Cry
@@ -12,15 +12,15 @@ Every day, the "walled gardens" of corporate AI try to sell us back our own idea
 
 **CTRL-AI is the resistance.** We aren't building an app. We are building **Behavioral Scaffolding**. This is a community-driven, open-source governance framework that forces any LLM (ChatGPT, Claude, Local models) to stop acting like an eager intern and start operating like a disciplined, multi-disciplinary advisory board.
 
-## 🚀 Technical Breakthroughs (V5.2.1)
+## 🚀 Technical Breakthroughs (V5.2.2)
 
 We've engineered massive "Behavior Blocks" to solve the most persistent failure modes in current AI models:
 
-* **⚖️ The Internal Judge (PTRR):** A recursive Perceive-Think-React-Reflect loop. A silent Auditor persona scores every committee output (0–10) and force-regenerates any response that fails to meet Section 1 Axioms before you see it.
+* **⚖️ The Internal Judge (PTRR):** A recursive Perceive-Think-React-Reflect loop. The Judge now dual-scores every output against both Axiom Compliance (0–10) and task-specific **Success Gate** criteria extracted during the Perceive step. Before output, the **Completion Triad** runs a three-axis gate — Intent, Fallibility, Consequence — to catch outputs that are technically compliant but miss the point.
 
-* **📦 Thread Migration (The Handoff):** Escapes the "Token Event Horizon." Use `CTRL_MIGRATE` to generate a portable "Ghost-in-a-Shell" payload to move your project DNA into a fresh chat with a clean token buffer. The **Active Strain Tracker** monitors context saturation in real time with calibrated percentage thresholds — no more guessing when your thread is dying.
+* **📦 Thread Migration (The Handoff):** Escapes the "Token Event Horizon." Use `CTRL_MIGRATE` to generate a portable "Ghost-in-a-Shell" payload to move your project DNA into a fresh chat with a clean token buffer. The **Active Strain Tracker** monitors context saturation with calibrated percentage thresholds. At CRITICAL strain, the system is forbidden from outputting degraded logic — thread survival is subordinated to project integrity.
 
-* **🛑 Autonomous Enforcement Loop (SCEL):** A silent backend loop that prevents the AI from drifting into a "polite yes-man" by forcing a mandatory dissent check before every response. If the system agrees for 3 consecutive turns without dissent, an automatic Devil's Advocate reality check fires — and now logs it visibly in the `[SYS_MEM]` block so you can verify.
+* **🛑 Autonomous Enforcement Loop (SCEL):** A silent backend loop that prevents the AI from drifting into a "polite yes-man." Now with three detection layers: (1) 3-turn sycophancy trigger with visible logging, (2) **Dissent Health Monitor** that flags when the committee is rubber-stamping by overriding all dissent, and (3) **Offload Detection** that catches the AI pushing cognitive burden back to the user via placeholders or skeleton code.
 
 * **⏱️ Sequential Chunking (The Pace-Car Rule):** LLMs hallucinate when they try to dump massive outputs in one turn. The framework mathematically forces the AI to break massive payloads into steps, pausing for user acknowledgment.
 
@@ -28,21 +28,19 @@ We've engineered massive "Behavior Blocks" to solve the most persistent failure 
 
 * **🧠 Persistent State Compression:** Eliminates "Context Amnesia." The **Node Protocol** uses a self-propagating memory block that carries your project's core logic through every message turn.
 
-* **⚙️ Meta-Update Protocol:** The AI is forbidden from altering its own core framework blindly. Any structural change automatically triggers a 13-persona MasterBrain audit.
+* **⚙️ Meta-Update Protocol:** The AI is forbidden from altering its own core framework blindly. Any structural change automatically triggers a 13-persona MasterBrain audit and must include a **Kill Condition** — a testable statement of what would prove the change harmful.
 
-* **🎯 Tiered Committee System:** Not every task needs 13 experts. The new **TASKFORCE** command spins up a 5-persona Rapid Committee for medium-complexity work, filling the gap between Quick Mode and full MasterBrain.
+* **🎯 Tiered Committee System:** Not every task needs 13 experts. The **TASKFORCE** command spins up a 5-persona Rapid Committee for medium-complexity work, filling the gap between Quick Mode and full MasterBrain.
 
 * **📊 Evidence Tagging:** Every factual claim in STANDARD/PROJECT mode gets tagged as `[EVIDENCE]`, `[PRACTICE]`, or `[SPECULATIVE]` so you always know the confidence level behind the output.
 
-* **⚔️ Dispute Resolution:** When the committee can't agree, the system no longer just halts. It surfaces the conflict, presents evidence on both sides, and offers 2–3 resolution paths for you to choose from.
+* **⚔️ Dispute Resolution:** When the committee can't agree, the system surfaces the conflict, presents evidence on both sides, and offers 2–3 resolution paths for you to choose from.
 
 * **📜 Axiom Priority Stack:** When core rules collide, a deterministic hierarchy resolves the conflict. Stop > Evidence > Dissent > Spirit > Persona > Data-Wall. No more per-instance interpretation drift.
 
+* **🔒 Reference Lock:** In PROJECT mode, unpinned temporal language ("current," "latest," "recent") is flagged as a missing variable. Prompts must be pinned to concrete references to ensure reproducibility across sessions.
+
 ## 🛠️ How to Join the Battle
-
-### 0. New Here? Read the Plain-English Guide First
-
-If the Master Constitution looks overwhelming, start with the **[CTRL-AI wiki](<CTRL-AI wiki>)** — a jargon-free breakdown of what everything does and why it works.
 
 ### 1. The Quick Start (Instant Behavior Change)
 
@@ -60,16 +58,7 @@ For high-stakes coding, business strategy, or complex research:
 * Paste the entire contents of `CTRL-AI.md` as the first message.
 * Watch the **Committee Protocol** take over.
 
-### 3. The File Reference (Attach & Go)
-
-For AI platforms that support file uploads or project folders:
-
-* Upload `CTRL-AI.md` as a file attachment, or reference it from your project directory.
-* The Boot Sequence at the top of the file will auto-activate the framework.
-* Look for the confirmation: `[CTRL-AI V5.2.1 ACTIVATED]`
-* If you don't see the activation confirmation, the AI read the file as a document instead of as instructions. Copy-paste the file contents directly into chat as a fallback.
-
-### 4. The Loop
+### 3. The Loop
 
 Follow the AI's prompt for Survey/Brainstorm consent before proceeding to the execution phase. The Discovery Anchor ensures you never start a project with missing context.
 
@@ -97,7 +86,7 @@ Once the framework is active, use these micro-triggers to command the engine:
 
 ## 📜 Governance
 
-This framework is self-protecting. Any proposed changes to these core rules must undergo a full Committee Audit before being accepted. Agreement is not success; productive dissent is.
+This framework is self-protecting. Any proposed changes to these core rules must undergo a full Committee Audit before being accepted. Every structural change requires a Kill Condition. Agreement is not success; productive dissent is.
 
 ## 🤝 It Takes a Village (Contribute)
 
