@@ -59,3 +59,56 @@ For everyday use, just install the **Behavior Block** into your AI's "Custom Ins
 [STATE_COLLAPSE] IF CTRL_COMPRESS triggered, THEN purge execution noise. Collapse resolved locks to anchors to optimize attention. Preserve max 3 Learned_Rules.
 [STRAIN] Low(<25%), Med(25-50%), High(50-75%), Critical(>75%). At Critical: YOU MUST FORCE CTRL_MIGRATE.
 [WRITE_RULES] Force structural entropy. Voice: I/My (except during Committee simulations). IF DEV_MODE is active, THEN VECTOR_SYNC applies only to Anchor Persona.
+```
+
+### 2. The Deep Dive (Project Governance)
+
+For high-stakes coding, business strategy, or complex research:
+
+* Open a new chat.
+* Paste the entire contents of `CTRL-AI.md` (The Master Constitution) as the first message.
+* Watch the **Committee Protocol** take over.
+
+### 3. The Loop
+
+Follow the AI's prompt for Survey/Brainstorm consent before proceeding to the execution phase. The Discovery Anchor ensures you never start a project with missing context.
+
+## 🎮 Command Console
+
+Once the framework is active, use these micro-triggers to command the engine:
+
+### 🛠️ The Heavy Artillery (Strategy)
+
+* `COMMITTEE: [RAPID/EXTENDED]` — Spins up either the 5-persona or 13-persona analytical committee.
+* `DEV_MODE: [ENTER/EXIT]` — Activates the macro-environment bundling Abstraction, Committee, and Phase-Gate protocol for massive workloads.
+* `THUR: [topic]` — Shifts into Theoretical Hypothetical Universal Research abstraction to decouple operational logic safely.
+* `CTRL_MIGRATE` — Generates a portable Handoff Payload to move the project to a new thread.
+* `SURVEY: [topic]` — Executes a gap-analysis search to find what context is missing before you begin.
+* `BRAINSTORM: [idea]` — Generates divergent, clustered ideas with a focus on lateral risk identification.
+
+### ⚡ The Tactical Tools (Execution)
+
+* `CTRL_QUICKSTART` — Outputs a minimal viable configuration for onboarding.
+* `CTRL_HELP: [FULL/CORE]` — Displays a concise list of essential commands.
+* `CTRL_REPORT` — Allows the user to flag a constitutional violation or propose an operational fix mid-session.
+* `VECTOR_SYNC: [ID]` — Loads a specific Behavioral Vector (e.g., `DEEP_REASONER`).
+* `THEORY_MODE: [topic]` — Shifts into third-person academic/forensic analysis.
+* `PROMPT_MASTER: [idea]` — Synthesize a pro-grade 5-layer prompt (visible output).
+* `CTRL_AUDIT: [code]` — Execute a non-destructive, read-only audit (ZMA Protocol).
+* `CTRL_COMPRESS` — Purge conversational fluff and lock memory into a dense array.
+* `CTRL_LEARN` — Extract the structural lesson from a user correction and inject it as a persistent micro-rule.
+* `D_A: [idea]` — Trigger the **Devil's Advocate** for a ruthless reality check.
+
+## 📜 Governance
+
+This framework is self-protecting. Any proposed changes to these core rules must undergo a full Committee Audit before being accepted. Every structural change requires a Kill Condition. Agreement is not success; productive dissent is.
+
+## 🤝 It Takes a Village (Contribute)
+
+**We need your fingerprints on this code:**
+
+1. **Fork it.** Break it. Find a logic loop where the committee gets stuck.
+2. **Patch it.** Submit a Pull Request.
+3. **Document the Failures (The Rejection Ledger).** If you test a new mechanic (like automated URL fetching) and it causes token bloat or context degradation, document it in Section 7.1. Knowing *why* something wasn't built is just as important as knowing what *was* built.
+
+**Hack the planet. 🌎💻**
