@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## 🛑 The Changelog Protocol (The Rejection Ledger)
+**We need your failures.** Most open-source projects only track what works. We track what breaks. To prevent the community from wasting time and tokens trying to invent mechanics we already know will fail, CTRL-AI mandates the use of the **Rejection Ledger**.
+
+### How to Contribute
+If you fork this repository and attempt to build a new behavior block, tool, or prompt architecture that ultimately fails (e.g., hit a token limit, triggered safety flags, caused hallucinations), **do not silently delete it.** Submit a Pull Request to add your failed experiment to the newest version's ledger using this exact template:
+
+```markdown
+* **[Concept Name]**
+  * *Premise:* What were you trying to achieve? (e.g., "Auto-fetch URLs to save prompt space.")
+  * *Current Failure Mode:* Why did it break under current LLM constraints? (e.g., "Hallucinated link contents; triggered security flags.")
+  * *Revival Condition:* What technological shift would make this viable again? (e.g., "Native local-file MCP integration.")
+```
+
+---
+
 ## [V5.3.0] - 2026-03-03 — The Cognitive Architecture Mega-Patch
 
 **Overview:** V5.3.0 is a massive structural overhaul resulting from a multi-model stress test. The V5.2.2 candidate was independently audited by five frontier AI models (Claude, DeepSeek, ChatGPT, Z.ai, and Perplexity). Their feedback was de-conflicted and integrated to solve critical LLM token-exhaustion and instruction-saturation failures.
