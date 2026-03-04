@@ -105,10 +105,19 @@ This framework is self-protecting. Any proposed changes to these core rules must
 
 ## 🤝 It Takes a Village (Contribute)
 
-**We need your fingerprints on this code:**
+**We need your fingerprints on this code. But we also need your failures.**
 
-1. **Fork it.** Break it. Find a logic loop where the committee gets stuck.
-2. **Patch it.** Submit a Pull Request.
-3. **Document the Failures (The Rejection Ledger).** If you test a new mechanic (like automated URL fetching) and it causes token bloat or context degradation, document it in Section 7.1. Knowing *why* something wasn't built is just as important as knowing what *was* built.
+Most open-source projects only want your working code. We want to know what *broke*. To prevent the community from wasting time trying to invent mechanics we already know will fail, CTRL-AI utilizes the **Changelog Protocol (The Rejection Ledger)**.
+
+### 1. Read Before You Build
+Before you fork this repository to build a new tool, command, or behavior block, read the `CHANGELOG.md` or Section 5 of the `WIKI.md`. We document exactly what we tried, why it failed under current LLM constraints, and what needs to change to revive it.
+
+### 2. Submit PRs of Your Failures
+If you attempt to build a new prompt architecture or rule and the AI hallucinated, hit a token limit, or triggered a safety flag—**do not silently delete it.** Submit a Pull Request to add your failed experiment to the Rejection Ledger. 
+
+You can find the exact Contributor Template in the `WIKI.md`. By logging your failures, you give other developers more time to improve the framework instead of repeating the same mistakes.
+
+### 3. Patch & Refine
+If you successfully find a logic loop where the committee gets stuck, or if you can suggest tighter machine-logic constraints for the Lexical Matrix, submit a Pull Request.
 
 **Hack the planet. 🌎💻**
