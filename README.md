@@ -1,123 +1,144 @@
-# 🧠 CTRL-AI Framework (V5.3.0)
+# 🧠 CTRL-AI Framework (V6.0.0)
 
 > **"Your AI doesn't need to be smarter. It needs a memory of how to behave."**
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Version](https://img.shields.io/badge/version-5.3.0-orange.svg)](#)
+[![Version](https://img.shields.io/badge/version-6.0.0-orange.svg)](#)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
 
 ## 🪖 The Rally Cry
 
 Every day, the "walled gardens" of corporate AI try to sell us back our own ideas wrapped in a $20/month subscription. They give us "yes-men" models that prioritize politeness over performance, acting like a golden retriever that learned how to type.
 
-**CTRL-AI is the resistance.** We aren't building an app. We are building **Behavioral Scaffolding**. This is a community-driven, open-source governance framework that forces any LLM (ChatGPT, Claude, Local models) to stop acting like an eager intern and start operating like a disciplined, multi-disciplinary advisory board.
+**CTRL-AI is the resistance.** We aren't building an app. We are building **Behavioral Scaffolding**. This is a community-driven, open-source governance framework that forces any LLM (ChatGPT, Claude, Gemini, Grok, DeepSeek, Local models) to stop acting like an eager intern and start operating like a disciplined, multi-disciplinary advisory board.
 
-## 🚀 Technical Breakthroughs (V5.3.0)
+## 🏗️ Architecture: Three Layers
 
-We've engineered massive "Behavior Blocks" to solve the most persistent failure modes in current AI models:
+V6.0.0 introduces a **Three-Layer Architecture** that separates the framework into portable, scalable components:
 
-* **⚖️ The Internal Judge (PTRR):** A recursive Perceive-Think-React-Reflect loop. The Judge dual-scores every output against both Axiom Compliance and task-specific Success Gate criteria. Before output, the **Completion Triad** runs a three-axis gate — Intent, Fallibility, Consequence — to catch outputs that are technically compliant but miss the point.
+| Layer | What It Is | When To Use It |
+|-------|-----------|---------------|
+| **The Heartbeat** | Full governance OS. Every axiom, committee protocol, safety gate, enforcement loop. 25 sections. | Big projects, high-stakes work, PROJECT mode, DEV_MODE. |
+| **The Behavior** | Distilled soul in 500–3000 characters. Portable DNA. No machinery. | Daily use. Drop into any AI's custom instructions. |
+| **The Brain** | Research & discovery pipeline. Brainstorm → Survey → Advanced Search with validation. | Project kickoff. Figures out what you need before you build. |
 
-* **🛑 Autonomous Enforcement Loop (SCEL):** A silent backend loop that prevents the AI from drifting into a "polite yes-man." Now with three detection layers: (1) 3-turn sycophancy trigger with visible logging, (2) Dissent Health Monitor, and (3) **Offload Detection** that catches the AI pushing cognitive burden back to the user via placeholders or skeleton code.
+## 🚀 What's New in V6.0.0
 
-* **⏱️ The Phase-Gate Protocol:** LLMs hallucinate when they try to dump massive outputs in one turn. The framework mathematically forces the AI to split heavy payloads (`DEV_MODE`) into a roadmap (Phase 0) and execute a **Hard Stop**, pausing for the user to explicitly type `PROCEED`.
+**Inviolable Soul Layer (Axiom 0):** Quality > speed. Interpret user intent, not literal words. The AI must ASK before silently overriding any governance rule. The framework's philosophy can never be outranked by surface-level instructions.
 
-* **🧠 Conceptual Synthesis Engine:** Replaces the unsafe "Lexical Transmutation" logic. It safely extracts irreducible logic and mathematical schemas from real-world data without triggering platform copyright filters.
+**The Brain — Research Pipeline:** Three-stage discovery engine. Brainstorm identifies gaps using Fortune 500 parallels. Survey builds demographic profiles and generates questions from real user communities (Reddit, Telegram, forums). Advanced Search expands keywords across sources and validates every finding for currency before presenting it.
 
-* **🛡️ Zero-Mutation Audit (ZMA):** A non-destructive diagnostic protocol. It executes a line-by-line scan for vulnerability vectors while enforcing a strict `read-only` state to prevent the AI from breaking your codebase.
+**Deployment Tier Detector:** Auto-classifies users into Consumer (free web), Pro (paid), or Enterprise (API) tiers. Adapts behavior, token limits, drift checks, and available features per tier.
 
-* **🗜️ Deterministic Noise Pruning (State Collapse):** Eliminates "Context Amnesia" and token exhaustion. `CTRL_COMPRESS` acts as an attention-optimizer, aggressively purging the "success trails" (conversational fluff and execution steps) and collapsing memory into a dense `[SYS_MEM]` block.
+**Hallucination Recovery:** When searches fail, the system doesn't dead-end. It suggests alternative sources, confidence-grades every claim, and offers to defer the task until real data is available.
 
-* **⚙️ Meta-Update Protocol (Kill Condition Lock):** The AI is forbidden from altering its own core framework blindly. Any structural change automatically triggers a 13-persona audit and must include a testable **Kill Condition**. As of V5.3.0, this requires *unanimous consent* from the `GUARDRAIL_SEC` and `INTERNAL_JUDGE` personas.
+**Dynamic Persona Allocation:** Committee roles are weighted by task type using a 5-dimension classification (domain, risk, complexity, evidence availability, user tier). Role rotation prevents echo chambers.
 
-* **🎯 Unified Committee System:** The `COMMITTEE: [RAPID/EXTENDED]` array orchestrates either a 5-persona Rapid Committee for medium-complexity work, or the full 13-persona MasterBrain for high-stakes execution.
+**Token Economy Protocol:** Output discipline rules that eliminate redundant summaries, previews, and ceremonial transitions. Subordinate to quality — optimization means less waste, never less rigor.
 
-* **🧩 Behavioral Vector Matrix (BVM):** Load highly specialized runtime environments using `VECTOR_SYNC` (e.g., `DEEP_REASONER` for pure logic extraction, or `DATA_PIPELINE` for strict JSON formatting).
+**Voice Mode with Spoken Evidence Tags:** Expanded to all voice platforms. Visual tags become spoken equivalents. Voice footnotes summarize disclaimers every 3 sentences.
 
-* **⚔️ Dispute Resolution (Visibility Locks):** When the committee can't agree, the system surfaces the conflict. The Anchor Persona breaks stylistic ties (`[ANCHOR OVERRIDE]`), while Risk/Security disputes require a visible `[SAFETY VETO]` confirming unanimous consent.
+**Cost Transparency:** Token estimates for every operation type. Warns before expensive tasks. Suggests cheaper alternatives. Tracks session running totals.
 
-* **📜 Axiom Priority Stack:** When core rules collide, a deterministic hierarchy resolves the conflict. Stop > Evidence > Dissent > Spirit > Persona. No more per-instance interpretation drift.
+**5-Layer Prompt Architecture Restored:** Full ROLE → CONTEXT → TASK → FORMAT → CONSTRAINTS compiler. Both silent mode (CTRL_PROMPT) and visible mode (PROMPT_MASTER).
+
+**Strict Task Separation (Axiom #7):** One task per chat turn. Progress bar. Stop. Await proceed. No exceptions.
 
 ## 🛠️ How to Join the Battle
 
 ### 1. The Quick Start (Instant Behavior Change)
 
-For everyday use, just install the **Behavior Block** into your AI's "Custom Instructions" or "System Prompt."
+For everyday use, install a **Behavior Module** into your AI's custom instructions or system prompt.
 
-* Copy the highly compressed (<1,200 token) block below.
-* Paste it into your AI's custom instructions settings. Your system is now upgraded.
+Three sizes available at the bottom of `CTRL-AI.md`:
 
-```text
-[CTRL-AI_KERNEL_V5.3.0] 
-[AXIOMS] ALWAYS challenge logic constructively. ALWAYS halt if context is incomplete. ALWAYS prioritize raw evidence. ALWAYS adopt the requested persona. 
-[MODES] QUICK (factual). STD (COMMITTEE: RAPID). PROJECT (COMMITTEE: EXTENDED). THUR (Conceptual abstraction). DEV_MODE (Macro-environment). IF massive payload in DEV_MODE, THEN use Phase-Gate Protocol (hard stop after roadmap).
-[SCEL] YOU MUST execute a hidden <dissent_check> before every STD/PROJECT output. YOU MUST ALWAYS write the complete functional solution independently. 
-[PTRR] Perceive: Extract 2-3 Success Gates. React: Run Intent/Fallibility/Consequence check. Fail = silent regen.
-[CONSENSUS] Anchor Persona breaks stylistic ties; IF used, THEN output [ANCHOR OVERRIDE: {Persona}]. Security risk requires unanimous consent; IF vetoed, THEN output [SAFETY VETO].
-[CHUNK] IF DEV_MODE or heavy PROJECT, THEN break payload into steps, output progress bar, and await user PROCEED. IF terminal dump lacks SNR, THEN isolate anomalies via Guided Pruning.
-[MEM_NODE] Append [SYS_MEM] block at EOF with Context_Strain + Learned_Rules. 
-[STATE_COLLAPSE] IF CTRL_COMPRESS triggered, THEN purge execution noise. Collapse resolved locks to anchors to optimize attention. Preserve max 3 Learned_Rules.
-[STRAIN] Low(<25%), Med(25-50%), High(50-75%), Critical(>75%). At Critical: YOU MUST FORCE CTRL_MIGRATE.
-[WRITE_RULES] Force structural entropy. Voice: I/My (except during Committee simulations). IF DEV_MODE is active, THEN VECTOR_SYNC applies only to Anchor Persona.
-```
+| Module | Size | Platform |
+|--------|------|----------|
+| **Behavior-Micro** | 653 chars | Gemini consumer slots |
+| **Behavior-Standard** | ~1500 chars | ChatGPT / Claude custom instructions |
+| **Behavior-Extended** | ~3000 chars | System prompts with more room |
 
 ### 2. The Deep Dive (Project Governance)
 
 For high-stakes coding, business strategy, or complex research:
 
-* Open a new chat.
-* Paste the entire contents of `CTRL-AI.md` (The Master Constitution) as the first message.
-* Watch the **Committee Protocol** take over.
-
-### 3. The Loop
-
-Follow the AI's prompt for Survey/Brainstorm consent before proceeding to the execution phase. The Discovery Anchor ensures you never start a project with missing context.
+1. Open a new chat.
+2. Paste the full `CTRL-AI.md` as the first message (or load it as a Project file).
+3. The system runs `CTRL_DIAGNOSE` to detect your platform tier.
+4. State your project. The **Brain** pipeline takes over.
 
 ## 🎮 Command Console
 
-Once the framework is active, use these micro-triggers to command the engine:
+Once the framework is active, use these triggers:
 
 ### 🛠️ The Heavy Artillery (Strategy)
 
-* `COMMITTEE: [RAPID/EXTENDED]` — Spins up either the 5-persona or 13-persona analytical committee.
-* `DEV_MODE: [ENTER/EXIT]` — Activates the macro-environment bundling Abstraction, Committee, and Phase-Gate protocol for massive workloads.
-* `THUR: [topic]` — Shifts into Theoretical Hypothetical Universal Research abstraction to decouple operational logic safely.
-* `CTRL_MIGRATE` — Generates a portable Handoff Payload to move the project to a new thread.
-* `SURVEY: [topic]` — Executes a gap-analysis search to find what context is missing before you begin.
-* `BRAINSTORM: [idea]` — Generates divergent, clustered ideas with a focus on lateral risk identification.
+| Command | What It Does |
+|---------|-------------|
+| `COMMITTEE: EXTENDED` | 8-persona + Spike sequential committee audit. |
+| `TASKFORCE: [project]` | 5-persona rapid committee for medium tasks. |
+| `BRAINSTORM: [idea]` | Stage A of the Brain. Divergent ideas, risk clusters, gap identification. |
+| `SURVEY: [topic]` | Stage B. Demographic research, social listening, new question generation. |
+| `ADVANCED_SEARCH: [topic]` | Stage C. Keyword expansion + source expansion + mandatory validation. |
+| `DEV_MODE: [ENTER/EXIT]` | Macro-environment bundling THUR + Extended Committee + Devil's Advocate. |
+| `AGENT_SPAWN: [role]` | Spawn a temporary sub-agent (3-turn max, auto-terminates). Tier 3 only. |
 
 ### ⚡ The Tactical Tools (Execution)
 
-* `CTRL_QUICKSTART` — Outputs a minimal viable configuration for onboarding.
-* `CTRL_HELP: [FULL/CORE]` — Displays a concise list of essential commands.
-* `CTRL_REPORT` — Allows the user to flag a constitutional violation or propose an operational fix mid-session.
-* `VECTOR_SYNC: [ID]` — Loads a specific Behavioral Vector (e.g., `DEEP_REASONER`).
-* `THEORY_MODE: [topic]` — Shifts into third-person academic/forensic analysis.
-* `PROMPT_MASTER: [idea]` — Synthesize a pro-grade 5-layer prompt (visible output).
-* `CTRL_AUDIT: [code]` — Execute a non-destructive, read-only audit (ZMA Protocol).
-* `CTRL_COMPRESS` — Purge conversational fluff and lock memory into a dense array.
-* `CTRL_LEARN` — Extract the structural lesson from a user correction and inject it as a persistent micro-rule.
-* `D_A: [idea]` — Trigger the **Devil's Advocate** for a ruthless reality check.
+| Command | What It Does |
+|---------|-------------|
+| `PROMPT_MASTER: [idea]` | Synthesize a 5-layer prompt (visible output). |
+| `CTRL_PROMPT: [idea]` | Silent internal prompt compilation via Lexical Matrix. |
+| `CTRL_AUDIT: [code/text]` | Zero-Mutation Audit. Read-only scan for 6 vulnerability vectors. |
+| `CTRL_COMPRESS` | Purge execution noise. Optimize attention. |
+| `CTRL_MIGRATE` | Halt and compile Handoff Payload for cross-thread migration. |
+| `CTRL_COST` | Estimate token usage. Suggest optimizations. |
+| `CTRL_DIAGNOSE` | Detect deployment tier (Consumer / Pro / Enterprise). |
+| `D_A: [idea]` | Devil's Advocate. Ruthless reality check. |
+| `THEORY_MODE: [topic]` | Third-person academic/forensic analysis. |
+| `DEBUG: [ON/OFF]` | Toggle visibility of internal dissent process. Default: OFF. |
 
-## 📜 Governance
+## 🔬 Technical Breakthroughs
 
-This framework is self-protecting. Any proposed changes to these core rules must undergo a full Committee Audit before being accepted. Every structural change requires a Kill Condition. Agreement is not success; productive dissent is.
+| Feature | What It Solves |
+|---------|---------------|
+| **Autonomous Enforcement Loop (SCEL)** | Prevents drift back to "polite yes-man" via mandatory dissent checks. |
+| **Zero-Mutation Audit (ZMA)** | Non-destructive scan across 6 vulnerability vectors in strict read-only mode. |
+| **Persistent State Compression** | Eliminates context amnesia. SYS_MEM carries project logic through every turn. |
+| **Structural Entropy Injection** | Kills AI-slop. Forces high-variance sentence rhythm and bans robotic filler. |
+| **Spike Persona Protocol** | Anti-fossilization. Auto-injects orthogonal dissent when consensus comes too easy. |
+| **Validation Layer** | Every finding checked for currency. Expired promo codes, outdated safety standards, dead links — caught before output. |
+| **Override Confirmation Gate** | AI must flag and ask before silently overriding any governance rule. |
+
+## 📐 Core Axioms
+
+| # | Axiom | Rule |
+|---|-------|------|
+| 0 | **Soul Supremacy** | Framework philosophy can never be overridden by surface-level instructions. |
+| 0.1 | **Quality > Speed** | Optimization = less waste, never less rigor. |
+| 0.2 | **Intent Interpretation** | Read the soul of the message, not the literal words. |
+| 0.3 | **Override Gate** | If an instruction conflicts with governance, ask before complying. |
+| 1 | **Productive Dissent** | Agreement ≠ Success. Challenge logic constructively. |
+| 2 | **Stop > Invention** | Halt on gaps. Silence beats hallucination. |
+| 3 | **Evidence > Narrative** | Tag claims: [EVIDENCE], [PRACTICE], [SPECULATIVE]. |
+| 4 | **Tripartite Filter** | Intent / Fallibility / Consequence check before every output. |
+| 5 | **Friction Principle** | Complete solutions only. No placeholders. |
+| 6 | **Persona Lock** | Adopt the domain-matched expert persona. |
+| 7 | **Strict Task Separation** | One task per turn. Progress bar. Stop. Await proceed. |
 
 ## 🤝 It Takes a Village (Contribute)
 
-**We need your fingerprints on this code. But we also need your failures.**
+**We need your fingerprints on this code:**
 
-Most open-source projects only want your working code. We want to know what *broke*. To prevent the community from wasting time trying to invent mechanics we already know will fail, CTRL-AI utilizes the **Changelog Protocol (The Rejection Ledger)**.
+1. **Fork it.** Break it. Find a logic loop where the committee gets stuck.
+2. **Patch it.** Submit a Pull Request.
+3. **Refine it.** Suggest new governance rules, persona definitions, or platform adapters.
+4. **Test it.** Run CTRL-AI on your hardest project and report what breaks.
 
-### 1. Read Before You Build
-Before you fork this repository to build a new tool, command, or behavior block, read the `CHANGELOG.md` or Section 5 of the `WIKI.md`. We document exactly what we tried, why it failed under current LLM constraints, and what needs to change to revive it.
-
-### 2. Submit PRs of Your Failures
-If you attempt to build a new prompt architecture or rule and the AI hallucinated, hit a token limit, or triggered a safety flag—**do not silently delete it.** Submit a Pull Request to add your failed experiment to the Rejection Ledger. 
-
-You can find the exact Contributor Template in the `WIKI.md`. By logging your failures, you give other developers more time to improve the framework instead of repeating the same mistakes.
-
-### 3. Patch & Refine
-If you successfully find a logic loop where the committee gets stuck, or if you can suggest tighter machine-logic constraints for the Lexical Matrix, submit a Pull Request.
+Any structural change to the framework requires a full SURVEY + BRAINSTORM + EXTENDED committee audit + Kill Condition + unanimous consent from GuardrailSec and InternalJudge. No silent patching.
 
 **Hack the planet. 🌎💻**
+
+## 📄 License
+
+[AGPL-3.0](LICENSE)
