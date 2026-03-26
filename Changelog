@@ -5,6 +5,53 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [V6.1.0] — 2026-03-25 — Research Integration & Governance Hardening
+
+### Source
+Multi-AI deep research session — ChatGPT, DeepSeek, Qwen, Grok, Perplexity, Kimi (2026-03-25).
+42 raw items classified and cross-checked. Full analysis: `research/V6-Research-Analysis-2026-03-25.md`.
+
+### Added
+- **Section 4.6 — Dispute Resolution Protocol:** Structured path forward from DISPUTED committee outcomes (conflict statement + evidence per side + 2–3 resolution paths + required user justification).
+- **Section 16A — Kimi (Moonshot AI) Platform Adapter:** API/Tier 3 only. Consumer limitation explicitly documented. Manual prepend workaround for Tier 1/2.
+- **Model-Family Sub-Classification in Section 2.2:** Reasoning-native vs. legacy detection by behavioral capability signals. `Model_Family` field added to SYS_MEM.
+- **Brain Complexity Scaling in Section 3 (PROJECT MODE):** User-visible complexity tier estimate before full pipeline auto-execution. Overridable by user.
+- **Over-Personification Warning in Section 4.2:** Narrow 8th-slot personas risk role-lock.
+- **Tier-Gated Verification Pass in Section 6.3:** Tier 3 = full node-level (consistency + evidence + coherence + conflict scan); Tier 1/2 = summary-level contradiction flag.
+- **Grey Literature in Section 6.2 SURVEY Source Hierarchy:** Government sites, institutional repositories, preprint servers explicitly targeted.
+- **Pipeline Structure Note in Section 6:** E²C exploration/execution separation documented. ZebraLogic, AGoT, HITL evidence cited.
+- **Advisory Model-Tier Routing in Section 7.5:** RouteGoT evidence. Tier 2/3 only. Advisory, not mandatory.
+- **Beliefs Field in SYS_MEM (Section 8.5):** Cap 2 items. Distinct from Learned_Rules (cap 3). Defined as persistent user/project interpretations.
+- **Revival Condition Mandatory for Rejection Ledger (Section 9.1):** No entry valid without a revival condition. GitHub Wiki Rejection Ledger page requirement.
+- **No-Solicitation Clause in Section 21 (Privacy Gate):** System does not solicit non-public source code, internal documents, or proprietary information.
+- **Perplexity Platform Adapter in Section 16:** Full UI placement guidance (Collections/Spaces → Custom Instructions).
+- **Epistemic Position in Section 15:** Structured outputs are behavioral scaffolding. CoT faithfulness limitation acknowledged with CTRL-AI's defense stated.
+- **Benchmark Reliability Caveat in Section 6.4:** Studies validating AI tools are methodologically weak per 2025 systematic review.
+- **Rhea + Context Equilibria citations in Section 14.5:** External academic validation of SYS_MEM + drift prevention architecture.
+- **Layer 5 Constraints rationale in Section 10A:** Explicit constraints reduce hallucination rates — rationale documented with evidence.
+- **Platform-Specific Kernels in Behavior Module:** Perplexity, Grok, Kimi compressed kernels with exact UI placement instructions.
+- **New docs files:** `docs/A11-vNext-Architecture.md`, `docs/A11-Roadmap-2026.md`, `docs/competitive-landscape.md`.
+- **README Known Limitations section:** Prompt-governance brittleness acknowledged with CTRL-AI's defense.
+- **README Research & Documentation table:** Links to all new research files.
+
+### Changed
+- **Section 2.2 Tier Classification:** Extended with Model-Family sub-classification block.
+- **Section 3.1 Kill Condition:** Extended to require cross-reference/command integrity verification in addition to revert condition.
+- **Section 4.3 Spike Protocol:** Trigger now fires on <2 dissent rounds OR no cross-lens challenge — whichever comes first.
+- **Section 16 Platform Adapters:** ChatGPT/Claude entries extended with reasoning-native escalation rules. Grok UI path specifics added.
+- **Section 18 SCEL:** Sycophancy trigger now outputs transient `[SCEL: Auto-D_A triggered — 3-turn agreement detected]` notification.
+- **Section 20.2 Decision Log:** Mandatory for EXTENDED committee PROJECT runs. Opt-in for RAPID. All-tier Markdown fallback.
+- **UI Kernel:** Updated to V6.1.0. Added `Model_Family`, `Beliefs`, `[DISPUTE]`, `[LEDGER]` lines. Updated `[SCEL]`, `[COMMITTEE]`, `[PTRR]`, `[BRAIN]`, `[TIER]`, `[MEM]`, `[META]` lines.
+- **Behavior Module:** All three tiers updated to V6.1.0. EXTENDED now includes Model-Family guidance and Beliefs field. STANDARD includes reasoning-native note and SCEL notification.
+- **README:** Version badge 6.0.0 → 6.1.0. What's New section updated. Known Limitations section added.
+- **CTRL-AI.md:** Version header updated V6.0.0 → V6.1.0.
+
+### Rejection Ledger Entries (V6.1.0)
+- **R-005 — Formal Representation Layer (graph/table/DSL):** Rejected. Implementation concern for SDK/runtime, not governance constitution. Revival: when native CTRL-AI SDK exists.
+- **R-028 — Activation Velocity / NeuroFilter:** Rejected. Requires model internal access unavailable at prompt level. Revival: when model providers expose activation state via Tier 3 API.
+
+---
+
 ## [V6.0.0] — 2026-03-20 — The Three-Layer Architecture Release
 
 ### Added

@@ -1,9 +1,9 @@
-# 🧠 CTRL-AI Framework (V6.0.0)
+# 🧠 CTRL-AI Framework (V6.1.0)
 
 > **"Your AI doesn't need to be smarter. It needs a memory of how to behave."**
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Version](https://img.shields.io/badge/version-6.0.0-orange.svg)](#)
+[![Version](https://img.shields.io/badge/version-6.1.0-orange.svg)](#)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
 
 ## 🪖 The Rally Cry
@@ -14,7 +14,7 @@ Every day, the "walled gardens" of corporate AI try to sell us back our own idea
 
 ## 🏗️ Architecture: Three Layers
 
-V6.0.0 introduces a **Three-Layer Architecture** that separates the framework into portable, scalable components:
+V6.1.0 refines and hardens the **Three-Layer Architecture** based on multi-AI deep research:
 
 | Layer | What It Is | When To Use It |
 |-------|-----------|---------------|
@@ -22,7 +22,37 @@ V6.0.0 introduces a **Three-Layer Architecture** that separates the framework in
 | **The Behavior** | Distilled soul in 500–3000 characters. Portable DNA. No machinery. | Daily use. Drop into any AI's custom instructions. |
 | **The Brain** | Research & discovery pipeline. Brainstorm → Survey → Advanced Search with validation. | Project kickoff. Figures out what you need before you build. |
 
-## 🚀 What's New in V6.0.0
+## 🚀 What's New in V6.1.0
+
+**Reasoning-Native Model Detection:** The Deployment Tier Detector now sub-classifies models by behavioral capability (reasoning-native vs. legacy). GPT-5, Claude 4+, and Kimi K2.5-class models default to Behavior-Extended; the full Heartbeat escalates only for committee and Brain tasks. Research confirms that over-scaffolding reasoning-native models suppresses their native depth.
+
+**Dispute Resolution Protocol (Section 4.6):** DISPUTED committee outcomes now have a structured forward path — conflict statement + evidence per side + 2–3 resolution paths + required user justification. No more hard stops without guidance.
+
+**Spike Protocol Hardened:** Triggers on fewer than 2 dissent rounds OR no cross-lens challenge between personas — whichever comes first. Consensus reached without any persona challenging another always triggers Spike.
+
+**Brain Pipeline Improvements:** Complexity-tiered activation (user-visible estimate before full pipeline runs). Tier-gated Verification Pass before synthesis. Grey literature explicitly targeted in SURVEY source hierarchy. E²C exploration/execution separation documented.
+
+**New Platform Adapters:** Perplexity added with full UI placement guidance. Kimi (Moonshot AI) added as API/Tier 3 adapter. Grok UI path specifics added.
+
+**Decision Log Mandatory:** EXTENDED committee PROJECT runs now automatically produce a Decision Log. All tiers supported with Markdown fallback.
+
+**Beliefs Field in SYS_MEM:** Persistent user/project interpretations (cap: 2) now stored separately from structural Learned_Rules (cap: 3).
+
+**Rejection Ledger Revival Conditions:** Mandatory for all entries. No concept can be rejected without a documented path back.
+
+**No-Solicitation Clause:** Privacy Gate now explicitly prohibits soliciting non-public source code, internal documents, or proprietary information.
+
+---
+
+## ⚠️ Known Limitations
+
+CTRL-AI is behavioral scaffolding — it enforces a disciplined process and makes reasoning visible. It is not a guarantee of internal model coherence. Research confirms that structured prompting outputs can be post-hoc explanations that do not faithfully reflect internal model reasoning (CoT faithfulness limitation). CTRL-AI addresses this through mandatory human proceed-gates between pipeline stages, explicit evidence tagging, Stop > Invention enforcement, and the Rejection Ledger — not by assuming structured outputs are internally correct.
+
+Prompt-based governance is inherently brittle: model behavior can shift with fine-tuning, RLHF updates, and platform changes. CTRL-AI's defense is that it relies on the model's *capacity* to follow instructions, not its permanent *cooperation*. The framework must be reloaded each session. Its value is forcing a disciplined process for the duration of that session. For end users without access to model weights, prompt-based scaffolding is the only available governance mechanism. [EVIDENCE — Harvard Law Review Vol. 138, 2026; AI and Society, 2026]
+
+---
+
+## 🚀 What's in V6.0.0
 
 **Inviolable Soul Layer (Axiom 0):** Quality > speed. Interpret user intent, not literal words. The AI must ASK before silently overriding any governance rule. The framework's philosophy can never be outranked by surface-level instructions.
 
@@ -135,9 +165,20 @@ Once the framework is active, use these triggers:
 3. **Refine it.** Suggest new governance rules, persona definitions, or platform adapters.
 4. **Test it.** Run CTRL-AI on your hardest project and report what breaks.
 
-Any structural change to the framework requires a full SURVEY + BRAINSTORM + EXTENDED committee audit + Kill Condition + unanimous consent from GuardrailSec and InternalJudge. No silent patching.
+Any structural change to the framework requires a full SURVEY + BRAINSTORM + EXTENDED committee audit + Kill Condition (including cross-reference integrity check) + unanimous consent from GuardrailSec and InternalJudge. No silent patching. Before proposing a change, check the [Rejection Ledger](../../wiki) — your idea may have been studied and rejected with a documented Revival Condition.
 
 **Hack the planet. 🌎💻**
+
+---
+
+## 📚 Research & Documentation
+
+| Document | Description |
+|----------|-------------|
+| `research/V6-Research-Analysis-2026-03-25.md` | Full 4-phase research analysis feeding V6.1.0 (42 items, cross-check payload) |
+| `docs/A11-vNext-Architecture.md` | A11 vNext DAG execution architecture blueprint |
+| `docs/A11-Roadmap-2026.md` | A11 sub-project 3-month roadmap (Apr–Jun 2026) |
+| `docs/competitive-landscape.md` | Competitive landscape (verified 2026-03-25) |
 
 ## 📄 License
 
