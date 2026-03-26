@@ -1,4 +1,4 @@
-# CTRL-AI V6.1.0 Research Integration Report
+# codex-CTRL-AI V6.1.0 Research Integration Report
 
 **Analyst:** Cursor Cloud Agent (DEV_MODE)  
 **Date:** 2026-03-25  
