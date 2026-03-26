@@ -2,65 +2,65 @@
 
 ## The Golden Rule
 
-Any structural change to the framework requires the full Meta-Update Protocol (Section 3.1):
+**Reformulate, never reproduce.** All external ideas entering this framework are decomposed into principles and rebuilt in CTRL-AI's own vocabulary. We do not copy — we learn and rewrite.
 
-1. **SURVEY** — Identify what gaps or conflicts prompted the change.
-2. **BRAINSTORM** — Generate risks, unintended consequences, and alternatives.
-3. **COMMITTEE: EXTENDED** — Full 8-persona + Spike audit.
-4. **Kill Condition** — Every change MUST include a testable condition under which it would be reverted.
-5. **Unanimous Consent** — GuardrailSec and InternalJudge must both sign off.
-6. **No Silent Patching** — All changes are explicit, versioned, and logged.
+## How Changes Work
+
+CTRL-AI is a living governance document. Changes follow the **Meta-Update Protocol (Section 3.1)**:
+
+1. **SURVEY:** Identify the gap or conflict.
+2. **BRAINSTORM:** Generate risks, alternatives, unintended consequences.
+3. **COMMITTEE: EXTENDED:** Full 8-persona + Spike audit.
+4. **EVOLVE:** Research how other frameworks handle this type of change.
+5. **Kill Condition:** Every change includes a testable condition for reversion.
+6. **Unanimous Consent:** GuardrailSec + InternalJudge must both sign off.
+
+No silent patching. No incremental undocumented adjustments.
+
+## Integration Protocol
+
+When proposing an external concept:
+
+```
+CTRL_AUDIT (ZMA) → Section 9 (CSE) → Section 25 (Reverse Engineering Protocol)
+```
+
+1. **Audit first** — read-only analysis of the source material.
+2. **Extract principles** — decompose into mechanics, not prose.
+3. **Test fit** — does it conflict with axioms? Duplicate existing sections? Add bloat?
+4. **Reformulate** — rewrite in CTRL-AI lexicon.
+5. **Integrate or Reject** — rejected items go to the Rejection Ledger with revival conditions.
 
 ## Naming Conventions
 
-When adding or modifying framework elements, follow these naming patterns:
+| Element | Pattern | Example |
+|---------|---------|---------|
+| Sections | `SECTION [N] — [NAME] [GATE/NORM/INFO]` | `SECTION 24 — EVOLVE PHASE [GATE]` |
+| Commands | `CTRL_[ACTION]` or `[VERB]: [target]` | `CTRL_ACTIVATE`, `COMMITTEE: EXTENDED` |
+| Tags | `[ALL_CAPS]` | `[EVIDENCE]`, `[SPECULATIVE]`, `[SCEL: Auto-D_A triggered]` |
+| SYS_MEM keys | `PascalCase` or `~PascalCase` for beliefs | `Deployment_Tier`, `~UserPrefersPlainLanguage` |
+| Versions | Semantic: `MAJOR.MINOR.PATCH` | `V7.0.0` |
 
-| Element Type | Convention | Example |
-|-------------|-----------|---------|
-| Commands / triggers | `CTRL_[ACTION]` or `[VERB]: [PARAM]` | `CTRL_AUDIT`, `VECTOR_SYNC: ID` |
-| Personas | PascalCase compound noun | `LogicArchitect`, `RedTeam`, `DevAuditor` |
-| Operating modes | ALL_CAPS | `QUICK`, `STANDARD`, `DEV_MODE` |
-| Section tags | `[GATE]`, `[NORM]`, `[INFO]` | `[GATE]` = core enforcement |
-| Evidence tags | `[EVIDENCE]`, `[PRACTICE]`, `[SPECULATIVE]` | Per Axiom 3 |
-| Memory state | `[SYS_MEM]` key=value block | `Active_State`, `Deployment_Tier` |
-| Reference anchors | `[REF]` pipe-delimited | `[REF] key=value \| key=value` |
-| Permanent learned rules | Plain name | `NoPlaceholders` |
-| Project-scoped beliefs | `~` prefix | `~UserPrefersPlainLanguage` |
+## PR Process
 
-## Integration Protocol for External Sources
+1. Fork the repository.
+2. Create a branch: `feature/[short-description]` or `fix/[short-description]`.
+3. Make changes. Include rationale in the PR description.
+4. Reference the relevant section(s) and axiom(s) affected.
+5. If proposing a new section, include a Kill Condition.
+6. Submit PR. Maintainers will run the Meta-Update Protocol.
 
-When proposing a feature inspired by an external framework, tool, or paper:
+## What Belongs Where
 
-1. **CTRL_AUDIT** the external source first (read-only scan for 6 risk vectors).
-2. **Axiom Extraction** — Strip to core logical mechanics. Ignore surface syntax.
-3. **Structural Recomposition** — Rename to CTRL-AI lexicon using the convention map above.
-4. **Friction Gate** — Test for bloat, conflicts, or redundancy with existing sections.
-5. If it conflicts with existing governance → full Meta-Update Protocol fires.
-6. If rejected → log to Rejection Ledger (Section 9.1) with Revival Condition.
-7. If approved → integrate, version it, update Changelog.
-
-## What Makes a Good Contribution
-
-- **Bug reports:** Run the framework on a hard task. Report where it breaks.
-- **Platform adapters:** Test on a platform not yet covered. Document the kernel path and any quirks.
-- **Stress tests:** Design adversarial prompts that expose governance failures.
-- **Evidence:** Find academic papers or engineering reports that validate or challenge framework design decisions.
-- **Efficiency:** Propose ways to reduce token cost without reducing rigor.
-
-## What to Avoid
-
-- Adding features that duplicate existing capabilities (check Rejection Ledger first).
-- Weakening governance rules to "make the AI nicer."
-- Silent changes to axiom-level principles.
-- Token-expensive additions without clear justification.
-
-## Pull Request Process
-
-1. Fork the repo and create a feature branch.
-2. Make your changes. Include a Kill Condition in your PR description.
-3. Update the Changelog with your changes.
-4. Submit. The maintainers will run the Meta-Update Protocol on structural changes.
+| Content | Location |
+|---------|----------|
+| Governance rules, axioms, protocols | `CTRL-AI.md` (constitution) |
+| Specific URLs, tool lists, source registries | Wiki |
+| Decision rationale, rejected ideas | Wiki (Decision Log) |
+| Benchmarks, metrics, test scenarios | Wiki (Benchmarks page) |
+| Competitive analysis | Wiki (Landscape page) |
+| Code, SDK, runtime implementations | Separate repo (future) |
 
 ## Code of Conduct
 
-Quality > speed. Productive dissent > agreement. Evidence > narrative. These aren't just framework rules — they apply to how we work together on this project.
+Agreement is not success. Challenge ideas constructively. Disagree with evidence. The framework's soul — quality over speed, truth over convenience — applies to contributors as much as to the AI.
