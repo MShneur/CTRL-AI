@@ -1,174 +1,104 @@
 # CTRL-AI Changelog
 
-All notable changes to this project are documented in this file.
-Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+All notable changes documented. Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
-## [V6.0.0-r1] — 2026-03-25 — Research Integration Patch
+## [V7.0.0] — 2026-03-26 — The Living Organism Release
 
 ### Added
-- **Model-Family Detection (Section 2.1):** Tier Detector now asks a 4th question to identify reasoning-native models (o-series, GPT-5+, Claude 4.6+). Reasoning-native models default to Behavior-Extended; Heartbeat escalation reserved for Committee/Brain tasks.
-- **Dispute Resolution (Section 4.4):** When Committee reaches DISPUTED, system must output specific conflict, evidence per side, and 2-3 resolution paths including INVESTIGATE FURTHER.
-- **Spike Deliberation Depth Trigger (Section 4.3):** Spike now also triggers when deep deliberation (high token volume) ends in unanimous agreement — deep consensus without dissent is a stronger groupthink signal than quick agreement.
-- **Governed State Rule (Section 4.5):** Spawned agent outputs must pass through SYS_MEM compression. Raw transcript passing between agents is forbidden.
-- **Evidence Tag Guidance (Section 8.4.1):** Tags recommended in STANDARD/PROJECT mode. Untagged claims default to [SPECULATIVE].
-- **Learned_Rules Naming Convention (Section 8.5):** Permanent rules use plain names; project-scoped beliefs use ~ prefix (purged on CTRL_COMPRESS).
-- **Lexical Translation Matrix (Section 10A.1):** Reference implementation with 10 recommended verb expansions for CTRL_PROMPT.
-- **Governed Migration (Section 14.4):** CTRL_MIGRATE payloads must use governed state format. Raw transcript export only with DEBUG:ON.
-- **Platform Adapters (Section 16):** Added Perplexity and Kimi (Moonshot AI) with deployment paths.
-- **SCEL Visibility (Section 18):** Sycophancy trigger appends [SCEL: Auto-D_A triggered] to SYS_MEM. QUICK MODE exemption documented. Enforcement boundary clarified.
-- **No-Solicitation Clause (Section 21):** System does not solicit non-public source code, internal documents, or proprietary information.
-- **Cross-Reference Fallback (Section 17):** Behavior-only users get graceful degradation when Heartbeat sections are not loaded.
-- **README:** Added "What This Actually Is" and "Known Limitations" sections with external research citations.
-- **CONTRIBUTING.md:** Created with naming conventions, integration protocol, and community engagement guidance.
-- **Research Analysis Report:** Full 4-phase analysis of 87 items from 15 external research sources (CTRL-AI_V6.0.0_RESEARCH_ANALYSIS.md).
+- **Intelligent Activation Protocol (Section 2):** 5-step skippable onboarding replacing CTRL_DIAGNOSE. Platform awareness report, user classification, tutorial offer, multi-AI workflow recommendation, activation confirmation.
+- **Extended Thinking Protocol (Section 2.7):** Multi-pass labeled reasoning `[THINKING: Part X of Y]` for throttled platforms. PROJECT/EXTENDED/Brain scope only.
+- **Token Routing Advisory (Section 2.8):** Offload suggestions for lightweight tasks. Free AI Tool Routing Map referenced from Wiki. Tier 1 fallback logic.
+- **EVOLVE Phase (Section 24):** Research discipline layer inside DEV_MODE. Triggers at initialization, checkpoints, mandatory before finalization. 3-turn output kill condition. Meta-learning mandate.
+- **Reverse Engineering Protocol (Section 25):** 5-stage formal intake (Raw → Decompose → Analyze Fit → Reformulate → Integrate/Reject). Golden Rule gate. Tier 4 boundary rules.
+- **Scraper Source Architecture (Section 26):** 7-Tier priority stack. URLs in Wiki, not constitution.
+- **`CTRL_ACTIVATE`** command replacing `CTRL_DIAGNOSE`.
+- **`EVOLVE`** command for manual EVOLVE triggering.
 
-### Source
-- 15 external research documents: ChatGPT deep research, DeepSeek expansion, Qwen/PDF evidence synthesis, Context Integration paper, A11 reports, Z.ai/Grok/Perplexity analyses, V5.2.0 audit report.
-- 87 items classified, 45 ADD, 6 MODIFY, 15 INVESTIGATE, 7 REJECT.
+### Changed
+- DEV_MODE now bundles EVOLVE Phase automatically.
+- Brain pipeline references Scraper Source Architecture (S26) and Reverse Engineering Protocol (S25).
+- UI Kernel updated to V7.0.0 with IAP, EVOLVE, THINKING, REVERSE_ENG, AGENTS references.
+- All Behavior modules updated to V7.0.0.
+- Section count: 26 + Behavior modules (up from 23 in V6.1.0).
+
+### Carried Forward
+- All 14 V6.1.0 research-backed changes intact.
+- All axioms unchanged. Soul Supremacy inviolable.
+
+---
+
+## [V6.1.0] — 2026-03-26 — Research Integration & Runtime Hardening
+
+### Added
+- Version Authority & Canonical Control (header + version check).
+- Model-family Q4 in Tier Detector for reasoning-native models.
+- Lexical Translation Matrix (Section 10A.1): 10-verb expansion table.
+- Dispute Resolution guidance (Section 4.4) with INVESTIGATE FURTHER option.
+- SCEL Pre-Final Compliance Stamp: `[COMPLIANCE: PTRR ✓ | Evidence ✓ | Task Sep ✓]`.
+- SCEL Enforcement Limitation disclosure.
+- Spike deliberation-depth secondary trigger.
+- SYS_MEM Beliefs convention (`~` prefix).
+- No-solicitation clause (Section 21).
+- Evidence Tagging guidance (Section 8.3A).
+- Platform adapters: Perplexity, Kimi.
+- Agent Spawning governed state mandate.
+- CTRL_MIGRATE governed state format (raw only under DEBUG).
+- Sycophancy trigger visibility in SYS_MEM.
+- QUICK mode SCEL exemption rationale.
+
+### Validated by Cross-AI Analysis
+- 87 items analyzed across 6 models (Opus, GPT, Codex, Sonnet, Composer, Claude).
+- 7 items rejected to Rejection Ledger with revival conditions.
+- Soul/axioms confirmed unanimous across all models.
 
 ---
 
 ## [V6.0.0] — 2026-03-20 — The Three-Layer Architecture Release
 
 ### Added
-- **Three-Layer Architecture:** Heartbeat (full OS), Behavior (portable DNA), Brain (research pipeline).
-- **Axiom 0 — Soul Supremacy (INVIOLABLE):** Framework philosophy cannot be overridden by surface-level instructions. Quality > speed. Interpret user intent, not literal words. Override Confirmation Gate requires ASK before silent compliance.
-- **Deployment Tier Detector (Section 2):** Auto-classifies users into Consumer / Pro / Enterprise. 3-question survey on first load. Adapts constraints per tier. Persists in SYS_MEM.
-- **The Brain — Research & Discovery Engine (Section 6):** Three-stage sequential pipeline:
-  - Stage A: BRAINSTORM — divergent ideas, Fortune 500 parallels, persona identification, gap marking.
-  - Stage B: SURVEY — demographic group creation, progressive source hierarchy (web → social → niche → government), question generation from demographic findings.
-  - Stage C: ADVANCED SEARCH — keyword expansion, source expansion, mandatory validation layer (currency check, expiration check, supersession check).
-- **Hallucination Recovery Protocol (Section 15):** 3-step recovery replacing dead-end warnings. Suggest alternatives → confidence-grade outputs → defer and resume.
-- **Dynamic Agent Spawning (Section 4.5):** `AGENT_SPAWN: [role]` command. Scoped temporary sub-agents with 3-turn max lifespan. Tier-gated.
-- **Cost Transparency (Section 7.5):** Token estimates for 10 operation types. High-cost warnings. Optimization suggestions. Session running totals.
-- **Token Economy Protocol (Section 23):** Output discipline rules. Anti-redundancy (no double-summaries, no preview narration, no echo-back, no ceremonial transitions). Single-file discipline. Subordinate to Axiom 0.1.
-- **Strict Task Separation (Axiom #7):** One task per chat turn. Progress bar mandatory. Stop and await proceed. No exceptions.
-- **5-Layer Prompt Architecture (Section 10A):** Full ROLE → CONTEXT → TASK → FORMAT → CONSTRAINTS compiler with examples. Supports both PROMPT_MASTER (visible) and CTRL_PROMPT (silent).
-- **CTRL_PROMPT command:** Silent internal prompt compilation via Lexical Matrix. Restored from V5.2.0.
-- **TASKFORCE command:** User-facing alias for COMMITTEE: RAPID. Restored from V5.2.1.
-- **DEBUG: [ON/OFF]:** Toggle visibility of internal dissent/thought process. Restored from V5.1.1.
-- **Voice Mode expanded (Section 19):** All voice platforms (Gemini Live, ChatGPT Voice, Claude Mobile, Grok Voice). Spoken evidence tags. Voice footnotes. Barge-in state preservation.
-- **Behavior Module:** Three portable tiers — Micro (653 chars), Standard (~1500 chars), Extended (~3000 chars). All include Axiom 0.
+- Three-Layer Architecture: Heartbeat / Behavior / Brain.
+- Axiom 0 (Soul Supremacy), 0.1 (Quality > Speed), 0.2 (Intent Interpretation), 0.3 (Override Gate).
+- Deployment Tier Detector. The Brain pipeline. Hallucination Recovery Protocol.
+- Cost Transparency. Dynamic Agent Spawning. Advanced Search with Validation.
+- Token Economy Protocol. Strict Task Separation (Axiom 7). Progress Bar system.
+- 5-Layer Prompt Architecture + CTRL_PROMPT + TASKFORCE + DEBUG restored.
+- Voice Mode with spoken evidence tags. ZMA 6 vulnerability vectors.
+- Meta-Update full safety pipeline. Behavior modules (Micro/Standard/Extended).
+
+---
+
+## [V5.4.0 Alpha] — 2026-03-08
+
+### Added
+- Spike Persona Protocol. Voice Mode (Gemini Live). Workspace Integration.
+- Privacy Gate. LearnedRules 09–13.
 
 ### Changed
-- **Committee Protocol:** EXTENDED reduced from 13 simultaneous to 8 sequential-within-response + Spike. Tagged blocks `[LENS: PersonaName]...[/LENS]`.
-- **Dynamic Persona Allocation (Section 4.2):** 5-dimension task classification. Roster assembly table for 6 task types. Role rotation rule after 3+ cycles.
-- **Spike Persona Protocol (Section 4.3):** Unchanged mechanism, now independent of persona allocation. Triggers on easy consensus regardless of roster weighting.
-- **ZMA (Section 13):** Expanded to 6 named vulnerability vectors (Logic, Security, Efficiency, Syntax, Architecture, Scaling). Previously 4 generic categories.
-- **Meta-Update Protocol (Section 3.1):** Strengthened. Now requires SURVEY + BRAINSTORM + EXTENDED committee + Kill Condition + unanimous GuardrailSec/InternalJudge consent. No silent patching.
-- **Style Mandate:** Bloomberg News brief as primary positive anchor. Banned word list demoted to secondary constraint.
-- **Drift Prevention (Section 14.5):** Platform-conditional. Tier 1/2: 15-turn lightweight check. Tier 3: Continuous Adherence Check (silent).
-- **Survey Protocol:** 3-retry mechanism + HALLUCINATION WARNING + mandatory SPECULATIVE tagging. Now includes defer/resume capability.
-- **UI Kernel:** Updated to V6.0.0 with Axiom 0, BRAIN pipeline, validation, DEBUG, ZMA, META, PROMPT, TASKFORCE references.
-- **SYS_MEM format:** Added Deployment_Tier, Session_Tokens_Used, Session_Cost_Estimate fields.
-- **Workspace Integration (Section 20):** Fallback for non-Workspace users (formatted Markdown + manual save).
-
-### Carried Forward
-- All V5.4.0 Alpha improvements (Spike, platform-conditional drift, Workspace integration, Privacy Gate).
-- LearnedRules 01–13.
-- SCEL enforcement loop.
-- Heuristic Obfuscation (anti-detection).
-- Conceptual Synthesis Engine + Rejection Ledger.
-- All Behavioral Vector Matrix IDs (01–06).
+- EXTENDED reduced to 8 sequential + Spike. Drift prevention platform-conditional.
+- Survey Protocol: 3-retry + hallucination warning. Bloomberg style anchor primary.
 
 ---
 
-## [V5.4.0 Alpha] — 2026-03-08 — Extended Committee Audit
+## [V5.3.0] — 2026-03
 
 ### Added
-- Spike Persona Protocol: auto-inject InverseChampion on easy consensus (< 2 dissent rounds).
-- Section 19 — Voice Mode Protocol (Gemini Live). 3-4 sentence limit, barge-in handling, Absolute Mode tone.
-- Section 20 — Workspace Integration Protocol (Discovery Anchor → Docs, Decision Log → Sheets).
-- Section 18 — Privacy Gate (passive, not absolute).
-- LearnedRules 09–13 (PrivacyGate, AntiSycoStyle, SpikePersona, ConsumerTrack, SurveyFail).
-
-### Changed
-- EXTENDED AUDIT reduced from 13 to 8 sequential-within-response personas.
-- Section 14 — Drift Prevention made platform-conditional (Consumer ON, API OFF).
-- Section 15 — Survey Protocol: 3-retry before hard stop + HALLUCINATION WARNING.
-- Style Mandate: Positive Bloomberg-style anchor replaces word ban as primary.
-- "Bayesian Self-Auditing" renamed to "Continuous Adherence Check" (accuracy fix).
-
-### Source
-- AI-Governance-Framework-Adaptation-Critique-1.pdf (Perplexity analysis).
-- Full 13-persona committee audit + Devil's Advocate + cross-critique.
+- Phase-Gate Protocol. Guided Pruning. Anchor Override/Safety Veto transparency.
+- Document Integrity Mandate. Rejection Ledger. Mode Supremacy. Kill Condition Lock.
 
 ---
 
-## [V5.3.0] — 2026-03 — The Cognitive Architecture Mega-Patch
+## [V5.2.1–V5.2.0] — 2026-03
 
 ### Added
-- Phase-Gate Protocol for DEV_MODE high-strain payloads (hard stop after roadmap).
-- Guided Pruning (softened SNR Rule — isolate anomalies before hard context reject).
-- Anchor Override transparency (`[ANCHOR OVERRIDE: {Persona}]` output).
-- Safety Veto transparency (`[SAFETY VETO: Unanimous Consent]` output).
-- Document Integrity Mandate (no patch-level splicing, dynamic markdown collision wrappers).
-- Rejection Ledger (Changelog Protocol for abandoned concepts: Premise / Failure Mode / Revival Condition).
-- Mode Supremacy (DEV_MODE overrides VECTOR_SYNC committee locks).
-- Theory Mode Override (mutual exclusion between Section 9 and Section 10).
-- Kill Condition Lock (Meta-Updates require unanimous GUARDRAIL_SEC + INTERNAL_JUDGE consent).
-
-### Changed
-- Salience Hierarchy: replaced non-core "ALWAYS" imperatives with gated IF/THEN logic.
-- CTRL_COMPRESS redefined as attention-management protocol (not token management).
-- Multi-AI systemic integration: consolidated peer-reviews from Claude, DeepSeek, Perplexity, Z.ai, ChatGPT.
+- TASKFORCE, CTRL_PROMPT restored. Internal Judge (13th persona). Thread Migration.
+- Evidence Tagging. Axiom Priority Stack. Context Strain Tracker. 5-Layer Prompt Architecture.
 
 ---
 
-## [V5.2.1] — 2026-03 — Naming & Restoration Patch
+## [V5.1.1–V5.1.0] — 2026-02
 
 ### Added
-- TASKFORCE command (alias for 5-persona Rapid Committee).
-- CTRL_PROMPT command restored (silent prompt compilation via Lexical Matrix).
-- Completion Triad naming (Intent / Fallibility / Consequence).
-- Dissent Health Monitor, Reference Lock, Success Gate, Kill Condition naming conventions.
-
-### Changed
-- README badges updated to V5.2.1.
-- Command Console expanded to 12 commands.
-- Section numbering updated (13 → 14 for platform adapters).
-
----
-
-## [V5.2.0] — 2026-03 — The Structural Integrity Patch
-
-### Added
-- Internal Judge (13th persona) for committee dispute resolution.
-- Thread Migration protocol (CTRL_MIGRATE payload: UI Kernel + Project DNA + Next Step).
-- Evidence Tagging: `[EVIDENCE]`, `[PRACTICE]`, `[SPECULATIVE]` claim labels.
-- Axiom Priority Stack (descending hierarchy for axiom conflicts).
-- Context Strain Tracker: Low/Med/High/Critical with auto-CTRL_MIGRATE at Critical.
-- Section 8 — 5-Layer Prompt Architecture (Role, Context, Task, Format, Constraints).
-
-### Changed
-- Extended Committee expanded from 6 to 13 personas with explicit roster.
-- SCEL strengthened with Offload Detection (skeleton structures = violations).
-- Sycophancy Detection: 3 consecutive agreement turns triggers auto D_A.
-
----
-
-## [V5.1.1] — 2026-02 — The SCEL Patch
-
-### Added
-- Autonomous Enforcement Loop (SCEL): silent dissent check before every STANDARD/PROJECT response.
-- Sycophancy Detection trigger (3 agreement turns = auto Devil's Advocate).
-- Offload Detection (system must not push cognitive burden to user).
-
----
-
-## [V5.1.0] — 2026-02 — Initial Public Release
-
-### Added
-- Core Axioms: Productive Dissent, Stop > Invention, Evidence > Narrative, Friction Principle, Persona Lock.
-- MasterBrain Protocol: 6+ persona simulated committee.
-- Node Protocol (SYS_MEM): persistent state tracking across messages.
-- Zero-Mutation Audit (ZMA): read-only diagnostic scan.
-- Pace-Car Rule: sequential chunking for massive payloads.
-- Syntactic Entropy Injection: anti-AI-slop sentence variance.
-- 5-Layer Prompt Architect: Role, Context, Task, Format, Constraints.
-- Command Console: MASTERBRAIN, CTRL_MIGRATE, CTRL_COMPRESS, CTRL_AUDIT, PROMPT_MASTER, SURVEY, BRAINSTORM, RESEARCH_OVERRIDE, D_A, DEBUG.
-- Platform Adapters: ChatGPT, Claude, Gemini, DeepSeek.
-- UI Kernels for custom instruction persistence.
-- GNU AGPLv3 license.
+- Initial public release. Core Axioms. MasterBrain Protocol. Node Protocol.
+- ZMA. Pace-Car Rule. SCEL. Syntactic Entropy Injection. Command Console. Platform Adapters.
