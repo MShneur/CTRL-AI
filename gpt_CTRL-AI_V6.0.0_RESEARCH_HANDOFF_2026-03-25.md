@@ -782,7 +782,7 @@ Ask the next AI to do three things only:
 
 Suggested comparison prompt:
 
-> Read `CTRL-AI_V6.0.0_RESEARCH_HANDOFF_2026-03-25.md` and `CTRL_AI_V6.0.0.md`.  
+> Read `gpt_CTRL-AI_V6.0.0_RESEARCH_HANDOFF_2026-03-25.md` and `CTRL_AI_V6.0.0.md`.  
 > Do not resummarize.  
 > Audit the handoff for false positives, false negatives, constitutional bloat risk, and missed high-leverage changes.  
 > State where you agree, where you disagree, and which exact changes you would ratify for V6.x.
