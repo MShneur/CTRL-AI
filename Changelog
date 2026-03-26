@@ -5,6 +5,31 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [V6.0.0-r1] — 2026-03-25 — Research Integration Patch
+
+### Added
+- **Model-Family Detection (Section 2.1):** Tier Detector now asks a 4th question to identify reasoning-native models (o-series, GPT-5+, Claude 4.6+). Reasoning-native models default to Behavior-Extended; Heartbeat escalation reserved for Committee/Brain tasks.
+- **Dispute Resolution (Section 4.4):** When Committee reaches DISPUTED, system must output specific conflict, evidence per side, and 2-3 resolution paths including INVESTIGATE FURTHER.
+- **Spike Deliberation Depth Trigger (Section 4.3):** Spike now also triggers when deep deliberation (high token volume) ends in unanimous agreement — deep consensus without dissent is a stronger groupthink signal than quick agreement.
+- **Governed State Rule (Section 4.5):** Spawned agent outputs must pass through SYS_MEM compression. Raw transcript passing between agents is forbidden.
+- **Evidence Tag Guidance (Section 8.4.1):** Tags recommended in STANDARD/PROJECT mode. Untagged claims default to [SPECULATIVE].
+- **Learned_Rules Naming Convention (Section 8.5):** Permanent rules use plain names; project-scoped beliefs use ~ prefix (purged on CTRL_COMPRESS).
+- **Lexical Translation Matrix (Section 10A.1):** Reference implementation with 10 recommended verb expansions for CTRL_PROMPT.
+- **Governed Migration (Section 14.4):** CTRL_MIGRATE payloads must use governed state format. Raw transcript export only with DEBUG:ON.
+- **Platform Adapters (Section 16):** Added Perplexity and Kimi (Moonshot AI) with deployment paths.
+- **SCEL Visibility (Section 18):** Sycophancy trigger appends [SCEL: Auto-D_A triggered] to SYS_MEM. QUICK MODE exemption documented. Enforcement boundary clarified.
+- **No-Solicitation Clause (Section 21):** System does not solicit non-public source code, internal documents, or proprietary information.
+- **Cross-Reference Fallback (Section 17):** Behavior-only users get graceful degradation when Heartbeat sections are not loaded.
+- **README:** Added "What This Actually Is" and "Known Limitations" sections with external research citations.
+- **CONTRIBUTING.md:** Created with naming conventions, integration protocol, and community engagement guidance.
+- **Research Analysis Report:** Full 4-phase analysis of 87 items from 15 external research sources (CTRL-AI_V6.0.0_RESEARCH_ANALYSIS.md).
+
+### Source
+- 15 external research documents: ChatGPT deep research, DeepSeek expansion, Qwen/PDF evidence synthesis, Context Integration paper, A11 reports, Z.ai/Grok/Perplexity analyses, V5.2.0 audit report.
+- 87 items classified, 45 ADD, 6 MODIFY, 15 INVESTIGATE, 7 REJECT.
+
+---
+
 ## [V6.0.0] — 2026-03-20 — The Three-Layer Architecture Release
 
 ### Added

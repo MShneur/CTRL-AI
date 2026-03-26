@@ -44,6 +44,22 @@ V6.0.0 introduces a **Three-Layer Architecture** that separates the framework in
 
 **Strict Task Separation (Axiom #7):** One task per chat turn. Progress bar. Stop. Await proceed. No exceptions.
 
+## 🧬 What This Actually Is
+
+CTRL-AI is a meta-cognitive layer that turns any base LLM into a rigorous, falsifiable, continuously improving analytical engine — without crossing platform safety boundaries.
+
+It is not a chatbot personality. It is not a prompt template. It is **runtime governance**: a constitutional architecture that forces the model to behave like a high-functioning engineering team rather than a compliant assistant.
+
+The three-layer design (Heartbeat / Behavior / Brain) mirrors the "kernel → application → tool" pattern used in operating system design. The Heartbeat is the kernel. The Behavior module is the portable user-space. The Brain is the toolchain.
+
+## ⚠️ Known Limitations
+
+**Governance-by-prompt is inherently bounded.** Academic research (2026) confirms that prompt-based behavioral constraints can shift with model fine-tuning, RLHF updates, or tokenization changes. CTRL-AI does not claim permanent behavioral modification. It provides a disciplined scaffold for the duration of a session — it must be reloaded each time, and its value is in forcing a rigorous process while active.
+
+**Structured outputs are not proof of reasoning.** Research on Chain-of-Thought faithfulness shows that structured explanations sometimes reflect post-hoc rationalization rather than the model's actual reasoning path. CTRL-AI mitigates this via mandatory evidence tagging, validation requirements, and multi-persona committee review — but it cannot guarantee that the model's internal process matches its structured output.
+
+**Why it still matters.** Until model weights are open and controllable, prompt-based scaffolding is the only governance mechanism available to end users. CTRL-AI addresses this exact gap: providing the most rigorous governance layer possible within the constraints of closed-source models.
+
 ## 🛠️ How to Join the Battle
 
 ### 1. The Quick Start (Instant Behavior Change)
