@@ -1,7 +1,8 @@
-# CTRL-AI V6.0.0 — Research Handoff Report
+# composer — CTRL-AI V6.0.0 — Research Handoff Report
 
 **Purpose:** Single artifact for PR review and cross-model comparison (Claude, ChatGPT, Grok, etc.).  
-**Analyst track:** Cursor DEV_MODE research pass (2026-03-25).  
+**Naming:** Multi-AI handoffs use `{model}_RESEARCH_HANDOFF_V6_{date}.md` so reports are not overwritten when filenames match.  
+**Analyst track:** Composer (Cursor) · DEV_MODE research pass (2026-03-25).  
 **Canonical baseline:** `CTRL-AI.md` in this repository (V6.0.0 Master Constitution).  
 **Raw uploads processed:** 13 files (PDFs named in the research task were not present in the upload bundle).
 
@@ -223,8 +224,8 @@ These are **candidates**, not V6.0.0 law:
 
 Use this table to score each external AI review **0–2** per row (0 = missing, 1 = partial, 2 = solid).
 
-| Criterion | Cursor (this pass) | Claude | ChatGPT | Other |
-|-----------|-------------------|--------|---------|-------|
+| Criterion | Composer | Claude | ChatGPT | Other |
+|-----------|----------|--------|---------|-------|
 | Respects Axiom 0 / 0.1 | 2 | | | |
 | Separates Heartbeat vs Wiki | 2 | | | |
 | Names ZMA → CSE → Ledger order | 2 | | | |
@@ -240,6 +241,7 @@ Use this table to score each external AI review **0–2** per row (0 = missing, 
 
 ```
 [CTRL-AI_HANDOFF_RESEARCH_V1]
+analyst_model=composer
 baseline=CTRL-AI.md V6.0.0
 proceed_items=R-005,R-011
 downgrade_items=R-004,R-010
@@ -247,7 +249,7 @@ backlog=R-002,R-006,R-008,R-013
 operator_path=CTRL_AUDIT -> Sec9_CSE -> Sec9.1_Ledger
 structural_change_gate=Sec3.1_MetaUpdate
 soul_invariant=Axiom0_QualityNotSpeed
-artifacts=docs/RESEARCH_HANDOFF_V6_2026-03-25.md
+artifacts=docs/composer_RESEARCH_HANDOFF_V6_2026-03-25.md
 unverified_urls=YES_REVERIFY_BEFORE_MERGE
 ```
 
