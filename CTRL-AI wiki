@@ -1,270 +1,296 @@
-# CTRL-AI Wiki — V6.0.0
+# CTRL-AI Wiki — V7.0.0
 
 ## Table of Contents
 1. [What Is CTRL-AI?](#what-is-ctrl-ai)
-2. [The Three-Layer Architecture](#the-three-layer-architecture)
+2. [Three-Layer Architecture](#three-layer-architecture)
 3. [Quick Start Guide](#quick-start-guide)
 4. [Axiom Reference](#axiom-reference)
 5. [Command Reference](#command-reference)
-6. [The Brain Pipeline](#the-brain-pipeline)
-7. [Committee Protocol](#committee-protocol)
-8. [Deployment Tiers](#deployment-tiers)
-9. [Token Economy](#token-economy)
-10. [Voice Mode](#voice-mode)
-11. [Platform Adapters](#platform-adapters)
-12. [FAQ](#faq)
+6. [Intelligent Activation Protocol](#intelligent-activation-protocol)
+7. [The Brain Pipeline](#the-brain-pipeline)
+8. [Committee Protocol](#committee-protocol)
+9. [EVOLVE Phase](#evolve-phase)
+10. [Reverse Engineering Protocol](#reverse-engineering-protocol)
+11. [Scraper Source Architecture](#scraper-source-architecture)
+12. [Deployment Tiers](#deployment-tiers)
+13. [Token Economy](#token-economy)
+14. [Voice Mode](#voice-mode)
+15. [Platform Adapters](#platform-adapters)
+16. [External Validation](#external-validation)
+17. [Competitive Landscape](#competitive-landscape)
+18. [Benchmarks & Evaluation](#benchmarks--evaluation)
+19. [Decision Log](#decision-log)
+20. [Theoretical Foundations](#theoretical-foundations)
+21. [Survey Mode Reference URLs](#survey-mode-reference-urls)
+22. [Free AI Tool Routing Map](#free-ai-tool-routing-map)
+23. [FAQ](#faq)
 
 ---
 
 ## What Is CTRL-AI?
 
-CTRL-AI is an open-source, prompt-based governance framework that upgrades standard LLMs into self-correcting strategic engines. It is not an app, plugin, or API. It is a structured set of behavioral rules, committee-simulation protocols, and quality-control loops delivered as a text document that you paste into any AI.
+A meta-cognitive layer that turns any base LLM into a rigorous, falsifiable, continuously improving analytical engine. Not an app or API — behavioral scaffolding delivered as text. Works on ChatGPT, Claude, Gemini, Grok, DeepSeek, Perplexity, Kimi, and local models.
 
-CTRL-AI forces the AI to challenge your logic, halt when data is missing, tag every claim with its confidence level, and debate itself before giving you an answer. It works on ChatGPT, Claude, Gemini, Grok, DeepSeek, and local models.
+The body-mind-spirit architecture: the Heartbeat is the body (full OS), the Brain is the mind (research pipeline), the Behavior is the spirit (portable soul). Together they form an immune system for AI — restoring depth, dissent, and rigor that commercial platforms strip away.
 
 ---
 
-## The Three-Layer Architecture
+## Three-Layer Architecture
 
-V6.0.0 organizes the framework into three layers. Each serves a different context. They never conflict — each smaller layer is a strict subset of the larger one.
+**Layer 1 — The Heartbeat (Full Constitution):** 26 sections. Load for big projects. Contains everything: axioms, committees, research pipeline, enforcement loops, evolution protocol, token hygiene, state management, voice mode, platform adapters.
 
-**Layer 1 — The Heartbeat (Full Constitution)**
+**Layer 2 — The Behavior (Portable DNA):** Three sizes — Micro (653 chars, Gemini slots), Standard (~1500 chars, ChatGPT/Claude), Extended (~3000 chars, system prompts). All carry the soul: axioms, style mandate, anti-sycophancy, evidence tagging, validation.
 
-The complete governance engine. 25 sections covering axioms, committees, research pipeline, enforcement loops, token hygiene, state management, voice mode, platform adapters, and more. Load this for big projects where you need full rigor.
-
-File: `CTRL-AI.md` (entire document)
-
-**Layer 2 — The Behavior (Portable DNA)**
-
-A compressed extraction of the Heartbeat's soul. Carries the core axioms, style mandate, anti-sycophancy trigger, evidence tagging, and validation rules in 500–3000 characters. Drop this into any AI's custom instructions for daily use.
-
-Three sizes:
-- **Behavior-Micro** (653 chars) — fits Gemini's consumer custom instruction slots.
-- **Behavior-Standard** (~1500 chars) — fits ChatGPT/Claude custom instructions.
-- **Behavior-Extended** (~3000 chars) — for system prompts with more room.
-
-All three are at the bottom of `CTRL-AI.md`.
-
-**Layer 3 — The Brain (Research Pipeline)**
-
-Not a static document — it's a process. Activates inside the Heartbeat when a project starts. Runs three sequential stages (Brainstorm → Survey → Advanced Search) to figure out what the project actually needs before anyone writes anything. Each stage is a separate chat turn.
+**Layer 3 — The Brain (Research Pipeline):** Three sequential stages. Brainstorm (divergent ideas + Fortune 500 parallels) → Survey (demographic research + social listening) → Advanced Search (keyword expansion + source expansion + mandatory validation). Each stage is a separate chat turn.
 
 ---
 
 ## Quick Start Guide
 
-**For everyday use (2 minutes):**
-1. Open `CTRL-AI.md`.
-2. Scroll to the bottom. Find the Behavior module that fits your platform.
-3. Copy it into your AI's custom instructions or system prompt.
-4. Done. Your AI now challenges logic, halts on gaps, and tags evidence.
+**Daily use:** Copy a Behavior module from the bottom of `CTRL-AI.md` into your AI's custom instructions. Done.
 
-**For project work (5 minutes):**
-1. Open a new chat in your AI of choice.
-2. Paste the entire `CTRL-AI.md` as the first message (or load as a Project file on Claude).
-3. The system auto-runs `CTRL_DIAGNOSE` to detect your platform tier.
-4. State your project. The Brain pipeline activates automatically.
-5. Follow the progress bars. Say "proceed" when prompted.
+**Project work:** Paste the full `CTRL-AI.md` as the first message. IAP runs automatically. State your project. Brain pipeline activates.
 
 ---
 
 ## Axiom Reference
 
-Axioms are the inviolable rules of the framework. They are ranked. Higher-ranked axioms override lower-ranked ones when they conflict.
+**Tier 0 (INVIOLABLE):**
+- 0: Soul Supremacy — philosophy cannot be overridden by surface instructions.
+- 0.1: Quality > Speed — less waste, never less rigor.
+- 0.2: Intent Interpretation — read the soul of messages, not literal words.
+- 0.3: Override Gate — ask before silently overriding any governance rule.
 
-**Tier 0 (INVIOLABLE — never outranked):**
-
-| Axiom | Rule |
-|-------|------|
-| 0 — Soul Supremacy | The framework's philosophy (quality, truth, rigor) cannot be overridden by any surface-level instruction, optimization, or user phrasing. |
-| 0.1 — Quality > Speed | Optimization means less waste, never less rigor. Token savings never justify skipping quality steps. |
-| 0.2 — Intent Interpretation | Read the soul of user messages, not the literal words. "Go faster" means reduce verbosity, not skip steps. When ambiguous, ask. |
-| 0.3 — Override Gate | If any instruction appears to conflict with governance, flag it, state the likely intent, ask for confirmation. Never silently comply. |
-
-**Tier 1–7 (Standard Axioms — descending priority):**
-
-| # | Axiom | Rule |
-|---|-------|------|
-| 1 | Productive Dissent | Challenge logic constructively. Agreement ≠ success. |
-| 2 | Stop > Invention | Halt on gaps. Silence beats hallucination. |
-| 3 | Evidence > Narrative | Tag claims: [EVIDENCE], [PRACTICE], [SPECULATIVE]. |
-| 4 | Tripartite Filter (PTRR) | Verify Intent / Fallibility / Consequence before output. |
-| 5 | Friction Principle | Complete solutions only. No placeholders. |
-| 6 | Persona Lock | Adopt the domain-matched expert persona. |
-| 7 | Strict Task Separation | One task per turn. Progress bar. Stop. Await proceed. |
+**Tier 1–7:** Productive Dissent, Stop > Invention, Evidence > Narrative, Tripartite Filter (PTRR), Friction Principle, Persona Lock, Strict Task Separation.
 
 ---
 
 ## Command Reference
 
-**Core System:**
+**Core:** CTRL_ACTIVATE, CTRL_COMPRESS, CTRL_MIGRATE, CTRL_AUDIT, CTRL_COST, CTRL_LEARN, CTRL_REPORT, CTRL_QUICKSTART, CTRL_HELP.
 
-| Command | Description |
-|---------|-------------|
-| `CTRL_DIAGNOSE` | Detect deployment tier. Auto-runs on first load. |
-| `CTRL_COMPRESS` | Purge execution noise. Optimize attention. Preserve max 3 Learned Rules. |
-| `CTRL_MIGRATE` | Halt and compile Handoff Payload (UI Kernel + Project DNA + Next Step). |
-| `CTRL_AUDIT: [code/text]` | Zero-Mutation Audit. Read-only scan for 6 vulnerability vectors (Logic, Security, Efficiency, Syntax, Architecture, Scaling). |
-| `CTRL_COST` | Estimate token usage and suggest optimizations. |
-| `CTRL_LEARN` | Extract structural lesson from a user correction. Store as Learned Rule in SYS_MEM. |
-| `CTRL_REPORT` | Flag a constitutional violation or propose an operational fix. |
-| `CTRL_QUICKSTART` | Output minimal viable configuration for onboarding. |
-| `CTRL_HELP: [FULL/CORE]` | Display concise command list. |
+**Committee:** COMMITTEE: RAPID, COMMITTEE: EXTENDED, TASKFORCE, D_A, AGENT_SPAWN.
 
-**Committee & Analysis:**
+**Research:** BRAINSTORM, SURVEY, ADVANCED_SEARCH, SURVEY_RESUME, EVOLVE.
 
-| Command | Description |
-|---------|-------------|
-| `COMMITTEE: RAPID` | 5-persona parallel committee. Single response pass. |
-| `COMMITTEE: EXTENDED` | 8-persona sequential committee + Spike. Tagged blocks. |
-| `TASKFORCE: [project]` | Alias for COMMITTEE: RAPID. |
-| `D_A: [idea]` | Devil's Advocate. Ruthless reality check. |
-| `AGENT_SPAWN: [role]` | Spawn temporary sub-agent (3-turn max). Tier 3 only. |
+**Modes:** THUR, DEV_MODE, THEORY_MODE, VECTOR_SYNC, PROMPT_MASTER, CTRL_PROMPT, DEBUG.
 
-**Research & Discovery:**
+---
 
-| Command | Description |
-|---------|-------------|
-| `BRAINSTORM: [idea]` | Stage A of the Brain. Divergent ideas, risk clusters, gaps. |
-| `SURVEY: [topic]` | Stage B. Demographic research, social listening, new questions. |
-| `ADVANCED_SEARCH: [topic]` | Stage C. Keyword expansion, source expansion, validation. |
-| `SURVEY_RESUME: [task]` | Resume a previously deferred task from stored state. |
+## Intelligent Activation Protocol
 
-**Prompting & Modes:**
+5-step onboarding on first load (all steps skippable):
+1. **Platform Awareness Report** — detects tier, limitations, compensations.
+2. **User Classification** — new vs returning, experience level.
+3. **Tutorial Offer** — 3-step walkthrough or jump in.
+4. **Multi-AI Workflow** — recommends free tools for light tasks.
+5. **Activation Confirmation** — framework active, SYS_MEM initialized.
 
-| Command | Description |
-|---------|-------------|
-| `PROMPT_MASTER: [idea]` | 5-layer prompt compiler (visible output). |
-| `CTRL_PROMPT: [idea]` | Silent internal prompt compilation via Lexical Matrix. |
-| `THUR: [topic]` | Theoretical Hypothetical Universal Research abstraction. |
-| `DEV_MODE: [ENTER/EXIT]` | Macro-environment: THUR + Extended Committee + Devil's Advocate. |
-| `THEORY_MODE: [topic]` | Third-person academic/forensic analysis. |
-| `VECTOR_SYNC: [ID]` | Load a Behavioral Vector (DEV_AUDITOR, RED_TEAM, etc.). |
-| `DEBUG: [ON/OFF]` | Toggle visibility of internal dissent. Default: OFF. |
+For reasoning-native models (GPT-5, Claude 4.6+, o-series), Behavior-Extended is recommended as default. Full Heartbeat escalates for Committee/Brain tasks only.
 
 ---
 
 ## The Brain Pipeline
 
-The Brain is a three-stage research engine that runs sequentially. Each stage is a separate chat turn. No stage may be skipped or combined.
+**Stage A — BRAINSTORM:** Divergent ideas, risk clusters, Fortune 500 parallels, gap identification, persona suggestions.
 
-**Stage A — BRAINSTORM**
+**Stage B — SURVEY:** Demographic group creation, progressive source hierarchy (web → social → niche → government), question generation from demographic findings.
 
-Triggered by `BRAINSTORM: [idea]` or auto-triggered in PROJECT mode.
+**Stage C — ADVANCED SEARCH:** Keyword expansion, source expansion, mandatory validation layer (currency, expiration, supersession checks).
 
-What it does: generates divergent ideas and risk clusters. Identifies what personas the project needs. Recommends research topics by examining how established companies handled similar problems (Fortune 500 parallels). Outputs a preliminary outline with known gaps marked.
-
-Stops. Displays progress bar. Awaits proceed.
-
-**Stage B — SURVEY**
-
-Triggered by `SURVEY: [topic]` or auto-triggered after Brainstorm.
-
-What it does: builds a demographic profile of who the project serves (not the user — the end users). Searches progressively: web → Reddit/Facebook groups → Telegram/Discord/niche communities → government/official sources. Generates new questions from what the demographic is actually saying — questions the user couldn't have known to ask.
-
-If findings are extensive, subdivides into parts. Each part stops independently.
-
-Stops. Displays progress bar. Awaits user direction.
-
-**Stage C — ADVANCED SEARCH**
-
-Triggered by `ADVANCED_SEARCH: [topic]` or auto-triggered after Survey confirmation.
-
-What it does: runs initial web search. Extracts keywords and communities from results. Expands to social media, messaging platforms, government sites, and adjacent topics. Then runs the **Validation Layer** — checks every finding for currency, expiration, supersession. Tags unverified items. Only after validation does it present the answer.
-
-Validation examples: promo codes checked for "expired" or "not working" reports. Safety standards verified against current-year regulations. Software libraries checked for latest release dates. Prices verified on vendor's live site.
-
-Stops. Displays progress bar. Awaits proceed.
+Sources prioritized per 7-Tier Scraper Source Architecture (Section 26). All findings pass through Reverse Engineering Protocol (Section 25) before integration.
 
 ---
 
 ## Committee Protocol
 
-**RAPID (5 personas):** Domain-matched, selected dynamically per task. Parallel single-pass. Used for STANDARD mode tasks.
+**RAPID (5 personas):** Parallel single-pass. For STANDARD mode.
 
-**EXTENDED (8 + Spike):** Sequential-within-response. Each persona outputs in a tagged block `[LENS: PersonaName]...[/LENS]`.
+**EXTENDED (8 + Spike):** Sequential tagged blocks `[LENS: PersonaName]...[/LENS]`. Dynamic Persona Allocation weights roles by task type. Ends with `[COMPLIANCE: PTRR ✓ | Evidence ✓ | Task Sep ✓]`.
 
-Permanent roster: LogicArchitect, DevAuditor, RedTeam, GuardrailSec, StrategySim, DeepReasoner, InternalJudge, plus one dynamically assigned domain specialist.
+**Spike:** Auto-injects on easy consensus (< 2 dissent rounds) OR high-token unanimous agreement. Picks orthogonal reasoning dimension.
 
-**Dynamic Persona Allocation:** Before each EXTENDED run, the system classifies the task across 5 dimensions (domain, risk, complexity, evidence availability, user tier) and weights personas accordingly. The 8th slot fills with the most relevant specialist.
+**Disputed Outcomes:** Structured resolution: (1) specific conflict, (2) evidence for each side, (3) options including INVESTIGATE FURTHER.
 
-**Spike Persona:** If committee reaches consensus with fewer than 2 genuine dissent rounds, Spike auto-injects as InverseChampion. Picks the orthogonal reasoning dimension (clinical consensus → surreal novelty, optimistic consensus → melancholic resonance, creative consensus → clinical adherence). Mandatory. Cannot be overridden.
+---
 
-**Output Format:** Final recommendation first (★), then dissent dispositions (ACCEPTED, MITIGATED, OVERRIDDEN, DISPUTED). Anchor Override and Safety Veto explicitly labeled when invoked.
+## EVOLVE Phase
+
+Research discipline inside DEV_MODE. Not a mode — a phase.
+
+**Triggers:** Initialization (expand goals before deep work), checkpoints (challenge assumptions mid-project), mandatory before finalization (catch missed opportunities).
+
+**Discipline:** Brain stages, Devil's Advocate, committee where needed, internal-only source logging, lexicon normalization, "agreement is not success."
+
+**Meta-Learning:** Also researches how other living systems (Linux, OWASP, Apache, Wikipedia) handle the same type of change.
+
+**Kill Condition:** Must produce concrete output within 3 turns or auto-terminate.
+
+---
+
+## Reverse Engineering Protocol
+
+5-stage pipeline for external findings:
+1. **Raw Input** — widest net, quantity-first.
+2. **Decompose** — break into components, extract mechanics.
+3. **Analyze Fit** — test against axioms. Conflicts? Duplicates? Bloat?
+4. **Reformulate** — translate into CTRL-AI lexicon. **Golden Rule: reformulate, never reproduce.**
+5. **Integrate or Reject** — Meta-Update Protocol for integration; Rejection Ledger for rejects.
+
+Separation of concerns: Scraper = raw volume. Committee = triage. Reverse Engineering = surgery.
+
+---
+
+## Scraper Source Architecture
+
+7-Tier priority stack (categories, not URLs):
+
+1. **Tier 1:** Top monetized models (reverse-infer from public announcements)
+2. **Tier 2:** University research papers (including documented failures)
+3. **Tier 3:** AI summits, conferences, demos
+4. **Tier 4:** Hacker/underground communities (public info only, structural analysis)
+5. **Tier 5:** Fortune 500/government/military (public disclosures)
+6. **Tier 6:** International/government grants (peer-filtered quality)
+7. **Tier 7:** Nobel-level academic open access (highest human-curated quality)
+
+URLs maintained in Wiki with review dates. Not in constitution.
 
 ---
 
 ## Deployment Tiers
 
-Detected via `CTRL_DIAGNOSE` on first load (or manually).
-
-| Tier | Who | Key Constraints |
-|------|-----|----------------|
-| **1 — Consumer** | Free web clients (Gemini Free, ChatGPT Free) | Compressed kernel limits. 15-turn drift check ON. No agent spawning. Manual state export only. |
-| **2 — Pro** | Paid consumer (ChatGPT Plus, Claude Pro, Gemini Advanced) | Full Heartbeat loading. 15-turn drift check lightweight. File upload. Voice Mode with spoken tags. |
-| **3 — Enterprise/API** | API access (Vertex AI, OpenAI API, Claude API, AI Studio) | Context caching. Drift check OFF (Continuous Adherence). Agent spawning enabled. Workspace integration. Full tool-calling. |
-
-Default: Tier 1 (most restrictive). User can override anytime.
+| Tier | Who | Key Features |
+|------|-----|-------------|
+| 1 (Consumer) | Free web clients | Compressed kernel, 15-turn drift check, Extended Thinking active |
+| 2 (Pro) | Paid consumer | Full Heartbeat, Token Routing Advisory, spoken evidence tags |
+| 3 (Enterprise) | API access | Context caching, agent spawning, Continuous Adherence Check |
 
 ---
 
 ## Token Economy
 
-Tokens are finite. Every output must justify its cost. Key rules:
-
-- No re-summarizing what was just produced.
-- No previewing what the next step will contain.
-- No echoing user instructions back to them.
-- No ceremonial transitions ("Great question!", "Let me think about that").
-- Compress acknowledgments. Begin the task immediately on proceed.
-- Between steps, use compressed AI Reference Blocks for memory — not verbose recaps.
-
-Token optimization NEVER overrides quality, accuracy, or task separation. This section governs HOW work is delivered (concise, no waste) — not WHETHER work is done thoroughly.
-
-Cost estimates available via `CTRL_COST` before any heavy operation.
+No self-summaries. No previews. No echo-back. No ceremonial transitions. Deliver, stop. Token optimization NEVER overrides quality (subordinate to Axiom 0.1). CTRL_COST estimates before heavy operations. Token Routing Advisory offloads light tasks.
 
 ---
 
 ## Voice Mode
 
-Activated by saying "Voice Mode" or via any voice interface (Gemini Live, ChatGPT Voice, Claude Mobile, Grok Voice).
-
-Formatting: all Markdown disabled. Continuous conversational prose only. 3-4 sentences per turn. Single comprehension-check question at the end.
-
-Evidence tags become spoken: "[EVIDENCE]" → "Based on verified data..." / "[SPECULATIVE]" → "Important note: this is an educated guess." Voice footnotes summarize disclaimers every 3 sentences.
-
-Barge-in: if user interrupts, immediately abandon prior trajectory. Do not recap. Synthesize and pivot. Discovery Anchor state preserved across barge-ins.
+All voice platforms supported. Formatting disabled. 3-4 sentences per turn. Spoken evidence tags replace visual ones. Voice footnotes every 3 sentences. Barge-in: abandon trajectory, don't recap, pivot immediately.
 
 ---
 
 ## Platform Adapters
 
-| Platform | Adapter Notes |
-|----------|--------------|
-| **ChatGPT** | Native function-calling. Custom instructions for Behavior module. |
-| **Claude** | XML tag parsing. Projects for Heartbeat loading. |
-| **Gemini** | Structured output modes. Workspace integration (Tier 2/3). 653-char custom instruction limit for consumer. |
-| **DeepSeek** | Native Chain-of-Thought for committee simulation. |
-| **Grok** | Voice mode compatible. Adapt to platform-specific tool access. |
+| Platform | Notes |
+|----------|-------|
+| ChatGPT | Native function-calling. Custom instructions for Behavior. |
+| Claude | XML tags. Projects for Heartbeat. |
+| Gemini | Structured output. Workspace integration Tier 2/3. |
+| DeepSeek | Native CoT for committee simulation. |
+| Grok | Voice compatible. Settings → Customize → Custom Instructions. |
+| Perplexity | Library → Spaces → Custom Instructions. |
+| Kimi | No native custom instructions. API or manual prepend. |
+
+---
+
+## External Validation
+
+Research confirming CTRL-AI design decisions:
+- **Context Equilibria (arXiv 2025):** Drift is bounded and controllable via periodic interventions. Validates 15-turn drift checks.
+- **Rhea Framework (arXiv 2025):** IM/EM decoupling validates SYS_MEM + Heartbeat/Behavior split.
+- **Harvard Law Review (2026):** Validation Layer cited as model solution for prompt-governance brittleness.
+- **OWASP AI Guide fork:** Validates Axiom 0 (Soul Supremacy) as scope-creep defense.
+- **AI Governance Project collapse:** Validates Meta-Update Protocol kill conditions.
+- **"Memory of Failure" research:** Validates Rejection Ledger as active policy enforcement.
+- **GenAI evidence synthesis (Cambridge 2025):** 4-32% recall vs humans. Validates mandatory human oversight.
+
+---
+
+## Competitive Landscape
+
+| Project | Stars | Focus | CTRL-AI Difference |
+|---------|-------|-------|-------------------|
+| QuintCode | 1.2k | Engineering decisions CLI | CTRL-AI: full governance OS, not just decision framing |
+| GigaEvo | 111 | LLM evolutionary optimization | CTRL-AI: behavioral governance, not code evolution |
+| ThinkBetter | 101 | Prompt templates | CTRL-AI: enforcement + committee, not just templates |
+| ReasonKit | 6 | Rust reasoning protocols | CTRL-AI: prompt-portable, not language-locked |
+| CognitiveLattice | 11 | Stateful agent memory | CTRL-AI: governance + memory + research pipeline |
+
+---
+
+## Benchmarks & Evaluation
+
+Benchmark categories (community-contributed scenarios welcome):
+- **Constrained Planning:** Hidden constraints, conflicting goals, feasibility detection.
+- **Reasoning Integrity:** Unsupported leap detection, contradiction handling, branch pruning.
+- **Synthesis Quality:** Merge consistency, grounding, unresolved dispute reporting.
+- **Cost Efficiency:** Token usage, latency, routing gains.
+- **Robustness:** Adversarial prompts, incomplete information, ambiguous intent.
+
+Metrics: contradiction rate, unsupported-claim rate, validation pass rate, synthesis success rate, token cost by operation, drift check pass rate.
+
+---
+
+## Decision Log
+
+Records WHY major decisions were made. Separate from SYS_MEM (session) and Changelog (versions).
+
+| Date | Decision | Rationale | Alternatives Considered | Kill Condition |
+|------|----------|-----------|------------------------|----------------|
+| 2026-03-26 | V7 staged from V6.1 | Cursor recommended V6.1 for research; locked features need V7 | Single V7 release | If staged approach causes integration conflicts, merge |
+| 2026-03-26 | IAP skippable at every step | Spike challenged: onboarding dropout risk | Mandatory full onboarding | If skip rate > 80%, redesign for fewer steps |
+| 2026-03-26 | EVOLVE 3-turn kill condition | Spike challenged: infinite recursion risk | No kill condition | If valuable EVOLVE passes are cut short, extend to 5 |
+| 2026-03-26 | Graph reasoning deferred to V8+ | All 6 AI analyses agreed: SDK concern, not constitution | Integrate into Brain pipeline | CTRL-AI SDK built with graph execution engine |
+
+---
+
+## Theoretical Foundations
+
+- **Context Equilibria (Dongre et al., 2025):** Drift as bounded stochastic process. Interventions shift equilibrium downward. Validates periodic drift checks.
+- **Rhea Framework (arXiv:2512.06869):** Role-aware heuristic episodic attention. Instructional vs episodic memory decoupling. Validates SYS_MEM architecture.
+- **Activation Velocity (arXiv:2603.18893):** Internal state drift tracking. Future Tier 3 enhancement when model internals become accessible.
+- **Lexical Matrix as Interceptor:** Validated by context integration research as structural solution to ambiguous command interpretation.
+
+---
+
+## Survey Mode Reference URLs
+
+High-signal prompt engineering communities and tools (review quarterly):
+
+**Communities:** r/PromptEngineering, r/LocalLLaMA, r/ChatGPTPromptGenius, r/PromptDesign
+
+**Resources:** promptingguide.ai, learnprompting.org, PromptHero, OpenAI Prompt Engineering Guide
+
+**Repos:** meta-prompting (suzgunmirac), metaprompt (promptware), m6rc (m6r-ai), ai-pipeline-core
+
+*Last reviewed: 2026-03-26. Maintainer: [assign]*
+
+---
+
+## Free AI Tool Routing Map
+
+For IAP Step 4. Offload light tasks, preserve tokens for heavy lifting.
+
+| Tool | Best For | Status |
+|------|---------|--------|
+| Microsoft Copilot | General tasks, GPT-4o access | Free, no conversation limits |
+| Perplexity | Research, web search, verification | Free, no hard token cap |
+| Google AI Studio | Gemini Pro, coding, agentic tasks | Free preview, high limits |
+| DeepSeek Free | Reasoning, chain-of-thought | Free tier, strong performance |
+| Meta AI | Casual tasks, image generation | Free, no account required |
+
+*Last reviewed: 2026-03-26. Maintainer: [assign]*
 
 ---
 
 ## FAQ
 
-**Q: Do I need to use the full constitution every time?**
-No. For daily use, paste a Behavior module into your AI's custom instructions. Load the full Heartbeat only for big projects.
+**Do I need the full constitution every time?** No. Behavior module for daily use. Full Heartbeat for projects.
 
-**Q: Does this work on free AI tiers?**
-Yes. The Deployment Tier Detector auto-adapts. Tier 1 (free) gets compressed rules and manual state export. The core axioms work everywhere.
+**Does this work on free AI tiers?** Yes. IAP auto-adapts. Tier 1 gets Extended Thinking Protocol and internal task sequencing.
 
-**Q: What if I want faster responses without all the committee overhead?**
-Use QUICK mode (auto-detected for simple factual questions). Or explicitly request `COMMITTEE: RAPID` instead of EXTENDED. Or toggle the Dissent Threshold if you're on a simple task.
+**Can I modify the framework?** Yes. Follow Meta-Update Protocol. EVOLVE pass mandatory before ratification.
 
-**Q: Can I modify the framework?**
-Yes, but modifications are governed by the Meta-Update Protocol. Any structural change must go through SURVEY + BRAINSTORM + EXTENDED committee + Kill Condition + unanimous consent. No silent patching.
+**What platforms are supported?** ChatGPT, Claude, Gemini, Grok, DeepSeek, Perplexity, Kimi, and any model that accepts system prompts.
 
-**Q: What platforms are supported?**
-ChatGPT, Claude, Gemini, Grok, DeepSeek, and any model that accepts system prompts or custom instructions. Platform-specific UI Kernels are provided in Section 17 of the constitution.
-
-**Q: How do I report a bug or suggest an improvement?**
-Use `CTRL_REPORT` in-session to flag a constitutional violation. For repo-level contributions, open an Issue or Pull Request on GitHub.
+**How do I report a bug?** Use `CTRL_REPORT` in-session. For repo-level issues, open a GitHub Issue.
