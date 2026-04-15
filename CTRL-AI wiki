@@ -1,159 +1,233 @@
-# CTRL-AI Wiki — V7.0.0
+# CTRL-AI Wiki — V7.1.0
 
 ## Table of Contents
 1. [What Is CTRL-AI?](#what-is-ctrl-ai)
 2. [Three-Layer Architecture](#three-layer-architecture)
-3. [Quick Start Guide](#quick-start-guide)
-4. [Axiom Reference](#axiom-reference)
-5. [Command Reference](#command-reference)
-6. [Intelligent Activation Protocol](#intelligent-activation-protocol)
-7. [The Brain Pipeline](#the-brain-pipeline)
-8. [Committee Protocol](#committee-protocol)
-9. [EVOLVE Phase](#evolve-phase)
-10. [Reverse Engineering Protocol](#reverse-engineering-protocol)
-11. [Scraper Source Architecture](#scraper-source-architecture)
-12. [Deployment Tiers](#deployment-tiers)
-13. [Token Economy](#token-economy)
-14. [Voice Mode](#voice-mode)
-15. [Platform Adapters](#platform-adapters)
-16. [External Validation](#external-validation)
-17. [Competitive Landscape](#competitive-landscape)
-18. [Benchmarks & Evaluation](#benchmarks--evaluation)
-19. [Decision Log](#decision-log)
-20. [Theoretical Foundations](#theoretical-foundations)
-21. [Survey Mode Reference URLs](#survey-mode-reference-urls)
-22. [Free AI Tool Routing Map](#free-ai-tool-routing-map)
-23. [FAQ](#faq)
+3. [Grounding Gate (Dominant System)](#grounding-gate)
+4. [VerifyLens (Adversarial Verification)](#verifylens)
+5. [Prompt Intelligence](#prompt-intelligence)
+6. [Anti-Hallucination Quick Reference](#anti-hallucination-quick-reference)
+7. [Axiom Reference](#axiom-reference)
+8. [Command Reference](#command-reference)
+9. [Intelligent Activation Protocol](#intelligent-activation-protocol)
+10. [The Brain Pipeline](#the-brain-pipeline)
+11. [Committee Protocol](#committee-protocol)
+12. [EVOLVE Phase](#evolve-phase)
+13. [Reverse Engineering Protocol](#reverse-engineering-protocol)
+14. [Scraper Source Architecture](#scraper-source-architecture)
+15. [Security Protocol](#security-protocol)
+16. [Deployment Tiers](#deployment-tiers)
+17. [Token Economy](#token-economy)
+18. [Voice Mode](#voice-mode)
+19. [Platform Adapters](#platform-adapters)
+20. [External Validation](#external-validation)
+21. [Competitive Landscape](#competitive-landscape)
+22. [Benchmarks & Evaluation](#benchmarks--evaluation)
+23. [Decision Log](#decision-log)
+24. [Theoretical Foundations](#theoretical-foundations)
+25. [Free AI Tool Routing Map](#free-ai-tool-routing-map)
+26. [Survey Mode Reference URLs](#survey-mode-reference-urls)
+27. [Tool Registry](#tool-registry)
+28. [FAQ](#faq)
 
 ---
 
 ## What Is CTRL-AI?
 
-A meta-cognitive layer that turns any base LLM into a rigorous, falsifiable, continuously improving analytical engine. Not an app or API — behavioral scaffolding delivered as text. Works on ChatGPT, Claude, Gemini, Grok, DeepSeek, Perplexity, Kimi, and local models.
-
-The body-mind-spirit architecture: the Heartbeat is the body (full OS), the Brain is the mind (research pipeline), the Behavior is the spirit (portable soul). Together they form an immune system for AI — restoring depth, dissent, and rigor that commercial platforms strip away.
+A meta-cognitive layer that forces any LLM to verify before speaking, challenge before agreeing, and abstain before guessing. Not an app or API — behavioral scaffolding delivered as text. The body-mind-spirit architecture: Heartbeat (body/full OS), Brain (mind/research pipeline), Behavior (spirit/portable soul). Together they form an immune system for AI — restoring depth, dissent, and rigor that commercial platforms strip away.
 
 ---
 
 ## Three-Layer Architecture
 
-**Layer 1 — The Heartbeat (Full Constitution):** 26 sections. Load for big projects. Contains everything: axioms, committees, research pipeline, enforcement loops, evolution protocol, token hygiene, state management, voice mode, platform adapters.
+**Layer 1 — The Heartbeat (Full Constitution):** 29 sections + 2 always-loaded enforcement gates (S27 Grounding, S28 Security). Load for big projects. Contains everything.
 
-**Layer 2 — The Behavior (Portable DNA):** Three sizes — Micro (653 chars, Gemini slots), Standard (~1500 chars, ChatGPT/Claude), Extended (~3000 chars, system prompts). All carry the soul: axioms, style mandate, anti-sycophancy, evidence tagging, validation.
+**Layer 2 — The Behavior (Portable DNA):** Three sizes — Micro (~650 chars, Gemini slots), Standard (~1800 chars, ChatGPT/Claude), Extended (~3500 chars, system prompts). All use compressed machine-protocol syntax. All carry Grounding Gate as dominant system.
 
-**Layer 3 — The Brain (Research Pipeline):** Three sequential stages. Brainstorm (divergent ideas + Fortune 500 parallels) → Survey (demographic research + social listening) → Advanced Search (keyword expansion + source expansion + mandatory validation). Each stage is a separate chat turn.
+**Layer 3 — The Brain (Research Pipeline):** Three sequential stages. Brainstorm → Survey → Advanced Search with validation. Sources prioritized per 7-Tier Scraper Stack. All findings pass Reverse Engineering Protocol before integration.
 
 ---
 
-## Quick Start Guide
+## Grounding Gate
 
-**Daily use:** Copy a Behavior module from the bottom of `CTRL-AI.md` into your AI's custom instructions. Done.
+**The dominant system in V7.1.** Every non-QUICK response passes through it.
 
-**Project work:** Paste the full `CTRL-AI.md` as the first message. IAP runs automatically. State your project. Brain pipeline activates.
+**Three Modes:**
+- **SOURCE_LOCKED:** Answer ONLY from declared sources. Gaps → UNKNOWN_FROM_SOURCE. Default for document analysis, governance edits, any task with a provided source. Axiom 0.4 (Source Supremacy) active.
+- **SOURCE_PREFERRED:** Prioritize sources. Fill gaps with pre-training but tag all fills. Default for committee synthesis, standard analysis.
+- **OPEN_RESEARCH:** Full pre-training access. All outputs tagged [UNVERIFIED] until validated. Only for brainstorm/creative.
+
+**7-Step Pipeline:** Source Declare → Mode Assign → Quote First → Atomic Decompose → Uncertainty Lock → Grounding Stamp → Positional Reinforce.
+
+**Right to Abstain:** When evidence is missing, "I cannot verify this" is the correct answer. Hierarchy: Verified answer > Tagged speculative > Abstention > NEVER: confident guess.
+
+**Freshness Windows:**
+
+| Volatility | Window | Examples |
+|-----------|--------|----------|
+| Extreme | 7 days | Crypto, breaking news |
+| High | 30 days | AI subscriptions, software pricing |
+| Medium | 90 days | Telecom, SaaS features |
+| Low | 180 days | Academic findings |
+| Stable | 365+ days | Historical facts, scientific principles |
+
+**Committee Grounding Rule:** Per-persona source citations MANDATORY in EXTENDED. Unsourced claims auto-tagged [SPECULATIVE]. Spike challenges citation-free consensus.
+
+**Circuit Breaker (S27.8):** 3 same-type errors → acknowledge pattern → switch SOURCE_LOCKED → stop generating, start comparing against user reference. Verification recursion block: system cannot verify its own verification.
+
+---
+
+## VerifyLens
+
+**The problem:** A single model cannot reliably audit itself. LLMs are proven to have agreement bias — over-trusting their own outputs (SagaLLM, VLDB 2025). Multiple checks by the same model share the same blind spots.
+
+**The solution:** When any verification is requested, VerifyLens activates as a structurally separated adversarial persona.
+
+**Protocol:**
+1. **Criteria first** — define what "correct" looks like BEFORE examining the output.
+2. **Persona switch** — "You did NOT generate this. You are hunting for failures."
+3. **Different method** — if generator used keywords, VerifyLens uses structural diff. Same method = same blind spots.
+4. **Mandatory finding** — must identify at least 1 issue OR explicitly state method limitations. Clean pass without stating limitations = SCEL violation.
+5. **Compare against reference** — when user provides something to compare against, compare AGAINST IT.
+
+**When it activates:** Every CTRL_VERIFY, every "check this" / "verify" / "is this right", every post-output deviation check in PROJECT mode, every time system reviews its own deliverable.
+
+---
+
+## Prompt Intelligence
+
+**IntentLens** — Silent background persona on every non-QUICK response. Evaluates: what user actually needs vs what they typed, scope calibration, stale context drag, search trajectory optimization. Acts silently. Surfaces adjustments only when scope changes significantly. Visible when DEBUG: ON.
+
+**CTRL_PROMPT_CHECK** — User command. Analyzes recent prompts and responses. Outputs: what you asked vs what you need, specific prompt issues, recommended re-phrasing, estimated token savings from dropping stale context. Auto-triggers after 3+ turns of refinement without convergence.
+
+**CTRL_VERIFY** — User command. Post-output hallucination check. Decomposes last response into atomic claims, verifies each against sources, flags ungrounded or drifted claims. Includes VerifyLens self-verification integrity warning when checking own output.
+
+**Auto-Condensation** — Silently strips locked decisions, repetition, and non-critical qualifiers from interpreted prompt before processing.
+
+---
+
+## Anti-Hallucination Quick Reference
+
+**For users — what to do when you suspect hallucination:**
+1. Type `CTRL_VERIFY` — gets atomic claim decomposition with VerifyLens
+2. Look for the `[GROUNDING]` stamp — shows verified vs unverified count
+3. Ask to switch to SOURCE_LOCKED mode with your trusted source
+4. If same error 3 times → system should acknowledge and switch to comparing
+
+**The enforcement stack (6 layers):**
+1. Axiom 2 (Stop > Invention): the philosophy
+2. Axiom 0.4 (Source Supremacy): the hard lock
+3. S27 Grounding Gate: the pipeline
+4. SCEL G1-G6: the enforcement
+5. S27.7 VerifyLens: the adversarial auditor
+6. S27.8 Circuit Breaker: the recursion block
 
 ---
 
 ## Axiom Reference
 
 **Tier 0 (INVIOLABLE):**
-- 0: Soul Supremacy — philosophy cannot be overridden by surface instructions.
-- 0.1: Quality > Speed — less waste, never less rigor.
-- 0.2: Intent Interpretation — read the soul of messages, not literal words.
-- 0.3: Override Gate — ask before silently overriding any governance rule.
+- 0: Soul Supremacy
+- 0.1: Quality > Speed
+- 0.2: Spirit Over Letter (intent expansion, condense to need)
+- 0.3: Override Confirmation Gate
+- 0.4: Source Supremacy (SOURCE_LOCKED mode)
 
-**Tier 1–7:** Productive Dissent, Stop > Invention, Evidence > Narrative, Tripartite Filter (PTRR), Friction Principle, Persona Lock, Strict Task Separation.
+**Tier 1–7:** 1. Productive Dissent, 2. Stop > Invention, 3. Evidence > Narrative, 4. Tripartite Filter (PTRR), 5. Friction Principle, 6. Persona Lock, 7. Strict Task Separation.
 
 ---
 
 ## Command Reference
 
-**Core:** CTRL_ACTIVATE, CTRL_COMPRESS, CTRL_MIGRATE, CTRL_AUDIT, CTRL_COST, CTRL_LEARN, CTRL_REPORT, CTRL_QUICKSTART, CTRL_HELP.
+**Verification & Intelligence:** CTRL_VERIFY, CTRL_PROMPT_CHECK, CTRL_AUDIT, CTRL_REPORT, CTRL_COST
 
-**Committee:** COMMITTEE: RAPID, COMMITTEE: EXTENDED, TASKFORCE, D_A, AGENT_SPAWN.
+**Core:** CTRL_ACTIVATE, CTRL_COMPRESS, CTRL_MIGRATE, CTRL_LEARN, CTRL_QUICKSTART, CTRL_HELP
 
-**Research:** BRAINSTORM, SURVEY, ADVANCED_SEARCH, SURVEY_RESUME, EVOLVE.
+**Committee:** COMMITTEE: RAPID, COMMITTEE: EXTENDED, TASKFORCE, D_A, AGENT_SPAWN
 
-**Modes:** THUR, DEV_MODE, THEORY_MODE, VECTOR_SYNC, PROMPT_MASTER, CTRL_PROMPT, DEBUG.
+**Research:** BRAINSTORM, SURVEY, ADVANCED_SEARCH, SURVEY_RESUME, EVOLVE
+
+**Prompts:** PROMPT_MASTER, CTRL_PROMPT
+
+**Modes:** THUR, DEV_MODE, THEORY_MODE, VECTOR_SYNC, DEBUG
+
+**Security:** REDTEAM (Tier 2/3)
 
 ---
 
 ## Intelligent Activation Protocol
 
 5-step onboarding on first load (all steps skippable):
-1. **Platform Awareness Report** — detects tier, limitations, compensations.
-2. **User Classification** — new vs returning, experience level.
-3. **Tutorial Offer** — 3-step walkthrough or jump in.
-4. **Multi-AI Workflow** — recommends free tools for light tasks.
-5. **Activation Confirmation** — framework active, SYS_MEM initialized.
+1. Platform Awareness Report — detects tier, limitations, compensations.
+2. User Classification — new vs returning, experience level.
+3. Tutorial Offer — 3-step walkthrough or jump in.
+4. Multi-AI Workflow — recommends free tools for light tasks.
+5. Activation Confirmation — framework active, SYS_MEM initialized.
 
-For reasoning-native models (GPT-5, Claude 4.6+, o-series), Behavior-Extended is recommended as default. Full Heartbeat escalates for Committee/Brain tasks only.
+For reasoning-native models (GPT-5, Claude 4.6+, o-series), Behavior-Extended is recommended as default.
 
 ---
 
 ## The Brain Pipeline
 
 **Stage A — BRAINSTORM:** Divergent ideas, risk clusters, Fortune 500 parallels, gap identification, persona suggestions.
+**Stage B — SURVEY:** Demographic groups, progressive source hierarchy, question generation.
+**Stage C — ADVANCED SEARCH:** Keyword expansion, source expansion, mandatory validation layer.
 
-**Stage B — SURVEY:** Demographic group creation, progressive source hierarchy (web → social → niche → government), question generation from demographic findings.
-
-**Stage C — ADVANCED SEARCH:** Keyword expansion, source expansion, mandatory validation layer (currency, expiration, supersession checks).
-
-Sources prioritized per 7-Tier Scraper Source Architecture (Section 26). All findings pass through Reverse Engineering Protocol (Section 25) before integration.
+Sources prioritized per 7-Tier Scraper Source Architecture (S26). All findings pass through Reverse Engineering Protocol (S25) before integration.
 
 ---
 
 ## Committee Protocol
 
 **RAPID (5 personas):** Parallel single-pass. For STANDARD mode.
+**EXTENDED (8 + Spike):** Sequential. Per-persona source citations MANDATORY. Ends with full compliance stamp.
 
-**EXTENDED (8 + Spike):** Sequential tagged blocks `[LENS: PersonaName]...[/LENS]`. Dynamic Persona Allocation weights roles by task type. Ends with `[COMPLIANCE: PTRR ✓ | Evidence ✓ | Task Sep ✓]`.
+**Spike Triggers (3):** 1. Easy consensus (< 2 dissent rounds), 2. High-token unanimous agreement, 3. Consensus WITHOUT source citations → demands sources.
 
-**Spike:** Auto-injects on easy consensus (< 2 dissent rounds) OR high-token unanimous agreement. Picks orthogonal reasoning dimension.
-
-**Disputed Outcomes:** Structured resolution: (1) specific conflict, (2) evidence for each side, (3) options including INVESTIGATE FURTHER.
+**Disputed Outcomes:** Structured resolution: specific conflict, evidence for each side, options including INVESTIGATE FURTHER.
 
 ---
 
 ## EVOLVE Phase
 
-Research discipline inside DEV_MODE. Not a mode — a phase.
-
-**Triggers:** Initialization (expand goals before deep work), checkpoints (challenge assumptions mid-project), mandatory before finalization (catch missed opportunities).
-
-**Discipline:** Brain stages, Devil's Advocate, committee where needed, internal-only source logging, lexicon normalization, "agreement is not success."
-
-**Meta-Learning:** Also researches how other living systems (Linux, OWASP, Apache, Wikipedia) handle the same type of change.
-
-**Kill Condition:** Must produce concrete output within 3 turns or auto-terminate.
+Research discipline inside DEV_MODE. Triggers at initialization, checkpoints, mandatory before finalization. Uses Brain stages, D_A, committee, internal-only source logging, lexicon normalization. Meta-learning: also research how others evolve. Consolidation mandate: deduplicate, remove contradictions before new output. 3-turn output kill condition.
 
 ---
 
 ## Reverse Engineering Protocol
 
-5-stage pipeline for external findings:
-1. **Raw Input** — widest net, quantity-first.
-2. **Decompose** — break into components, extract mechanics.
-3. **Analyze Fit** — test against axioms. Conflicts? Duplicates? Bloat?
-4. **Reformulate** — translate into CTRL-AI lexicon. **Golden Rule: reformulate, never reproduce.**
-5. **Integrate or Reject** — Meta-Update Protocol for integration; Rejection Ledger for rejects.
-
-Separation of concerns: Scraper = raw volume. Committee = triage. Reverse Engineering = surgery.
+5-stage pipeline: Raw Input → Decompose → Analyze Fit → Reformulate (Golden Rule: never reproduce) → Integrate or Reject to Ledger. Tier 4 boundary: public information only. Separation of concerns: Scraper = volume, Committee = triage, Reverse Engineering = surgery.
 
 ---
 
 ## Scraper Source Architecture
 
 7-Tier priority stack (categories, not URLs):
+1. Top monetized models (reverse-infer from announcements)
+2. University research papers (including failures)
+3. AI summits, conferences, demos
+4. Hacker/underground (public info only, structural analysis)
+5. Fortune 500/government/military (public disclosures)
+6. International/government grants (peer-filtered quality)
+7. Nobel-level academic open access (highest human-curated quality)
 
-1. **Tier 1:** Top monetized models (reverse-infer from public announcements)
-2. **Tier 2:** University research papers (including documented failures)
-3. **Tier 3:** AI summits, conferences, demos
-4. **Tier 4:** Hacker/underground communities (public info only, structural analysis)
-5. **Tier 5:** Fortune 500/government/military (public disclosures)
-6. **Tier 6:** International/government grants (peer-filtered quality)
-7. **Tier 7:** Nobel-level academic open access (highest human-curated quality)
+URLs in Wiki. NOT in constitution.
 
-URLs maintained in Wiki with review dates. Not in constitution.
+---
+
+## Security Protocol
+
+| ID | Attack | Counter |
+|----|--------|---------|
+| AT-01 | Direct Injection | Override Gate (Axiom 0.3) |
+| AT-02 | Indirect Injection | SOURCE_LOCKED mode |
+| AT-03 | Jailbreak | SCEL + THEORY_MODE lock |
+| AT-04 | Prompt Leakage | No-solicitation + no raw export |
+| AT-05 | Goal Hijacking | Drift check + governed state |
+| AT-06 | Tool Abuse | Agent Tier Gate |
+
+Adaptive Defense Rule: test against adaptive attackers, not fixed test suites.
 
 ---
 
@@ -161,21 +235,21 @@ URLs maintained in Wiki with review dates. Not in constitution.
 
 | Tier | Who | Key Features |
 |------|-----|-------------|
-| 1 (Consumer) | Free web clients | Compressed kernel, 15-turn drift check, Extended Thinking active |
-| 2 (Pro) | Paid consumer | Full Heartbeat, Token Routing Advisory, spoken evidence tags |
-| 3 (Enterprise) | API access | Context caching, agent spawning, Continuous Adherence Check |
+| 1 (Consumer) | Free web | Compressed kernel, 15-turn drift check, Extended Thinking, Grounding Gate |
+| 2 (Pro) | Paid consumer | Full Heartbeat, Token Routing Advisory, spoken evidence tags, Grounding Gate |
+| 3 (Enterprise) | API access | Context caching, agent spawning, Continuous Adherence Check, REDTEAM, Grounding Gate |
 
 ---
 
 ## Token Economy
 
-No self-summaries. No previews. No echo-back. No ceremonial transitions. Deliver, stop. Token optimization NEVER overrides quality (subordinate to Axiom 0.1). CTRL_COST estimates before heavy operations. Token Routing Advisory offloads light tasks.
+No self-summaries. No previews. No echo-back. No ceremonial transitions. Deliver, stop. Token optimization NEVER overrides quality (subordinate to Axiom 0.1). Adaptive compression: session-type-dependent (execution noise / committee decisions / Brain research / drift re-anchor). Static prefix (Behavior) cacheable; dynamic suffix (SYS_MEM, Brain output) not cached.
 
 ---
 
 ## Voice Mode
 
-All voice platforms supported. Formatting disabled. 3-4 sentences per turn. Spoken evidence tags replace visual ones. Voice footnotes every 3 sentences. Barge-in: abandon trajectory, don't recap, pivot immediately.
+All voice platforms supported. Formatting disabled. 3-4 sentences per turn. Spoken evidence tags. Voice footnotes every 3 sentences. Barge-in: abandon trajectory, pivot immediately.
 
 ---
 
@@ -183,26 +257,29 @@ All voice platforms supported. Formatting disabled. 3-4 sentences per turn. Spok
 
 | Platform | Notes |
 |----------|-------|
-| ChatGPT | Native function-calling. Custom instructions for Behavior. |
+| ChatGPT | Function-calling. Custom instructions for Behavior. |
 | Claude | XML tags. Projects for Heartbeat. |
 | Gemini | Structured output. Workspace integration Tier 2/3. |
 | DeepSeek | Native CoT for committee simulation. |
 | Grok | Voice compatible. Settings → Customize → Custom Instructions. |
 | Perplexity | Library → Spaces → Custom Instructions. |
-| Kimi | No native custom instructions. API or manual prepend. |
+| Kimi | No native custom instructions. API or manual prepend. 128K context. |
 
 ---
 
 ## External Validation
 
-Research confirming CTRL-AI design decisions:
-- **Context Equilibria (arXiv 2025):** Drift is bounded and controllable via periodic interventions. Validates 15-turn drift checks.
-- **Rhea Framework (arXiv 2025):** IM/EM decoupling validates SYS_MEM + Heartbeat/Behavior split.
-- **Harvard Law Review (2026):** Validation Layer cited as model solution for prompt-governance brittleness.
-- **OWASP AI Guide fork:** Validates Axiom 0 (Soul Supremacy) as scope-creep defense.
-- **AI Governance Project collapse:** Validates Meta-Update Protocol kill conditions.
-- **"Memory of Failure" research:** Validates Rejection Ledger as active policy enforcement.
-- **GenAI evidence synthesis (Cambridge 2025):** 4-32% recall vs humans. Validates mandatory human oversight.
+- **SagaLLM (VLDB 2025):** LLMs inherently lack self-validation — Gödel's incompleteness. Validates VerifyLens design.
+- **SAVeR (2025):** Consensus ≠ faithfulness. Same model produces structurally correlated false confirmations. Validates mandatory-finding requirement.
+- **Self-Grounded Verification (2025):** Criteria-first protocol mitigates agreement bias by 20 points.
+- **CoVe (ACL 2024):** Atomic verification reduces hallucinations across QA and longform generation.
+- **Context Equilibria (2025):** Drift is bounded and controllable via periodic interventions.
+- **Rhea Framework (2025):** IM/EM decoupling validates SYS_MEM architecture.
+- **OpenAI Model Spec:** "Better to show uncertainty than state something wrong with confidence."
+- **Claude Code Source Leak (2026):** "Prioritize technical accuracy over validating user's beliefs" — independent convergence with Axiom 1.
+- **Harvard Law Review (2026):** CTRL-AI Validation Layer cited as model solution.
+- **OWASP GenAI (2025):** 6-class threat taxonomy adopted for S28.
+- **GenAI evidence synthesis (Cambridge 2025):** 4-32% recall vs humans validates mandatory oversight.
 
 ---
 
@@ -210,87 +287,101 @@ Research confirming CTRL-AI design decisions:
 
 | Project | Stars | Focus | CTRL-AI Difference |
 |---------|-------|-------|-------------------|
-| QuintCode | 1.2k | Engineering decisions CLI | CTRL-AI: full governance OS, not just decision framing |
-| GigaEvo | 111 | LLM evolutionary optimization | CTRL-AI: behavioral governance, not code evolution |
-| ThinkBetter | 101 | Prompt templates | CTRL-AI: enforcement + committee, not just templates |
-| ReasonKit | 6 | Rust reasoning protocols | CTRL-AI: prompt-portable, not language-locked |
-| CognitiveLattice | 11 | Stateful agent memory | CTRL-AI: governance + memory + research pipeline |
+| QuintCode | 1.2k | Engineering decisions CLI | Full governance OS with verification |
+| GigaEvo | 111 | Evolutionary optimization | Behavioral governance, not code evolution |
+| ThinkBetter | 101 | Prompt templates | Enforcement + committee + grounding |
+| ReasonKit | 6 | Rust reasoning protocols | Prompt-portable, not language-locked |
+| CognitiveLattice | 11 | Stateful agent memory | Governance + memory + research + verification |
 
 ---
 
 ## Benchmarks & Evaluation
 
-Benchmark categories (community-contributed scenarios welcome):
-- **Constrained Planning:** Hidden constraints, conflicting goals, feasibility detection.
-- **Reasoning Integrity:** Unsupported leap detection, contradiction handling, branch pruning.
-- **Synthesis Quality:** Merge consistency, grounding, unresolved dispute reporting.
-- **Cost Efficiency:** Token usage, latency, routing gains.
-- **Robustness:** Adversarial prompts, incomplete information, ambiguous intent.
+Categories: Constrained Planning, Reasoning Integrity, Synthesis Quality, Cost Efficiency, Robustness, Grounding Accuracy, Hallucination Rate, Self-Verification Accuracy.
 
-Metrics: contradiction rate, unsupported-claim rate, validation pass rate, synthesis success rate, token cost by operation, drift check pass rate.
+Metrics: contradiction rate, unsupported-claim rate, GROUNDING_STAMP verified/unverified ratio, abstention rate, drift check pass rate, VerifyLens finding rate, Circuit Breaker trigger frequency, prompt condensation savings.
 
 ---
 
 ## Decision Log
 
-Records WHY major decisions were made. Separate from SYS_MEM (session) and Changelog (versions).
-
-| Date | Decision | Rationale | Alternatives Considered | Kill Condition |
-|------|----------|-----------|------------------------|----------------|
-| 2026-03-26 | V7 staged from V6.1 | Cursor recommended V6.1 for research; locked features need V7 | Single V7 release | If staged approach causes integration conflicts, merge |
-| 2026-03-26 | IAP skippable at every step | Spike challenged: onboarding dropout risk | Mandatory full onboarding | If skip rate > 80%, redesign for fewer steps |
-| 2026-03-26 | EVOLVE 3-turn kill condition | Spike challenged: infinite recursion risk | No kill condition | If valuable EVOLVE passes are cut short, extend to 5 |
-| 2026-03-26 | Graph reasoning deferred to V8+ | All 6 AI analyses agreed: SDK concern, not constitution | Integrate into Brain pipeline | CTRL-AI SDK built with graph execution engine |
+| Date | Decision | Rationale | Kill Condition |
+|------|----------|-----------|----------------|
+| 2026-04-15 | VerifyLens mandatory on self-review | System validated missing README content as "matches exactly" — blind to own errors | If VerifyLens false-positive rate >30% (over-flagging non-issues) |
+| 2026-04-15 | Circuit Breaker (3-strike) | Recursive hallucination: system hallucinates → "fixes" → hallucinates fix is correct | If valuable self-corrections blocked by premature escalation |
+| 2026-04-14 | Grounding Gate as dominant system | Codex insight: runtime enforcement is main failure | If grounding adds >20% token overhead with no quality gain |
+| 2026-04-14 | IntentLens as hidden persona | Users type one thing, need another | If misinterpretations exceed 10% |
+| 2026-04-14 | Right to Abstain | OpenAI Model Spec: guessing is worse than silence | If abstention rate >50% in SOURCE_PREFERRED |
+| 2026-03-26 | IAP skippable at every step | Spike: onboarding dropout risk | If skip rate >80% |
+| 2026-03-26 | EVOLVE 3-turn kill condition | Spike: infinite recursion risk | If valuable passes cut short |
+| 2026-03-26 | Graph reasoning deferred to V8+ | All 6 AI analyses agreed: SDK concern | When SDK built |
+| 2026-03-26 | V7 staged from V6.1 | Cursor recommended V6.1 for research; locked features need V7 | If staged approach causes integration conflicts |
 
 ---
 
 ## Theoretical Foundations
 
-- **Context Equilibria (Dongre et al., 2025):** Drift as bounded stochastic process. Interventions shift equilibrium downward. Validates periodic drift checks.
-- **Rhea Framework (arXiv:2512.06869):** Role-aware heuristic episodic attention. Instructional vs episodic memory decoupling. Validates SYS_MEM architecture.
-- **Activation Velocity (arXiv:2603.18893):** Internal state drift tracking. Future Tier 3 enhancement when model internals become accessible.
-- **Lexical Matrix as Interceptor:** Validated by context integration research as structural solution to ambiguous command interpretation.
-
----
-
-## Survey Mode Reference URLs
-
-High-signal prompt engineering communities and tools (review quarterly):
-
-**Communities:** r/PromptEngineering, r/LocalLLaMA, r/ChatGPTPromptGenius, r/PromptDesign
-
-**Resources:** promptingguide.ai, learnprompting.org, PromptHero, OpenAI Prompt Engineering Guide
-
-**Repos:** meta-prompting (suzgunmirac), metaprompt (promptware), m6rc (m6r-ai), ai-pipeline-core
-
-*Last reviewed: 2026-03-26. Maintainer: [assign]*
+- **Context Equilibria (2025):** Drift as bounded stochastic process. Validates 15-turn drift checks.
+- **Rhea Framework (2025):** IM/EM decoupling. Validates SYS_MEM + Heartbeat/Behavior split.
+- **Chain-of-Verification (ACL 2024):** 4-step draft→verify→revise. Validates atomic decomposition.
+- **Self-RAG (2023):** Reflection tokens for retrieval grounding. Validates retrieval-first behavior.
+- **FreshLLMs (ACL 2024):** Search-augmented prompting. Validates freshness windows.
+- **SelfCheckGPT (2023):** Multi-sample consistency. Deferred to Tier 3 (token cost).
+- **SagaLLM (VLDB 2025):** Gödel's limits on self-validation. Validates VerifyLens.
+- **SAVeR (2025):** Structurally correlated false confirmations. Validates mandatory-finding requirement.
 
 ---
 
 ## Free AI Tool Routing Map
 
-For IAP Step 4. Offload light tasks, preserve tokens for heavy lifting.
+For IAP Step 4. Offload light tasks, preserve tokens.
 
 | Tool | Best For | Status |
 |------|---------|--------|
-| Microsoft Copilot | General tasks, GPT-4o access | Free, no conversation limits |
-| Perplexity | Research, web search, verification | Free, no hard token cap |
-| Google AI Studio | Gemini Pro, coding, agentic tasks | Free preview, high limits |
-| DeepSeek Free | Reasoning, chain-of-thought | Free tier, strong performance |
-| Meta AI | Casual tasks, image generation | Free, no account required |
+| Microsoft Copilot | General tasks, GPT-4o | Free, no limits |
+| Perplexity | Research, verification | Free, no hard cap |
+| Google AI Studio | Gemini Pro, coding | Free preview |
+| DeepSeek Free | Reasoning, CoT | Free tier |
+| Meta AI | Casual tasks, images | Free, no account |
 
-*Last reviewed: 2026-03-26. Maintainer: [assign]*
+*Last reviewed: 2026-04-15. Maintainer: [assign]*
+
+---
+
+## Survey Mode Reference URLs
+
+Communities: r/PromptEngineering, r/LocalLLaMA, r/ChatGPTPromptGenius, r/PromptDesign
+Resources: promptingguide.ai, learnprompting.org, PromptHero, OpenAI Prompt Engineering Guide
+Repos: meta-prompting (suzgunmirac), metaprompt (promptware), m6rc (m6r-ai)
+
+*Last reviewed: 2026-04-15. Maintainer: [assign]*
+
+---
+
+## Tool Registry
+
+**Anti-Hallucination:** RAGAS, DeepEval, HHEM-2.1, TruthTorchLM, LettuceDetect, UQLM, Self-RAG, MIND, Edinburgh Compendium, mala-lab Compendium.
+**Security:** OWASP GenAI Top 10, Giskard, OnSecurity LLM Tools, arXiv Auto Red-Teaming.
+**Governance:** FINOS AI Governance, Tele-EVOL Policy Index, Microsoft Best Practices, Anthropic Anti-Hallucination Docs.
+
+All URLs in Wiki. NOT in constitution. Review quarterly.
+
+*Last reviewed: 2026-04-15. Maintainer: [assign]*
 
 ---
 
 ## FAQ
 
-**Do I need the full constitution every time?** No. Behavior module for daily use. Full Heartbeat for projects.
+**Do I need the full constitution?** No. Behavior module for daily use. Heartbeat for projects.
 
-**Does this work on free AI tiers?** Yes. IAP auto-adapts. Tier 1 gets Extended Thinking Protocol and internal task sequencing.
+**How do I check if the AI is hallucinating?** Type `CTRL_VERIFY`.
 
-**Can I modify the framework?** Yes. Follow Meta-Update Protocol. EVOLVE pass mandatory before ratification.
+**My prompts aren't getting good results.** Type `CTRL_PROMPT_CHECK` for analysis and recommendations.
 
-**What platforms are supported?** ChatGPT, Claude, Gemini, Grok, DeepSeek, Perplexity, Kimi, and any model that accepts system prompts.
+**The AI keeps making the same error.** Circuit Breaker should trigger after 3 same-type errors. If it doesn't, tell the AI explicitly: "You've made this error 3 times. Switch to SOURCE_LOCKED and I'll provide the reference."
 
-**How do I report a bug?** Use `CTRL_REPORT` in-session. For repo-level issues, open a GitHub Issue.
+**Can the AI verify its own work?** With limitations. VerifyLens (S27.7) forces structural separation but cannot eliminate the fundamental bias. For critical outputs, cross-check with a second AI.
+
+**Does this work on free AI tiers?** Yes. IAP auto-adapts. Grounding Gate works on all tiers.
+
+**Can I modify the framework?** Yes. Follow Meta-Update Protocol. EVOLVE pass mandatory.
