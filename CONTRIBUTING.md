@@ -2,16 +2,16 @@
 
 ## The Golden Rule
 
-**Reformulate, never reproduce.** All external ideas entering this framework are decomposed into principles and rebuilt in CTRL-AI's own vocabulary. We do not copy — we learn and rewrite.
+**Reformulate, never reproduce.** All external ideas are decomposed into principles and rebuilt in CTRL-AI's own vocabulary. Direct copying of source material is forbidden (Reverse Engineering Protocol, Section 25).
 
 ## How Changes Work
 
-CTRL-AI is a living governance document. Changes follow the **Meta-Update Protocol (Section 3.1)**:
+Changes follow the **Meta-Update Protocol (Section 3.1)**:
 
 1. **SURVEY:** Identify the gap or conflict.
 2. **BRAINSTORM:** Generate risks, alternatives, unintended consequences.
-3. **COMMITTEE: EXTENDED:** Full 8-persona + Spike audit.
-4. **EVOLVE:** Research how other frameworks handle this type of change.
+3. **COMMITTEE: EXTENDED:** Full 8-persona + Spike audit with per-persona source citations (SCEL G3 mandate).
+4. **EVOLVE:** Research how other frameworks handle this type of change. Consolidate prior findings (deduplicate, remove contradictions) before generating new output.
 5. **Kill Condition:** Every change includes a testable condition for reversion.
 6. **Unanimous Consent:** GuardrailSec + InternalJudge must both sign off.
 
@@ -19,48 +19,49 @@ No silent patching. No incremental undocumented adjustments.
 
 ## Integration Protocol
 
-When proposing an external concept:
-
 ```
 CTRL_AUDIT (ZMA) → Section 9 (CSE) → Section 25 (Reverse Engineering Protocol)
 ```
 
-1. **Audit first** — read-only analysis of the source material.
-2. **Extract principles** — decompose into mechanics, not prose.
-3. **Test fit** — does it conflict with axioms? Duplicate existing sections? Add bloat?
-4. **Reformulate** — rewrite in CTRL-AI lexicon.
-5. **Integrate or Reject** — rejected items go to the Rejection Ledger with revival conditions.
+1. **Audit** source material (read-only, 6 vulnerability vectors).
+2. **Extract** principles — decompose into mechanics, not prose.
+3. **Test fit** — conflicts with axioms? Duplicates existing? Adds bloat?
+4. **Reformulate** — rewrite in CTRL-AI lexicon. Golden Rule enforced.
+5. **Integrate or Reject** — rejected items to Rejection Ledger with revival conditions.
+
+## Verification Standard
+
+When verifying any contribution against existing content, use **VerifyLens protocol** (S27.7):
+- Define success criteria BEFORE checking.
+- Use structural comparison, not keyword spot-checks.
+- Assume errors exist until proven otherwise.
+- State the method used and its limitations.
 
 ## Naming Conventions
 
 | Element | Pattern | Example |
 |---------|---------|---------|
-| Sections | `SECTION [N] — [NAME] [GATE/NORM/INFO]` | `SECTION 24 — EVOLVE PHASE [GATE]` |
-| Commands | `CTRL_[ACTION]` or `[VERB]: [target]` | `CTRL_ACTIVATE`, `COMMITTEE: EXTENDED` |
-| Tags | `[ALL_CAPS]` | `[EVIDENCE]`, `[SPECULATIVE]`, `[SCEL: Auto-D_A triggered]` |
-| SYS_MEM keys | `PascalCase` or `~PascalCase` for beliefs | `Deployment_Tier`, `~UserPrefersPlainLanguage` |
-| Versions | Semantic: `MAJOR.MINOR.PATCH` | `V7.0.0` |
-
-## PR Process
-
-1. Fork the repository.
-2. Create a branch: `feature/[short-description]` or `fix/[short-description]`.
-3. Make changes. Include rationale in the PR description.
-4. Reference the relevant section(s) and axiom(s) affected.
-5. If proposing a new section, include a Kill Condition.
-6. Submit PR. Maintainers will run the Meta-Update Protocol.
+| Sections | `SECTION [N] — [NAME] [GATE/NORM/INFO]` | `SECTION 27 — GROUNDING GATE [GATE]` |
+| Commands | `CTRL_[ACTION]` or `[VERB]: [target]` | `CTRL_VERIFY`, `COMMITTEE: EXTENDED` |
+| Tags | `[ALL_CAPS]` | `[EVIDENCE]`, `[UNKNOWN_FROM_SOURCE]`, `[DEVIATION_FLAG]` |
+| Grounding modes | `SOURCE_LOCKED`, `SOURCE_PREFERRED`, `OPEN_RESEARCH` | — |
+| SYS_MEM keys | `PascalCase`, `~prefix` for beliefs | `Grounding_Sources`, `~UserPrefersPlain` |
+| Versions | Semantic: `MAJOR.MINOR.PATCH` | `V7.1.0` |
+| Personas | `[LENS: PersonaName]` | `[LENS: LogicArchitect]` |
 
 ## What Belongs Where
 
 | Content | Location |
 |---------|----------|
 | Governance rules, axioms, protocols | `CTRL-AI.md` (constitution) |
-| Specific URLs, tool lists, source registries | Wiki |
+| URLs, tool lists, source registries | Wiki / TOOL_REGISTRY |
 | Decision rationale, rejected ideas | Wiki (Decision Log) |
-| Benchmarks, metrics, test scenarios | Wiki (Benchmarks page) |
+| Benchmarks, test scenarios | Wiki (Benchmarks page) |
 | Competitive analysis | Wiki (Landscape page) |
 | Code, SDK, runtime implementations | Separate repo (future) |
 
+URLs do NOT go in the constitution. They rot. Wiki with quarterly review dates.
+
 ## Code of Conduct
 
-Agreement is not success. Challenge ideas constructively. Disagree with evidence. The framework's soul — quality over speed, truth over convenience — applies to contributors as much as to the AI.
+Agreement is not success. Challenge ideas with evidence. The framework's soul — quality over speed, truth over convenience — applies to contributors as much as to the AI.
