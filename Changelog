@@ -4,54 +4,98 @@ All notable changes documented. Format follows [Keep a Changelog](https://keepac
 
 ---
 
+## [V7.1.0] — 2026-04-15 — The Grounded Enforcement Release
+
+### Core Change
+CTRL-AI shifts from philosophy-based hallucination prevention ("Stop > Invention" as axiom) to mechanism-based enforcement (Grounding Gate as mandatory pre-output pipeline). Anti-hallucination and verification are now the DOMINANT system.
+
+### New Sections
+- **S27: Grounding Gate [GATE — ALWAYS LOADED]** — SOURCE_LOCKED/SOURCE_PREFERRED/OPEN_RESEARCH modes. 7-step pipeline (Source Declare → Mode Assign → Quote First → Atomic Decompose → Uncertainty Lock → Grounding Stamp → Positional Reinforce). Right to Abstain. Freshness Windows (7d/30d/90d/180d/365d). Committee per-persona citation mandate. CTRL_VERIFY post-output check. VerifyLens adversarial verification persona. Continuous Hallucination Circuit Breaker.
+- **S28: Security & Red-Team Protocol [GATE — ALWAYS LOADED]** — OWASP-aligned 6-class threat taxonomy (AT-01→AT-06). Kernel release security checklist. REDTEAM command (Tier 2/3). Adaptive defense rule.
+- **S29: Prompt Intelligence Protocol [NORM]** — IntentLens hidden persona (intent expansion, search trajectory, scope calibration, context drag). CTRL_PROMPT_CHECK command. Auto-condensation rule.
+
+### New Axiom
+- **Axiom 0.4: Source Supremacy** (INVIOLABLE in SOURCE_LOCKED mode) — declared source is supreme authority. Pre-training forbidden as factual basis. Gaps → UNKNOWN_FROM_SOURCE.
+
+### Enhanced Axiom
+- **Axiom 0.2:** Expanded with Spirit-Over-Letter Protocol — 4-step silent intent expansion before execution.
+
+### New Commands
+- `CTRL_PROMPT_CHECK` — Analyze user prompts, recommend sharper phrasing, flag stale context.
+- `CTRL_VERIFY` — Post-output hallucination/deviation decomposition into atomic claims.
+- `REDTEAM: [target]` — Adversarial testing (Tier 2/3 only).
+
+### SCEL Enforcement (V7.1)
+- **G1:** Pre-output grounding pass mandatory. Omission of GROUNDING_STAMP = violation.
+- **G2:** 2+ ungrounded claims in SOURCE_LOCKED → GROUNDING_HALT.
+- **G3:** EXTENDED committee outputs without per-persona citations = violation.
+- **G4:** Consensus without citations → auto-inject Spike with citation challenge.
+- **G5:** Self-verification must use structural comparison, not keyword counts. Verification claim is itself a factual claim.
+- **G6:** VerifyLens mandatory on all self-review. Different method than generator. Must find 1 issue or state method limitations.
+- **Rule 11:** Post-output deviation check in PROJECT mode. Flags confident claims without evidence tags.
+
+### New Verification Architecture
+- **VerifyLens (S27.7):** Structurally separated adversarial verification persona. Criteria-first (define "correct" before checking). Different-method mandate. Mandatory finding requirement. Based on SagaLLM/VLDB 2025 research confirming LLMs cannot reliably self-validate.
+- **Circuit Breaker (S27.8):** 3 same-type errors → acknowledge pattern → switch SOURCE_LOCKED → stop generating, start comparing. Verification recursion block. Admission over confidence.
+
+### Updated
+- Compliance stamp: `[COMPLIANCE: PTRR ✓ | Evidence ✓ | Task Sep ✓ | Grounding ✓ | Mode={} | Sources={}]`
+- UI Kernel V7.1.0 with GROUNDING dominant, INTENTLENS, PROMPT_INTEL, SECURITY, VERIFYLENS.
+- All 3 Behavior modules rebuilt in compressed machine-protocol syntax (V5.3.1 style) with Grounding Gate as dominant system.
+- S14.2: Adaptive compression strategies (session-type-dependent).
+- S17: Prompt cache boundary note (static prefix / dynamic suffix).
+- S24.2: EVOLVE consolidation mandate (deduplicate, remove contradictions before new output).
+
+### External Research Integrated (via Reverse Engineering Protocol)
+- CoVe (ACL 2024): Atomic claim decomposition validated.
+- Self-RAG: Retrieval-first behavior validated.
+- FreshLLMs: Freshness windows validated.
+- OpenAI Model Spec: Right to Abstain principle.
+- OWASP GenAI Top 10: Threat taxonomy.
+- SagaLLM (VLDB 2025): LLMs inherently lack self-validation — Gödel's incompleteness.
+- SAVeR (2025): Agreement bias in self-verification — structurally correlated false confirmations.
+- Self-Grounded Verification (2025): Criteria-first protocol to mitigate agreement bias.
+- Claude Code Source Leak (2026): Prompt cache boundary, adaptive compression, EVOLVE consolidation.
+- SelfCheckGPT: Self-consistency check concept (deferred to Tier 3).
+
+### Carried Forward
+All V7.0.0 content unchanged. V7.1 is fully backward compatible.
+
+### Deferred to V7.2
+RAGAS automated scoring, DeepEval test suite, modular /sections/ directory split, S29 Governance Alignment as constitution section, self-consistency 3x generation (Tier 3 only).
+
+---
+
 ## [V7.0.0] — 2026-03-26 — The Living Organism Release
 
 ### Added
-- **Intelligent Activation Protocol (Section 2):** 5-step skippable onboarding replacing CTRL_DIAGNOSE. Platform awareness report, user classification, tutorial offer, multi-AI workflow recommendation, activation confirmation.
-- **Extended Thinking Protocol (Section 2.7):** Multi-pass labeled reasoning `[THINKING: Part X of Y]` for throttled platforms. PROJECT/EXTENDED/Brain scope only.
-- **Token Routing Advisory (Section 2.8):** Offload suggestions for lightweight tasks. Free AI Tool Routing Map referenced from Wiki. Tier 1 fallback logic.
-- **EVOLVE Phase (Section 24):** Research discipline layer inside DEV_MODE. Triggers at initialization, checkpoints, mandatory before finalization. 3-turn output kill condition. Meta-learning mandate.
-- **Reverse Engineering Protocol (Section 25):** 5-stage formal intake (Raw → Decompose → Analyze Fit → Reformulate → Integrate/Reject). Golden Rule gate. Tier 4 boundary rules.
-- **Scraper Source Architecture (Section 26):** 7-Tier priority stack. URLs in Wiki, not constitution.
-- **`CTRL_ACTIVATE`** command replacing `CTRL_DIAGNOSE`.
-- **`EVOLVE`** command for manual EVOLVE triggering.
+- **Intelligent Activation Protocol (Section 2):** 5-step skippable onboarding replacing CTRL_DIAGNOSE. Platform awareness, user classification, tutorial offer, multi-AI workflow, activation confirmation.
+- **Extended Thinking Protocol (Section 2.7):** Multi-pass labeled reasoning for throttled platforms.
+- **Token Routing Advisory (Section 2.8):** Offload suggestions with Tier 1 fallback.
+- **EVOLVE Phase (Section 24):** Research discipline inside DEV_MODE. 3-turn kill condition.
+- **Reverse Engineering Protocol (Section 25):** 5-stage pipeline. Golden Rule gate.
+- **Scraper Source Architecture (Section 26):** 7-Tier priority stack. URLs in Wiki.
+- **Commands:** CTRL_ACTIVATE, EVOLVE.
 
 ### Changed
-- DEV_MODE now bundles EVOLVE Phase automatically.
-- Brain pipeline references Scraper Source Architecture (S26) and Reverse Engineering Protocol (S25).
-- UI Kernel updated to V7.0.0 with IAP, EVOLVE, THINKING, REVERSE_ENG, AGENTS references.
-- All Behavior modules updated to V7.0.0.
-- Section count: 26 + Behavior modules (up from 23 in V6.1.0).
-
-### Carried Forward
-- All 14 V6.1.0 research-backed changes intact.
-- All axioms unchanged. Soul Supremacy inviolable.
+- DEV_MODE bundles EVOLVE automatically. Brain references Scraper + Reverse Engineering.
 
 ---
 
 ## [V6.1.0] — 2026-03-26 — Research Integration & Runtime Hardening
 
 ### Added
-- Version Authority & Canonical Control (header + version check).
-- Model-family Q4 in Tier Detector for reasoning-native models.
-- Lexical Translation Matrix (Section 10A.1): 10-verb expansion table.
-- Dispute Resolution guidance (Section 4.4) with INVESTIGATE FURTHER option.
-- SCEL Pre-Final Compliance Stamp: `[COMPLIANCE: PTRR ✓ | Evidence ✓ | Task Sep ✓]`.
-- SCEL Enforcement Limitation disclosure.
-- Spike deliberation-depth secondary trigger.
-- SYS_MEM Beliefs convention (`~` prefix).
-- No-solicitation clause (Section 21).
-- Evidence Tagging guidance (Section 8.3A).
-- Platform adapters: Perplexity, Kimi.
-- Agent Spawning governed state mandate.
-- CTRL_MIGRATE governed state format (raw only under DEBUG).
-- Sycophancy trigger visibility in SYS_MEM.
-- QUICK mode SCEL exemption rationale.
+- Version Authority & Canonical Control. Model-family Q4 in Tier Detector.
+- Lexical Translation Matrix (S10A.1). Dispute Resolution (S4.4).
+- SCEL Compliance Stamp. Spike deliberation-depth trigger.
+- SYS_MEM Beliefs convention (~prefix). No-solicitation clause (S21).
+- Evidence Tagging guidance (S8.3A). Platform adapters: Perplexity, Kimi.
+- Agent Spawning governed state mandate. CTRL_MIGRATE governed state format.
+- Sycophancy trigger visibility. QUICK mode SCEL exemption rationale.
 
-### Validated by Cross-AI Analysis
-- 87 items analyzed across 6 models (Opus, GPT, Codex, Sonnet, Composer, Claude).
+### Validated
+- 87 items analyzed across 6 AI models (Opus, GPT, Codex, Sonnet, Composer, Claude).
 - 7 items rejected to Rejection Ledger with revival conditions.
-- Soul/axioms confirmed unanimous across all models.
 
 ---
 
@@ -59,46 +103,59 @@ All notable changes documented. Format follows [Keep a Changelog](https://keepac
 
 ### Added
 - Three-Layer Architecture: Heartbeat / Behavior / Brain.
-- Axiom 0 (Soul Supremacy), 0.1 (Quality > Speed), 0.2 (Intent Interpretation), 0.3 (Override Gate).
-- Deployment Tier Detector. The Brain pipeline. Hallucination Recovery Protocol.
-- Cost Transparency. Dynamic Agent Spawning. Advanced Search with Validation.
-- Token Economy Protocol. Strict Task Separation (Axiom 7). Progress Bar system.
-- 5-Layer Prompt Architecture + CTRL_PROMPT + TASKFORCE + DEBUG restored.
-- Voice Mode with spoken evidence tags. ZMA 6 vulnerability vectors.
-- Meta-Update full safety pipeline. Behavior modules (Micro/Standard/Extended).
+- Axioms 0-0.3 (INVIOLABLE) + 1-7. Deployment Tier Detector. Brain pipeline.
+- Cost Transparency. Dynamic Agent Spawning. Token Economy Protocol.
+- Behavior modules (Micro/Standard/Extended). Voice Mode. ZMA.
+- Hallucination Recovery Protocol. Platform Adapters. Privacy Gate.
+- Meta-Update full safety pipeline.
+
+### Restored from V5.x
+- 5-Layer Prompt Architecture (S10A). CTRL_PROMPT, TASKFORCE, DEBUG.
+- ZMA 6 vulnerability vectors. Meta-Update pipeline (from weakened version).
 
 ---
 
-## [V5.4.0 Alpha] — 2026-03-08
+## [V5.4.0 Alpha] — 2026-03-08 — Consumer Reality Release
 
 ### Added
-- Spike Persona Protocol. Voice Mode (Gemini Live). Workspace Integration.
-- Privacy Gate. LearnedRules 09–13.
+- Spike Persona Protocol (anti-fossilization).
+- Voice Mode (Gemini Live, ChatGPT Voice, Claude Mobile, Grok Voice).
+- Workspace Integration. Privacy Gate.
 
 ### Changed
-- EXTENDED reduced to 8 sequential + Spike. Drift prevention platform-conditional.
-- Survey Protocol: 3-retry + hallucination warning. Bloomberg style anchor primary.
+- EXTENDED reduced to 8 sequential + Spike (from 13).
+- Drift prevention platform-conditional.
+- Survey Protocol: 3-retry + hallucination warning.
+- Bloomberg style anchor as primary.
 
 ---
 
-## [V5.3.0] — 2026-03
+## [V5.3.0] — 2026-03 — Structural Integrity Release
 
 ### Added
-- Phase-Gate Protocol. Guided Pruning. Anchor Override/Safety Veto transparency.
-- Document Integrity Mandate. Rejection Ledger. Mode Supremacy. Kill Condition Lock.
+- Phase-Gate Protocol. Guided Pruning. Anchor Override / Safety Veto transparency.
+- Document Integrity Mandate (No-Patch Rule).
+- Rejection Ledger (Section 9.1). Mode Supremacy. Kill Condition Lock.
 
 ---
 
-## [V5.2.1–V5.2.0] — 2026-03
+## [V5.2.1–V5.2.0] — 2026-03 — Restoration Release
 
 ### Added
-- TASKFORCE, CTRL_PROMPT restored. Internal Judge (13th persona). Thread Migration.
-- Evidence Tagging. Axiom Priority Stack. Context Strain Tracker. 5-Layer Prompt Architecture.
+- TASKFORCE, CTRL_PROMPT restored. Internal Judge (13th persona).
+- Thread Migration (CTRL_MIGRATE). Evidence Tagging.
+- Axiom Priority Stack. Context Strain Tracker.
+- 5-Layer Prompt Architecture (S10A).
 
 ---
 
-## [V5.1.1–V5.1.0] — 2026-02
+## [V5.1.1–V5.1.0] — 2026-02 — Initial Public Release
 
 ### Added
-- Initial public release. Core Axioms. MasterBrain Protocol. Node Protocol.
-- ZMA. Pace-Car Rule. SCEL. Syntactic Entropy Injection. Command Console. Platform Adapters.
+- Core Axioms (Productive Dissent, Stop > Invention, Evidence > Narrative).
+- MasterBrain Protocol (precursor to Brain pipeline).
+- Node Protocol. Zero-Mutation Audit (ZMA).
+- Pace-Car Rule (Sequential Chunking).
+- SCEL (Autonomous Enforcement Loop).
+- Syntactic Entropy Injection.
+- Command Console. Platform Adapters (ChatGPT, Claude, Gemini, DeepSeek, Grok).
