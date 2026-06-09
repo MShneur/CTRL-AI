@@ -1,4 +1,4 @@
-# Contributing to CTRL-AI
+# Contributing to CTRL-AI (V8.0.0)
 
 ## The Golden Rule
 
@@ -22,6 +22,8 @@ No silent patching. No incremental undocumented adjustments.
 ```
 CTRL_AUDIT (ZMA) → Section 9 (CSE) → Section 25 (Reverse Engineering Protocol)
 ```
+
+**V8 Addition:** New modules require placement in the Module Library (S32) as KERNEL, ACTIVATABLE, or SUPPORT. The Router (S31) must be updated with activation conditions. All new modules must declare their authority level relative to the existing chain: KRN_PASSAGE > MOD_VERIFY > MOD_CIRCUIT > MOD_DA.
 
 1. **Audit** source material (read-only, 6 vulnerability vectors).
 2. **Extract** principles — decompose into mechanics, not prose.

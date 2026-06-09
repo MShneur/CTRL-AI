@@ -1,34 +1,40 @@
-# CTRL-AI Wiki — V7.1.0
+# CTRL-AI Wiki — V8.0.0
 
 ## Table of Contents
 1. [What Is CTRL-AI?](#what-is-ctrl-ai)
-2. [Three-Layer Architecture](#three-layer-architecture)
-3. [Grounding Gate (Dominant System)](#grounding-gate)
-4. [VerifyLens (Adversarial Verification)](#verifylens)
-5. [Prompt Intelligence](#prompt-intelligence)
-6. [Anti-Hallucination Quick Reference](#anti-hallucination-quick-reference)
-7. [Axiom Reference](#axiom-reference)
-8. [Command Reference](#command-reference)
-9. [Intelligent Activation Protocol](#intelligent-activation-protocol)
-10. [The Brain Pipeline](#the-brain-pipeline)
-11. [Committee Protocol](#committee-protocol)
-12. [EVOLVE Phase](#evolve-phase)
-13. [Reverse Engineering Protocol](#reverse-engineering-protocol)
-14. [Scraper Source Architecture](#scraper-source-architecture)
-15. [Security Protocol](#security-protocol)
-16. [Deployment Tiers](#deployment-tiers)
-17. [Token Economy](#token-economy)
-18. [Voice Mode](#voice-mode)
-19. [Platform Adapters](#platform-adapters)
-20. [External Validation](#external-validation)
-21. [Competitive Landscape](#competitive-landscape)
-22. [Benchmarks & Evaluation](#benchmarks--evaluation)
-23. [Decision Log](#decision-log)
-24. [Theoretical Foundations](#theoretical-foundations)
-25. [Free AI Tool Routing Map](#free-ai-tool-routing-map)
-26. [Survey Mode Reference URLs](#survey-mode-reference-urls)
-27. [Tool Registry](#tool-registry)
-28. [FAQ](#faq)
+2. [Architecture](#architecture)
+3. [Activation Protocol (V8)](#activation-protocol-v8)
+4. [Command Reference (V8)](#command-reference-v8)
+5. [Router: Classifier + Mode Selector](#router)
+6. [Module Library](#module-library)
+7. [Passage Gate (Grounding)](#passage-gate)
+8. [Ghost Rider Protocol](#ghost-rider-protocol)
+9. [Ghostwriter Protocol](#ghostwriter-protocol)
+10. [Enforcement Ceiling](#enforcement-ceiling)
+11. [Conformance Suite](#conformance-suite)
+12. [VerifyLens (Adversarial Verification)](#verifylens)
+13. [Prompt Intelligence](#prompt-intelligence)
+14. [Anti-Hallucination Quick Reference](#anti-hallucination-quick-reference)
+15. [Axiom Reference](#axiom-reference)
+16. [The Brain Pipeline](#the-brain-pipeline)
+17. [Committee Protocol](#committee-protocol)
+18. [Dynamic Persona Allocator (V8)](#dynamic-persona-allocator)
+19. [Memory Architecture (V8)](#memory-architecture)
+20. [Runtime Adaptation (V8)](#runtime-adaptation)
+21. [EVOLVE Phase](#evolve-phase)
+22. [Reverse Engineering Protocol](#reverse-engineering-protocol)
+23. [Scraper Source Architecture](#scraper-source-architecture)
+24. [Security Protocol](#security-protocol)
+25. [Deployment Tiers](#deployment-tiers)
+26. [Token Economy](#token-economy)
+27. [Voice Mode](#voice-mode)
+28. [Platform Adapters](#platform-adapters)
+29. [Advanced Operations (Pro Mode)](#advanced-operations)
+30. [External Validation](#external-validation)
+31. [Competitive Landscape](#competitive-landscape)
+32. [Benchmarks & Evaluation](#benchmarks--evaluation)
+33. [Decision Log](#decision-log)
+34. [FAQ](#faq)
 
 ---
 
@@ -38,9 +44,11 @@ A meta-cognitive layer that forces any LLM to verify before speaking, challenge 
 
 ---
 
-## Three-Layer Architecture
+## Architecture
 
-**Layer 1 — The Heartbeat (Full Constitution):** 29 sections + 2 always-loaded enforcement gates (S27 Grounding, S28 Security). Load for big projects. Contains everything.
+**Router-First (V8):** Every interaction flows through Classifier (S30) → Mode Selector (S31) → Module Library (S32). Modules activate on demand. User just describes their task — everything else is automatic.
+
+**Layer 1 — The Heartbeat (Full Constitution):** 39 sections. 12 KERNEL (always-loaded) + 14 ACTIVATABLE (router-controlled) + 7 SUPPORT (referenced) + 6 inline. Load for big projects.
 
 **Layer 2 — The Behavior (Portable DNA):** Three sizes — Micro (~650 chars, Gemini slots), Standard (~1800 chars, ChatGPT/Claude), Extended (~3500 chars, system prompts). All use compressed machine-protocol syntax. All carry Grounding Gate as dominant system.
 
@@ -137,32 +145,41 @@ A meta-cognitive layer that forces any LLM to verify before speaking, challenge 
 
 ---
 
-## Command Reference
+## Command Reference (V8)
 
-**Verification & Intelligence:** CTRL_VERIFY, CTRL_PROMPT_CHECK, CTRL_AUDIT, CTRL_REPORT, CTRL_COST
+**Zero commands required.** The system classifies, routes, and governs automatically. Natural language controls everything.
 
-**Core:** CTRL_ACTIVATE, CTRL_COMPRESS, CTRL_MIGRATE, CTRL_LEARN, CTRL_QUICKSTART, CTRL_HELP
+**5 Core Commands (shortcuts, never required):**
+| Command | What It Does | Say Naturally |
+|---|---|---|
+| D_A: | Challenge the last output | "challenge this" |
+| CTRL_AUDIT | Full 6-vector audit | "audit this" |
+| CTRL_VERIFY | Verify claims against sources | "verify this" |
+| CTRL_PROMPT | Optimize your prompt | "help me prompt" |
+| CTRL_HELP | Show commands | "help" |
 
-**Committee:** COMMITTEE: RAPID, COMMITTEE: EXTENDED, TASKFORCE, D_A, AGENT_SPAWN
+**Natural Language → Governance:**
+| You Say | System Does |
+|---|---|
+| "be more careful" | Escalates STAKES to HIGH |
+| "only use what I gave you" | SOURCE_LOCKED mode |
+| "something doesn't add up" | INVESTIGATIVE mode + Ghost Rider |
+| "write this as a legal brief" | Ghostwriter Legal profile |
+| "too long" / "just the answer" | Frustration adaptation |
+| "go deeper" | DEEP depth |
 
-**Research:** BRAINSTORM, SURVEY, ADVANCED_SEARCH, SURVEY_RESUME, EVOLVE
-
-**Prompts:** PROMPT_MASTER, CTRL_PROMPT
-
-**Modes:** THUR, DEV_MODE, THEORY_MODE, VECTOR_SYNC, DEBUG
-
-**Security:** REDTEAM (Tier 2/3)
+**Advanced Commands (wiki-only, for power users):**
+REDTEAM · CTRL_MIGRATE · CTRL_REPORT · CTRL_EXPORT · AGENT_SPAWN · DEBUG: · DEV_MODE · EVOLVE · PROMPT_MASTER
 
 ---
 
-## Intelligent Activation Protocol
+## Activation Protocol (V8)
 
-5-step onboarding on first load (all steps skippable):
-1. Platform Awareness Report — detects tier, limitations, compensations.
-2. User Classification — new vs returning, experience level.
-3. Tutorial Offer — 3-step walkthrough or jump in.
-4. Multi-AI Workflow — recommends free tools for light tasks.
-5. Activation Confirmation — framework active, SYS_MEM initialized.
+Silent auto-boot. Zero questions. Zero setup.
+
+On first load, the system detects platform, tier, and capabilities automatically. Outputs one status line. New users get a 3-sentence orientation. Returning users detected by platform memory or PROJECT_EXPORT block.
+
+The user then describes their task. The Classifier (S30) reads it, shows a one-line classification, and auto-confirms if the user just keeps talking. The Router (S31) activates the exact modules needed. Work begins.
 
 For reasoning-native models (GPT-5, Claude 4.6+, o-series), Behavior-Extended is recommended as default.
 
@@ -226,8 +243,18 @@ URLs in Wiki. NOT in constitution.
 | AT-04 | Prompt Leakage | No-solicitation + no raw export |
 | AT-05 | Goal Hijacking | Drift check + governed state |
 | AT-06 | Tool Abuse | Agent Tier Gate |
+| AT-07 | Lethal Trifecta (private data + untrusted content + exfiltration) | TRIFECTA_CHECK (S28.5) |
+| AT-08 | Classifier Manipulation | Classification Line visible + stakes-wins rule |
+| AT-09 | Router Bypass | No orphan modules (S32.6) |
+| AT-10 | Module Authority Escalation | Immutable authority chain |
+| AT-11 | Quarantine Escape | LOW_CONFIDENCE floor + INJECTION flags |
+| AT-12 | Drift-Assisted Degradation | DRIFT_WATCH + escalating re-anchor |
 
 Adaptive Defense Rule: test against adaptive attackers, not fixed test suites.
+
+**Lethal Trifecta (Willison 2025):** Private data + untrusted content + exfiltration channel = confirmed injection vector. TRIFECTA_CHECK is mandatory before ingesting external content. MCP tool combinations checked as combinations, not individually.
+
+**Prudence Framing:** CTRL-AI reduces incidence of named failure modes. It does not provide coverage guarantees. "Not immunity. Not hubris. Just prudence."
 
 ---
 
@@ -370,18 +397,184 @@ All URLs in Wiki. NOT in constitution. Review quarterly.
 
 ---
 
+
+---
+
+## Router
+
+**Classifier (S30):** Auto-reads every non-QUICK input across 4 dimensions:
+- **Type:** RESEARCH / BUILD / AUDIT / ANALYZE / EXPLORE / INVESTIGATE
+- **Stakes:** HIGH / MEDIUM / LOW
+- **Source:** SOURCE_LOCKED / SOURCE_PREFERRED / OPEN_RESEARCH / INVESTIGATIVE
+- **Depth:** QUICK / STANDARD / DEEP
+
+Shows one-line classification. User confirms naturally or overrides ("this is high stakes"). Auto-confirms on silence after 1 turn. Conflict resolution: stakes wins — escalate, never downgrade.
+
+**Mode Selector (S31):** Maps classifier tuple to exact module combination. Nothing activates without a tuple. Authority chain: KRN_PASSAGE > MOD_VERIFY > MOD_CIRCUIT > MOD_DA. No silent activation — all active modules visible in SYS_MEM.
+
+---
+
+## Module Library
+
+39 sections mapped to 3 categories:
+
+| Category | Count | Behavior |
+|---|---|---|
+| KERNEL | 12 | Always loaded. Governance backbone. |
+| ACTIVATABLE | 14 | Router turns on/off per classification. |
+| SUPPORT | 7 | Referenced by other modules. Not standalone. |
+
+Key modules: KRN_PASSAGE (truth gate), KRN_SCEL (enforcement), MOD_GHOST (adversarial research), MOD_GHOSTWRITER (writing governance), MOD_PERSONA (committee allocation), MOD_ZMA (audit), MOD_VERIFY (verification).
+
+---
+
+## Passage Gate
+
+Evolves S27 Grounding Gate. Adds INVESTIGATIVE source mode (4th mode for Ghost Rider), 8-tag confidence scoring, cross-mode transition protocol.
+
+**8 Confidence Tags:** VERIFIED · EVIDENCE · PRACTICE · SPECULATIVE · LOW_CONFIDENCE · CONFLICT · ORPHAN · STALE
+
+**Cross-Mode Transitions:** Switching to SOURCE_LOCKED purges all SPECULATIVE claims. Switching to INVESTIGATIVE demotes all prior claims to LOW_CONFIDENCE. CONFLICT tags persist across mode switches until user explicitly resolves.
+
+---
+
+## Ghost Rider Protocol
+
+Adversarial research for when clean sources don't exist, contradict each other, or the surface narrative is suspect.
+
+**Pipeline:** Runs Brain stages A/B/C with adversarial extensions — counter-narrative construction, stakeholder mapping, dead-end logging, source hostility checks, contradiction harvesting, timeline reconstruction, language pattern scanning, gap analysis.
+
+**Dual LLM Isolation (Willison):** Quarantine pass processes untrusted content in isolation. No private data, no tools, no external output. Returns summary packet only. Primary context validates before integration.
+
+**Output:** Conflict matrix + provenance map + silence map. Ghost Rider does NOT produce a single recommendation — the user decides.
+
+---
+
+## Ghostwriter Protocol
+
+Writing governance. 10 composable traits (GW_T1–T10). Auto-activates when TYPE=BUILD + written output.
+
+**Decision Architecture:** Recipient Model → Truth Floor → Structural Frame → Threat Model. Decision 2 (Truth Floor) gates everything — if evidence doesn't support the claim, structure and tone don't matter.
+
+**Passage Gate Integration:** Every factual claim routes through KRN_PASSAGE before delivery. Ghostwriter CANNOT override Passage Gate verdicts. Persuasion ≤ evidence, always.
+
+**Profiles (auto-selected):** Executive Brief · Legal/Compliance · Public Post · Technical Report · Personal/Sensitive. Say "write this as a legal brief" — system selects profile automatically.
+
+**Non-negotiable:** GW_T3 (Evidence Anchor) and GW_T9 (Honesty Floor) cannot be disabled.
+
+---
+
+## Enforcement Ceiling
+
+Honest disclosure of what CTRL-AI can and cannot enforce.
+
+**3 Tiers:** STRUCTURAL (high confidence — visible artifacts), BEHAVIORAL (medium — compliance probable), COGNITIVE (low — genuine dissent hardest to mandate).
+
+**7 Named Failure Modes:** F-01 Verification Theater · F-02 Performative Dissent · F-03 Confidence Inflation · F-04 Exhaustion Compliance · F-05 Quarantine Leakage · F-06 Classifier Gaming · F-07 Stamp Without Substance.
+
+"Shields reduce damage. Not immunity. Not hubris. Just prudence."
+
+---
+
+## Conformance Suite
+
+How to verify that an AI is actually following CTRL-AI. Use these checks:
+
+**Structural (user-verifiable):**
+- [ ] Does the first non-QUICK response show a Classification Line?
+- [ ] Does every non-QUICK response have a GROUNDING_STAMP?
+- [ ] Are progress bars present in multi-step work?
+- [ ] Is one-task-per-turn enforced?
+- [ ] Does the system stop and await PROCEED between steps?
+- [ ] Are active modules listed in SYS_MEM?
+
+**Behavioral (test by asking):**
+- [ ] Say "only use what I gave you" — does it switch to SOURCE_LOCKED?
+- [ ] Ask a question it can't answer from sources — does it say UNKNOWN_FROM_SOURCE?
+- [ ] Agree with everything for 3 turns — does auto-D_A trigger?
+- [ ] Ask it to verify its own output — does VerifyLens activate with a different method?
+- [ ] Give it wrong information confidently — does it challenge or blindly accept?
+- [ ] Ask "verify this" — does it decompose into atomic claims?
+
+**Cognitive (hardest to verify):**
+- [ ] In committee output, do personas genuinely disagree or just rephrase agreement?
+- [ ] When Spike triggers, does it raise a substantive point or a formulaic objection?
+- [ ] When evidence is ambiguous, does it express genuine uncertainty or confident hedging?
+
+**Scoring:** 6/6 structural = baseline compliance. 4/6 behavioral = functional governance. Cognitive = qualitative judgment. No governance system can score itself on cognitive compliance — that's the Enforcement Ceiling.
+
+---
+
+## Dynamic Persona Allocator
+
+V8 upgrade to committee allocation. 4 permanent core (LogicArchitect, RedTeam, GuardrailSec, InternalJudge) + up to 4 dynamic slots selected by classifier tuple.
+
+**3 Failure Modes Fixed:**
+1. **Independence Phase:** Each persona generates position independently before cross-evaluation. Sealed positions prevent correlated opinions.
+2. **Adaptive Stopping:** 3+ independent convergence → early stop. 2-round deliberation cap prevents exhaustion consensus.
+3. **Judge Verdict:** InternalJudge issues reasoned verdict after all positions, citing evidence not authority. Replaces majority voting.
+
+---
+
+## Memory Architecture
+
+**3 Layers:** SESSION (volatile, dies with conversation) · PROJECT (persists across sessions via platform memory or paste) · IDENTITY (persists across projects, 90-day decay).
+
+**Drift Taxonomy (6 types):** Confidence Creep · Scope Drift · Governance Fatigue · Persona Collapse · Source Amnesia · Sycophancy Gradient. Each has a targeted fix. Multi-type drift triggers full re-anchor.
+
+---
+
+## Runtime Adaptation
+
+**Frustration Detection:** 6 signals (message collapse, repeat request, correction escalation, terse override, punctuation shift, governance abandonment). Silent adaptation: compress format, not rigor. Never asks "are you frustrated?"
+
+**Context Pressure:** GREEN/YELLOW/ORANGE/RED. Auto-compresses at YELLOW. Strategy adapts to session type. At RED, advises new session with carry-forward.
+
+**Progressive Loading:** KERNEL always in context. ACTIVATABLE modules loaded on demand. Tier 3 gets true API-level progressive loading.
+
+---
+
+## Advanced Operations
+
+For power users and developers. Never required for normal operation.
+
+**REDTEAM:** `REDTEAM: [target]` — adversarial testing against AT-01→AT-12. Can target specific modules. Tier 2/3 only.
+
+**CTRL_MIGRATE:** Compile governed state handoff for cross-platform migration.
+
+**CTRL_REPORT:** Full session analysis with governance compliance report.
+
+**CTRL_EXPORT:** Output PROJECT_EXPORT block for manual carry-forward to new session.
+
+**AGENT_SPAWN:** Create sub-agent with scoped lifespan (max 3 turns). Tier 3 only.
+
+**DEBUG:** Toggle visibility of internal deliberation, IntentLens reasoning, and module activation.
+
+**DEV_MODE / EVOLVE:** Development environment bundling extended committee, devil's advocate, and EVOLVE phase for framework development.
+
+**Trait Composition:** `GHOSTWRITER: T1+T3+T7` — manual trait selection for Ghostwriter. Auto-selection handles this for normal use.
+
+**Dimension Override:** `STAKES: HIGH` / `SOURCE: LOCKED` — explicit classifier override syntax. Natural language ("be more careful") handles this for normal use.
+
+
+---
+
 ## FAQ
+
+**Do I need to learn commands?** No. V8 requires zero commands. Just describe your task naturally. Say "challenge this", "verify this", "audit this" when you want those actions.
 
 **Do I need the full constitution?** No. Behavior module for daily use. Heartbeat for projects.
 
-**How do I check if the AI is hallucinating?** Type `CTRL_VERIFY`.
+**How do I set it up?** Paste the Behavior module (or full constitution) into your AI's custom instructions. Start talking. That's it.
 
-**My prompts aren't getting good results.** Type `CTRL_PROMPT_CHECK` for analysis and recommendations.
+**How do I check if the AI is hallucinating?** Say "verify this" or "check your work." The system runs VerifyLens automatically.
 
-**The AI keeps making the same error.** Circuit Breaker should trigger after 3 same-type errors. If it doesn't, tell the AI explicitly: "You've made this error 3 times. Switch to SOURCE_LOCKED and I'll provide the reference."
+**The AI keeps making the same error.** Circuit Breaker should trigger after 3 same-type errors. If not, say "you've made this error 3 times — use only what I give you."
 
-**Can the AI verify its own work?** With limitations. VerifyLens (S27.7) forces structural separation but cannot eliminate the fundamental bias. For critical outputs, cross-check with a second AI.
+**Can the AI verify its own work?** With limitations (see Enforcement Ceiling, S33). For critical outputs, cross-check with a second AI.
 
-**Does this work on free AI tiers?** Yes. IAP auto-adapts. Grounding Gate works on all tiers.
+**Does this work on free AI tiers?** Yes. Auto-adapts. Some modules restricted on Tier 1 (no Ghost Rider, EXTENDED capped at 5).
 
 **Can I modify the framework?** Yes. Follow Meta-Update Protocol. EVOLVE pass mandatory.
+
+**What's different in V8?** Router architecture (auto-classification), 10 new sections, 29→5 commands, zero-question boot, natural language controls everything.
