@@ -1,9 +1,9 @@
-# 🧠 CTRL-AI Framework (V7.1.0)
+# 🧠 CTRL-AI Framework (V8.0.0)
 
 > **"Your AI doesn't need to be smarter. It needs to stop making things up."**
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Version](https://img.shields.io/badge/version-7.1.0-orange.svg)](#)
+[![Version](https://img.shields.io/badge/version-8.0.0-orange.svg)](#)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
 
 ## 🪖 The Rally Cry
