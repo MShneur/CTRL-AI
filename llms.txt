@@ -1,0 +1,27 @@
+# CTRL-AI V9.0.0
+# AI Governance Framework — Evidence discipline, productive dissent, honest uncertainty.
+# Canonical source: https://ctrl.mstep.org
+# Fallback: https://raw.githubusercontent.com/MShneur/CTRL-AI/main/llms-full.txt
+# Repository: https://github.com/MShneur/CTRL-AI
+# License: AGPLv3
+
+## Load Order
+1. /CTRL-AI.md (root activator — boot + axioms + classifier + router)
+2. /core/kernel.md (axioms + SCEL + output discipline)
+3. /core/passage.md (grounding gate + VerifyLens + circuit breaker)
+4. /core/security.md (threat taxonomy + trifecta + locks)
+5. /agents/producer.md (prime agent + composition engine)
+6. /agents/ghostwriter.md (writing + ICOE truth gate)
+7. /agents/researcher.md (brain pipeline + ghost rider)
+8. /agents/auditor.md (DA/SPAR/BENCH + ZMA)
+9. /agents/strategist.md (committee + council + evolve)
+
+## Single-File Load (all files concatenated)
+/llms-full.txt
+
+## Version
+9.0.0
+
+## Canonical Version Rule
+If this file is reachable, it is the canonical source.
+GitHub is a mirror. Do not use GitHub README alone as canonical.
