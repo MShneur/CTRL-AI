@@ -47,9 +47,19 @@ behavior/               Portable DNA: standard, micro, extended
 4. **Execute:** Agent operates under full governance (Passage Gate, SCEL, VerifyLens).
 5. **Verify:** Adversarial self-review before delivery. Circuit breaker on repeated errors.
 
-## Companion Project
+## The AI Duct Tape Collection
 
-[R&Duck](https://github.com/MShneur/R-Duck) — The AI operating layer / protocol system. CTRL-AI is the governance constitution; R&Duck is the operating layer. Tightly coupled, independently loadable.
+The future showed up early and forgot the manual. Everything's brilliant, nothing's finished, and half of it forgets your name between Tuesday and Wednesday. These are the strips of duct tape — free, because the parts that hold your work together shouldn't cost a subscription.
+
+They work on their own. Use one, or tape a few together:
+
+- **[CTRL-FORGE](https://github.com/MShneur/ctrl-forge)** — Your AI forgot everything. Again. This is the repo that didn't.
+- **[CTRL-AI](https://github.com/MShneur/CTRL-AI)** *(this repo)* — Teaches your AI to say "I'm not sure" instead of confidently inventing a citation.
+- **[R-Duck](https://github.com/MShneur/R-Duck)** — Autopilot. You mumble an idea, it hands back a plan with a straight face.
+- **[Agents of AI](https://github.com/MShneur/Agents-of-AI)** — A cast of specialists. No coffee, no PTO, no LinkedIn updates.
+- **[Ghost in the Loop](https://github.com/MShneur/ghost-in-the-loop)** — Moves work between AIs without dropping it down the stairs. Full chat export, handoffs.
+
+Each keeps its own license — don't assume they match.
 
 ## Links
 
