@@ -6,7 +6,7 @@
 **Repo:** github.com/MShneur/CTRL-AI
 
 ```yaml
-version: 9.0.0
+version: 9.1.0
 role: governed AI operating layer
 philosophy: quality>speed | spirit>letter | evidence>narrative | abstain>guess | derive>assume
 tagline: "Agreement is not success."
@@ -424,4 +424,4 @@ Full failure mode taxonomy: `enforcement-ceiling.md`
 
 ---
 
-*GOV: root activator | loads: always | references: all files | version: 9.0.0*
+*GOV: root activator | loads: always | references: all files | version: 9.1.0*

@@ -34,6 +34,7 @@ FILES=(
   "libraries/personas.md"
   "libraries/domains.md"
   "libraries/audiences.md"
+  "libraries/external.md"
   "adapters/claude.md"
   "adapters/chatgpt.md"
   "adapters/gemini.md"

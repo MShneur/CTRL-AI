@@ -1,6 +1,6 @@
 # CTRL-AI — AI Governance Framework
 
-**Version: 9.0.0** | **License: AGPLv3** | **Status: Active Development**
+**Version: 9.1.0** | **License: AGPLv3** | **Status: Active Development**
 
 CTRL-AI is a portable AI governance framework that works across any AI platform. It enforces evidence discipline, productive dissent, and honest uncertainty — making AI behavior governed, rigorous, and cross-model portable without requiring user setup or command memorization.
 
