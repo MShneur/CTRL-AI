@@ -1,6 +1,6 @@
 # CTRL-AI Changelog
 
-## v9.2.0 — 2026-08 ("Know Where To Look")
+## V9.2.0 — 2026-08 ("Know Where To Look")
 
 ### Fixed
 - **`libraries/external.md` declared only three of seven Agents of AI layers**
