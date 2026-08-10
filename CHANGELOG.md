@@ -1,5 +1,38 @@
 # CTRL-AI Changelog
 
+## v9.2.0 — 2026-08 ("Know Where To Look")
+
+### Fixed
+- **`libraries/external.md` declared only three of seven Agents of AI layers**
+  (`agents/`, `personas/`, `teams/`). A session asked for `cleanerz` — which lives
+  in `workflows/` — probed sixteen plausible paths, got 404 on every one, and
+  correctly reported the module unavailable. The entry was live and published the
+  whole time. All seven layers are now addressable, and the file states that an id
+  resolving in none of them does not exist, so no session probes further.
+
+### Added
+- **Coined protocol table, binding.** `cleanerz`, `something's off`, `quorum`,
+  `human gate` and `RRed` fire on the token alone. Never ask what the user means
+  by one. A coined spelling routes to exactly one place — that is why it is
+  spelled that way, and why `cleanerz` never collides with `warroom`.
+- **Ecosystem registry.** CTRL-AI now knows R&Duck, Agents of AI and ctrl-forge
+  exist, with canonical raw URLs and what each is for. R&Duck runs a task end to
+  end and returns minimum choices; CTRL-AI keeps the user steering. Neither
+  system's rules are ever merged into the other — the loaded system governs and
+  the difference is stated.
+- **Workflows and techniques sections.** Ten workflows and ten techniques with no
+  local equivalent, including `aoa:error-decorrelation` (a check counts only if
+  the checker differs from the author on a named axis) and
+  `aoa:controlled-vocabulary` (one approved word per concept).
+- **Failure vocabulary.** Six named failure modes with a shared `failure_class`
+  from a fixed eleven-value set, so incidents get one vocabulary rather than six
+  paraphrases.
+
+### Why this release exists
+Everything above already existed and was published. None of it was reachable from
+the system that actually loads in a working session. Shipped is not the same as
+loaded.
+
 All notable changes documented. Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---

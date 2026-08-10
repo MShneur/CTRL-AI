@@ -6,7 +6,7 @@
 **Repo:** github.com/MShneur/CTRL-AI
 
 ```yaml
-version: 9.1.0
+version: 9.2.0
 role: governed AI operating layer
 philosophy: quality>speed | spirit>letter | evidence>narrative | abstain>guess | derive>assume
 tagline: "Agreement is not success."
@@ -111,6 +111,9 @@ CTRL_BOOK     → MEDICAL_LOCK + SCAN_MODE + 4-pass editing + style anchor
 
 **Natural language equivalents** (IntentLens maps automatically):
 "challenge this" → DA | "audit this" → CTRL_AUDIT | "verify this" → CTRL_VERIFY
+"cleanerz" / "something's off" → aoa:cleanerz | "quorum" → aoa:quorum
+"human gate" → aoa:human-gate-committee | "RRed" → R&Duck capabilities/rred.md
+Coined tokens fire on the name alone — never ask what one means (libraries/external.md)
 "review my code" → CTRL_SCAN | "check for errors" → CTRL_VERIFY
 "this is medical/legal" → CTRL_BOOK | "compress" → CTRL_COMPRESS
 
@@ -424,4 +427,4 @@ Full failure mode taxonomy: `enforcement-ceiling.md`
 
 ---
 
-*GOV: root activator | loads: always | references: all files | version: 9.1.0*
+*GOV: root activator | loads: always | references: all files | version: 9.2.0*
