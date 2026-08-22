@@ -58,6 +58,7 @@ They work on their own. Use one, or tape a few together:
 - **[R-Duck](https://github.com/MShneur/R-Duck)** — Autopilot. You mumble an idea, it hands back a plan with a straight face.
 - **[Agents of AI](https://github.com/MShneur/Agents-of-AI)** — A cast of specialists. No coffee, no PTO, no LinkedIn updates.
 - **[Ghost in the Loop](https://github.com/MShneur/ghost-in-the-loop)** — Moves work between AIs without dropping it down the stairs. Full chat export, handoffs.
+- **[Control Walkthrough](https://github.com/MShneur/Ctrl-Walkthrough)** — The hands. It finds the page, clicks the safe buttons, fills the boring fields, verifies the result, and gets out of the way.
 
 Each keeps its own license — don't assume they match.
 
