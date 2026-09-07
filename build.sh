@@ -44,6 +44,8 @@ FILES=(
   "behavior/standard.md"
   "behavior/micro.md"
   "behavior/extended.md"
+  "behavior/chatgpt-always.md"
+  "behavior/chatgpt-boot.md"
   "enforcement-ceiling.md"
 )
 

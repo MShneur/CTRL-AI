@@ -76,21 +76,24 @@ fi
 
 # ── C9: llms-full.txt freshness ──
 echo "— C9 llms-full.txt freshness —"
+# build.sh writes llms-full.txt in place and stamps line 4 with the build time.
+# That timestamp changes on every run, so a naive diff (or `git diff`) is ALWAYS
+# dirty and the check can never pass. Compare content only: exclude line 4.
+C9_SNAPSHOT="$(mktemp)"
+cp llms-full.txt "$C9_SNAPSHOT"
 if bash build.sh llms-only >/dev/null 2>&1; then
-  if diff -q llms-full.txt llms-full.txt.tmp >/dev/null 2>&1; then
+  if diff <(sed '4d' "$C9_SNAPSHOT") <(sed '4d' llms-full.txt) >/dev/null 2>&1; then
+    cp "$C9_SNAPSHOT" llms-full.txt   # restore committed timestamp, no churn
     pass "C9 llms-full.txt matches fresh regeneration"
-    rm -f llms-full.txt.tmp
   else
-    # build.sh writes to llms-full.txt directly, so check git diff instead
-    if git diff --quiet -- llms-full.txt 2>/dev/null; then
-      pass "C9 llms-full.txt is current"
-    else
-      warn "C9 llms-full.txt may be stale (run ./build.sh and commit)"
-    fi
+    cp "$C9_SNAPSHOT" llms-full.txt
+    fail "C9 llms-full.txt is STALE — run ./build.sh and commit"
   fi
 else
-  warn "C9 build.sh failed — cannot verify llms-full.txt freshness"
+  cp "$C9_SNAPSHOT" llms-full.txt
+  fail "C9 build.sh failed — cannot verify llms-full.txt freshness"
 fi
+rm -f "$C9_SNAPSHOT"
 
 # ── C10: no dead references ──
 echo "— C10 dead reference check —"

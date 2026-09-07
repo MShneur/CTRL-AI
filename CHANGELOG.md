@@ -1,5 +1,32 @@
 # CTRL-AI Changelog
 
+## V9.2.1 — 2026-09 ("The Gate That Cried Wolf")
+
+### Fixed
+- **`conform.sh` C9 could never pass.** The check diffed `llms-full.txt` against
+  `llms-full.txt.tmp` — a file `build.sh` has never written, since it builds in
+  place. That branch always missed, so C9 fell through to `git diff`, which is
+  always dirty because `build.sh` restamps the build time on line 4 every run.
+  Result: a permanent false-positive stale warning on a bundle that was current,
+  emitted as `warn` so the run still reported SHIP. A gate that fires on every
+  invocation trains you to ignore it, and would have let a real staleness event
+  through unseen. C9 now snapshots the committed file, regenerates, compares
+  content with line 4 excluded, restores the committed timestamp so the check
+  leaves no churn, and **fails rather than warns** on a genuine mismatch.
+
+### Added
+- **`behavior/chatgpt-always.md` and `behavior/chatgpt-boot.md` folded into the
+  bundle.** Both files were maintained in the repo but absent from the `build.sh`
+  file list, so they never reached `llms-full.txt` or `ctrl.mstep.org` — the whole
+  distribution path. They are the two-field ChatGPT custom-instruction pair
+  (`boot` = loader + embedded kernel, `always` = base behavior + command map).
+  Nothing was removed; the orphans were folded in.
+
+### Note on scope
+This release fixes verification machinery only. No axiom, agent, mode, library or
+adapter content changed — `llms-full.txt` differs from V9.2.0 solely by the two
+newly included behavior files and the version stamp.
+
 ## V9.2.0 — 2026-08 ("Know Where To Look")
 
 ### Fixed
