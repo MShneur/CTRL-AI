@@ -91,6 +91,7 @@ either one gets the right cast without a fetch.
 | DevAuditor | `aoa:archaeologist`, `aoa:chisel` | close — external splits debt vs. quality |
 | DataPipeline | `aoa:pipeline`, `aoa:signal` | partial — external splits MLOps vs. BI |
 | ResearchMethodologist | — | no external equivalent |
+| ContextContinuity | `aoa:backstitch` | portable method; CTRL-AI also implements native KRN_STITCH gate |
 
 ## COVERAGE GAPS — WHY YOU WOULD FETCH
 
