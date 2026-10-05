@@ -79,10 +79,16 @@ triggers:
 ```yaml
 always_loaded:  core/ (kernel, passage, security) + root activator
 load_on_demand: agents/ + modes/ (per classifier)
-load_on_demand: runtime/ (when state management needed)
+load_on_demand: runtime/ (only when KRN_STITCH >= S1 or state management is otherwise needed)
 load_on_demand: libraries/ (per composition engine)
 load_on_demand: adapters/ (per platform)
 never_in_chat:  changelog, contributing, wiki, evolution ledger
+
+continuity_behavior:
+  S0: no runtime/state, ledger, handoff, or memory retrieval
+  S1: one exact current pointer
+  S2: authority + relevant Stitchboard slice
+  S3: bounded full reconciliation
 
 tier_behavior:
   T1/T2: simulated (attention hint — files referenced, content prioritized)
