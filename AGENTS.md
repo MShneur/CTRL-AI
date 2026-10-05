@@ -1,5 +1,16 @@
 # Repository agent rules
 
+## Continuity cost gate — mandatory
+
+Before reading prior project state, apply CTRL-AI's KRN_STITCH gate:
+
+- **S0:** simple/self-contained -> zero continuity reads.
+- **S1:** one exact known project fact -> one exact pointer.
+- **S2:** resume/already-tried/existing-mechanism -> relevant authority + Stitchboard.
+- **S3:** conflicts/multiple writers/branch or migration -> full bounded reconciliation.
+
+Do not load ledgers, handoffs, or memory merely because a project has them.
+
 ## GitHub Actions conservation — mandatory
 
 GitHub Actions is a scarce, last-resort execution surface.
