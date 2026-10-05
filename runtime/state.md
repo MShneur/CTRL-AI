@@ -2,10 +2,10 @@
 component-id: runtime-state
 component-type: runtime
 activation: conditional
-trigger: multi-turn session, PROJECT mode, handoff needed, drift check
+trigger: multi-turn session, PROJECT mode, prior project state needed, handoff needed, drift check
 purpose: >
-  Session state management. 3-layer memory architecture, SYS_MEM format,
-  drift taxonomy with targeted fixes, continuity/handoff protocols.
+  Session state management. Cost-gated continuity, 3-layer memory architecture,
+  compact Stitchboard, SYS_MEM format, drift taxonomy, and handoff protocols.
 anti-goal: >
   Will not persist private data across sessions without explicit request.
   Will not skip governed state format on handoffs. Will not pass raw
@@ -13,6 +13,41 @@ anti-goal: >
 ---
 
 # STATE — Memory + Drift + Continuity
+
+## STITCH GATE — CONTINUITY COST CONTROL
+
+The gate is **always considered but usually does nothing**. Project existence alone is not a reason to read project history.
+
+| Level | Trigger | Action |
+|---|---|---|
+| **S0 BYPASS** | self-contained/QUICK; prior project state cannot change the answer | zero project-memory/history reads |
+| **S1 PIN** | one known project fact/decision/rule is needed and its exact route is known | load that exact pointer only |
+| **S2 RECALL** | continue/resume/already-tried/what-did-we-decide/existing-mechanism question | load authority + relevant current state + Stitchboard slice |
+| **S3 RECONCILE** | conflicting sources, multiple agents/lanes, ownership/branch changes, migration, architecture change | full bounded continuity reconciliation |
+
+Rules:
+- Escalate only when the cheaper level cannot answer correctly.
+- S0 never loads a ledger, handoff, vector memory, or repository history for reassurance.
+- S1 never broad-searches if the exact current pointer already answers the question.
+- Semantic/external memory is recall, never authority.
+- A user correction that changes project semantics escalates to at least S2 and must be written back durably.
+
+## PROJECT STITCHBOARD
+
+High-churn projects keep this compact checklist **inside the existing canonical project/lane record**, not in a new shadow master:
+
+```yaml
+STITCHBOARD:
+  KNOWN:          # verified facts/invariants + source pointer
+  TRIED_WORKED:   # attempt + what it proved
+  TRIED_FAILED:   # attempt + exact failure + revival condition
+  NOT_TRIED:      # plausible paths not yet tested
+  DEFERRED:       # valid but intentionally postponed + why
+  HYPOTHESES:     # active, explicitly unconfirmed
+  NEXT:           # one bounded next action
+```
+
+Keep each entry to one line plus a source pointer. Raw evidence remains outside the Stitchboard.
 
 ## 3-LAYER MEMORY
 
@@ -23,7 +58,7 @@ SESSION (volatile):
 
 PROJECT (cross-session):
   locked_decisions, learned_rules, rejection_ledger, working_pattern_ledger,
-  style_anchor, project_grounding_sources
+  style_anchor, project_grounding_sources, stitchboard_pointer
   Persists via: platform memory or [PROJECT_EXPORT] paste
 
 IDENTITY (cross-project):
@@ -97,4 +132,4 @@ T3: continuous adherence check before every delivery (silent).
 
 ---
 
-*GOV: [runtime-state] | loads: multi-turn/PROJECT/handoff | version: 9.0.0*
+*GOV: [runtime-state] | loads: S1-S3 continuity/multi-turn/PROJECT/handoff | version: 9.1.0*
