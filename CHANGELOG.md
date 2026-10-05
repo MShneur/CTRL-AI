@@ -1,5 +1,15 @@
 # CTRL-AI Changelog
 
+## V9.2.x candidate — 2026-10-05 ("Backstitch Gate")
+
+### Added
+- Native **KRN_STITCH** continuity gate: S0 BYPASS, S1 PIN, S2 RECALL, S3 RECONCILE.
+- S0 performs zero prior-project retrieval so simple/QUICK questions do not pay continuity overhead.
+- High-churn project **Stitchboard** in the canonical project/lane record: KNOWN / TRIED_WORKED / TRIED_FAILED / NOT_TRIED / DEFERRED / HYPOTHESES / NEXT.
+- Runtime progressive loading now keys continuity depth to KRN_STITCH instead of loading state merely because a project exists.
+- Added optional `aoa:backstitch` equivalence while keeping the gate native; CTRL-AI does not need an external fetch to enforce it.
+
+
 ## V9.2.1 — 2026-09 ("The Gate That Cried Wolf")
 
 ### Fixed
