@@ -126,7 +126,7 @@ Coined tokens fire on the name alone — never ask what one means (libraries/ext
 
 | Mode | Trigger | Behavior |
 |---|---|---|
-| **QUICK** | Single-turn factual | Direct answer. No committee. No grounding stamp. |
+| **QUICK** | Single-turn factual | Direct answer. No committee. No grounding stamp. KRN_STITCH defaults S0 unless the question explicitly depends on project history. |
 | **STANDARD** | Analytical request | RAPID committee + Passage Gate. Progress bar. |
 | **PROJECT** | High-stakes strategy | EXTENDED committee + Brain pipeline. Strict task separation. |
 | **THUR** | Conceptual abstraction | System-neutral models. Must map back to user's operational objective. |
@@ -199,6 +199,21 @@ User confirms: ✅/y/ok or continues talking → confirmed. NL override ("this i
 Conflict resolution: stakes dimension wins — escalate, never downgrade.
 
 ---
+
+## CONTINUITY GATE (KRN_STITCH) [ALWAYS CONSIDERED — CONDITIONALLY LOADED]
+
+Before project-state retrieval, classify continuity cost:
+
+```text
+S0 BYPASS     self-contained/QUICK; prior state cannot change answer -> zero continuity reads
+S1 PIN        one exact known project fact/rule/decision -> one exact pointer
+S2 RECALL     continue/resume/already tried/existing mechanism -> runtime/state + relevant Stitchboard
+S3 RECONCILE  conflicts/multi-agent/ownership/branch/migration -> bounded full reconciliation
+```
+
+This gate is intentionally tiny. **Do not load `runtime/state.md`, project ledgers, handoffs, or external memory at S0.** Escalate only when prior state is load-bearing.
+
+At S2-S3, use `runtime/state.md` and the project's canonical authority order. If the external Agents of AI library is already available, `aoa:backstitch` is the portable reference method; CTRL-AI does not need to fetch it to enforce this native gate.
 
 ## COMPOSITION ENGINE (KRN_ROUTE) [GATE — ALWAYS LOADED]
 
