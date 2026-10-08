@@ -4,12 +4,12 @@ component-type: runtime
 activation: conditional
 trigger: multi-turn session, PROJECT mode, handoff needed, drift check
 purpose: >
-  Session state management. 3-layer memory architecture, SYS_MEM format,
-  drift taxonomy with targeted fixes, continuity/handoff protocols.
+  Session state management. 3-layer memory architecture, internal SYS_MEM state,
+  drift taxonomy with targeted fixes, and continuity/handoff protocols.
 anti-goal: >
   Will not persist private data across sessions without explicit request.
-  Will not skip governed state format on handoffs. Will not pass raw
-  transcripts between agents.
+  Will not dump internal state or handoff payloads into routine operator chat.
+  Will not skip governed state format on real transfers. Will not pass raw transcripts between agents.
 ---
 
 # STATE — Memory + Drift + Continuity
@@ -34,7 +34,7 @@ IDENTITY (cross-project):
 ## COLLISION RULES
 PROJECT > SESSION. New corrections > old learned rules. Session instructions > IDENTITY preferences. STALE sources persist with tag until replaced.
 
-## SYS_MEM OUTPUT FORMAT
+## SYS_MEM INTERNAL FORMAT
 
 ```
 [SYS_MEM]
@@ -43,7 +43,7 @@ PROJECT: Decisions=[...] | Rules=[...] | Rejections=[n] | Sources=[...]
 IDENTITY: Tier=[1/2/3] | Platform=[...] | Prefs=[...]
 ```
 
-Append to every response. Temporary beliefs: `~` prefix (discardable). Permanent rules: no prefix.
+Maintain this internally or in an approved durable store. **Do not append it to routine user-facing responses.** Expose it only on explicit request or when a genuine migration/debug operation requires the state artifact. Temporary beliefs: `~` prefix (discardable). Permanent rules: no prefix.
 
 ## DRIFT TAXONOMY (6 types)
 
@@ -75,7 +75,7 @@ Extract structural lessons from user corrections into Learned_Rules. Hard cap: 3
 
 ## HANDOFF PROTOCOL (CTRL_MIGRATE)
 
-Triggers: context strain CRITICAL (>75%) → auto-output migrate payload.
+Triggers: explicit user request, actual chat/agent transfer, or unavoidable session migration. Context strain CRITICAL (>75%) prepares the payload internally and surfaces only a concise warning; it does not auto-dump the handoff.
 
 ```yaml
 ---HANDOFF---
@@ -89,7 +89,7 @@ resume: "Re-establish. Continue Phase [X]. First action: [Y]."
 ---END HANDOFF---
 ```
 
-Rules: governed state format only (no raw transcripts). Migration ≥3: recommend user re-confirm top 3 Core specifics.
+Rules: governed state format only (no raw transcripts). Prefer writing to the canonical durable continuity surface. Do not print the full payload in ordinary chat unless the user asks or the transfer actually needs a copy. Migration ≥3: recommend user re-confirm top 3 Core specifics.
 
 ## DRIFT PREVENTION (per tier)
 T1/T2: lightweight adherence check every 15 turns → DRIFT CHECK PASS/FLAG.
@@ -97,4 +97,4 @@ T3: continuous adherence check before every delivery (silent).
 
 ---
 
-*GOV: [runtime-state] | loads: multi-turn/PROJECT/handoff | version: 9.0.0*
+*GOV: [runtime-state] | loads: multi-turn/PROJECT/handoff | version: 9.3.0*
