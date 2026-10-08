@@ -399,7 +399,7 @@ Scope: DEEP depth only. Never QUICK. Platform adaptation, not reasoning improvem
 | `research/evolution-ledger.md` | All accept/reject decisions (LR-01/LR-02/LR-03) |
 | `research/decisions.md` | WHY major architecture decisions were made |
 | `WIKI.md` | Full reference documentation |
-| `CHANGELOG.md` | Version history V5.1→V9.0.0 |
+| `CHANGELOG.md` | Version history V5.1→V9.3.0 |
 | `CONTRIBUTING.md` | Contribution guidelines |
 | `README.md` | Project overview + quick start |
 | `llms-full.txt` | Auto-generated single-file fallback (all files concatenated) |
