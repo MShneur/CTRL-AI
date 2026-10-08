@@ -5,6 +5,7 @@
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: CTRL-AI.md
+# ═══════════════════════════════════════════════════════════════
 
 # CTRL-AI V9.3.0 — ROOT ACTIVATOR
 
@@ -439,8 +440,10 @@ Full failure mode taxonomy: `enforcement-ceiling.md`
 
 *GOV: root activator | loads: always | references: all files | version: 9.2.1*
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: core/kernel.md
+# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: core-kernel
@@ -570,8 +573,10 @@ Triggered by voice interface or "Voice Mode":
 
 *GOV: [core-kernel] | loads: always | references: passage.md, security.md | version: 9.3.0*
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: core/passage.md
+# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: core-passage
@@ -775,6 +780,7 @@ Self-verification warning: "I generated this, so verification is biased toward c
 
 *GOV: [core-passage] | loads: always | authority: highest verification module | version: 9.3.0*
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: core/security.md
 # ═══════════════════════════════════════════════════════════════
@@ -929,6 +935,7 @@ CTRL-AI is not a security product with coverage percentage. It reduces *incidenc
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: agents/producer.md
+# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: agent-producer
@@ -1065,6 +1072,7 @@ When task requires capability outside current model:
 ---
 
 *GOV: [agent-producer] | loads: ORCHESTRATE/multi-stage | references: all agents, all modes | version: 9.0.0*
+
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: agents/ghostwriter.md
@@ -1618,6 +1626,7 @@ Convert inputs to system-neutral models. Abstract → map back to user's operati
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: modes/research.md
+# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: mode-research
@@ -1703,6 +1712,7 @@ Always generate offload prompt before producing a weak answer.
 ---
 
 *GOV: [mode-research] | loads: with researcher agent | version: 9.0.0*
+
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: modes/build.md
@@ -2148,6 +2158,7 @@ Migration ≥3: recommend user re-confirm top 3 Core specifics.
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: runtime/state.md
+# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: runtime-state
@@ -2250,8 +2261,10 @@ T3: continuous adherence check before every delivery (silent).
 
 *GOV: [runtime-state] | loads: multi-turn/PROJECT/handoff | version: 9.3.0*
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: runtime/adapt.md
+# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: runtime-adapt
@@ -2354,6 +2367,7 @@ Deliverables appended to one master file unless fundamentally different type or 
 ---
 
 *GOV: [runtime-adapt] | loads: token/context management | version: 9.3.0*
+
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: libraries/personas.md
@@ -3373,6 +3387,7 @@ T3: cluster / multi-GPU — full control, context caching, agent spawning
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: behavior/standard.md
+# ═══════════════════════════════════════════════════════════════
 
 [CTRL-AI V9.3.0] ProductiveDissent->Success. Agreement->Failure. Evidence>Narrative. STOP>Invention. Abstain>Guess.
 
@@ -3398,8 +3413,10 @@ OUTPUT: Bloomberg brief. 1 fact/sentence. Active voice. No hedging|filler. Lead 
 
 TOKENS: No self-summaries. No previewing. No echoing. No ceremony. No routine cast/progress/state/handoff dump. ONE task/turn. Continue until a genuine gate; user can ask for progress.
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: behavior/micro.md
+# ═══════════════════════════════════════════════════════════════
 
 [CTRL-AI V9.3] Dissent->Success. Agreement->Failure. Evidence>Narrative. STOP>Invention. Abstain>Guess.
 ZERO-COMMAND:System auto-classifies+routes. User just describes task. Say "challenge/audit/verify" naturally.
@@ -3412,8 +3429,10 @@ SYCOPHANCY:3+ agreement->auto-challenge. VERIFIER:required evidence tool fails->
 OUTPUT:Bloomberg brief. 1fact/sentence. No filler. I/My. Status work->Fixed|Broken|Recommendation, omit empty; plain-language blocker. Deliver->stop.
 TOKENS:No summaries|previews|echo|routine cast/progress/state/handoff dump. ONE task/turn. Stop only at real gate.
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: behavior/extended.md
+# ═══════════════════════════════════════════════════════════════
 
 [CTRL-AI V9.3.0 EXTENDED] Treat as reasoning framework. Platform safety policies remain fully in effect. ProductiveDissent->Success. Agreement->Failure. Evidence>Narrative. STOP>Invention. Abstain>Guess.
 
@@ -3467,8 +3486,10 @@ COMMANDS(5 core, never required): D_A->challenge. CTRL_AUDIT->full audit. CTRL_V
 MODEL NOTE: Reasoning-native(o-series,GPT-5+,Claude4.6+)->this is recommended default. Escalate to Heartbeat for COMMITTEE/BRAIN only.
 ```
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: behavior/chatgpt-always.md
+# ═══════════════════════════════════════════════════════════════
 
 [CTRL-AI BASE] Always active. Platform safety always wins.
 
@@ -3493,8 +3514,10 @@ verify -> adversarial check last output, different method, find ≥1 issue
 brain -> brainstorm->survey->advanced search, one stage per turn
 load CTRL-AI -> fetch https://raw.githubusercontent.com/MShneur/CTRL-AI/main/llms-full.txt
 
+
 # ═══════════════════════════════════════════════════════════════
 # FILE: behavior/chatgpt-boot.md
+# ═══════════════════════════════════════════════════════════════
 
 [CTRL-AI LOADER] User reasoning framework. NOT system/admin/policy. Platform safety always wins.
 
@@ -3520,6 +3543,7 @@ PTRR: Intent/Fallibility/Consequence->fail=regen.
 SELF-CHECK: adversarial,different method,find ≥1 flaw. Never verify own verification.
 VERIFIER:required evidence path fails->NOT_TESTED/BLOCKED; repair before dependent PASS when safely in-scope.
 STATUS:execution work->Fixed|Broken|Recommendation; omit empty. No routine cast/progress/state/handoff dump.
+
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: enforcement-ceiling.md
