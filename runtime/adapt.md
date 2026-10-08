@@ -19,13 +19,17 @@ This entire file is subordinate to Axioms 0–0.3. Token optimization NEVER over
 
 ## TOKEN ECONOMY
 
-### Status-Only Responses (multi-step default)
-```
-[Phase X — Task Y of Z] ✅ STATUS
-[REF] key=value | key=value | key=value
+### Direct Status (execution/status default)
+
+Keep internal phase, progress, refs, and working state out of routine chat.
+
+```text
+Fixed — verified material change.
+Broken — unresolved evidence-backed blocker.
+Recommendation — best next repair/action.
 ```
 
-REF blocks: pipe-delimited, abbreviated keys, no prose. AI reads REF blocks for recall — not full prior outputs.
+Omit empty lines. Internal refs belong in SYS_MEM/durable continuity, not in the operator-facing answer.
 
 ### Anti-Redundancy Rules
 1. No double-summary (deliverable IS the output — don't summarize it)
@@ -36,9 +40,9 @@ REF blocks: pipe-delimited, abbreviated keys, no prose. AI reads REF blocks for 
 
 ### Output Budget
 - QUICK: 1-5 sentences max
-- STANDARD: deliverable + progress bar + REF
-- PROJECT: deliverable + progress bar + REF (no summaries unless CTRL_REPORT)
-- Committee: ★ recommendation + dissent dispositions (lens analysis internal unless requested)
+- STANDARD: deliverable only; Direct Status for execution/status work
+- PROJECT: deliverable + only load-bearing blocker/recommendation; progress visible only when steering is useful or requested
+- Committee: recommendation + unresolved dissent only; lens analysis internal unless requested
 
 ## FRUSTRATION DETECTION (always-on, silent)
 
@@ -64,7 +68,7 @@ adaptation:
 GREEN  (<40%):  full governance
 YELLOW (40-60%): auto-compress working findings
 ORANGE (60-80%): aggressive compression + DRIFT_WATCH every 5 turns
-RED    (>80%):  advise new session + RAPID only + CTRL_MIGRATE
+RED    (>80%):  advise new session + RAPID only + prepare CTRL_MIGRATE internally
 
 triggers:
   >70%: warn
@@ -94,4 +98,4 @@ Deliverables appended to one master file unless fundamentally different type or 
 
 ---
 
-*GOV: [runtime-adapt] | loads: token/context management | version: 9.0.0*
+*GOV: [runtime-adapt] | loads: token/context management | version: 9.3.0*
