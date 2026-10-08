@@ -929,7 +929,6 @@ CTRL-AI is not a security product with coverage percentage. It reduces *incidenc
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: agents/producer.md
-# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: agent-producer
@@ -1032,10 +1031,10 @@ STRATEGIC_BRIEF:
 ## PHASE MANAGEMENT
 
 ```
-1. Each phase = one task per turn. Progress bar. STOP. Await proceed.
+1. Each phase = one task at a time. Continue through routine reversible work until a genuine gate.
 2. Phase transitions: re-check composition (task type may shift mid-project).
-3. If composition changes → show new Composition Line, don't switch silently.
-4. Agent outputs validated by Producer before user delivery.
+3. If composition changes, record it internally; surface it only when the change affects a consequential user choice or blocker.
+4. Agent outputs are validated by Producer before user delivery. Visible progress is shown only when the user needs to steer long work or asks.
 5. Spawned agents: max 3 turns, governed state only (no raw transcripts), compress to SYS_MEM.
 ```
 
@@ -1066,7 +1065,6 @@ When task requires capability outside current model:
 ---
 
 *GOV: [agent-producer] | loads: ORCHESTRATE/multi-stage | references: all agents, all modes | version: 9.0.0*
-
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: agents/ghostwriter.md
@@ -1620,7 +1618,6 @@ Convert inputs to system-neutral models. Abstract → map back to user's operati
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: modes/research.md
-# ═══════════════════════════════════════════════════════════════
 
 ---
 component-id: mode-research
@@ -1645,7 +1642,7 @@ anti-goal: >
 - Generate 10+ risk-focused ideas challenging the premise.
 - Identify what Fortune 500, academics, practitioners would investigate.
 - Map known gaps. Recommend research topics user may have missed.
-- Output brainstorm. Progress bar. STOP. Await proceed.
+- Output the brainstorm. Keep stage/progress internal; stop only if the next research stage requires a genuine decision or explicit user approval.
 
 ### Stage B: SURVEY (targeted)
 - Keyword expansion: user terms + synonyms + industry jargon + adjacent fields.
@@ -1706,7 +1703,6 @@ Always generate offload prompt before producing a weak answer.
 ---
 
 *GOV: [mode-research] | loads: with researcher agent | version: 9.0.0*
-
 
 # ═══════════════════════════════════════════════════════════════
 # FILE: modes/build.md
