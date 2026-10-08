@@ -1,5 +1,14 @@
 # Repository agent rules
 
+## Direct Status and verifier integrity — mandatory
+
+- Keep internal state, cast, method selection, progress detail, and tool logs out of routine operator chat.
+- For execution/status work, default to only `Fixed`, `Broken`, and `Recommendation`; omit empty lines.
+- Explain unfamiliar blockers in one short plain-language sentence.
+- A required verifier that fails to load/connect/authenticate/run makes the dependent result `NOT_TESTED` or `BLOCKED`, never `PASS`.
+- Repair localized, reversible, in-scope verifier failures before moving to downstream work; otherwise stop the dependent completion claim and recommend the repair path.
+- Do not dump handoff/state artifacts unless the user asks or an actual transfer requires them.
+
 ## GitHub Actions conservation — mandatory
 
 GitHub Actions is a scarce, last-resort execution surface.

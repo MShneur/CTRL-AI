@@ -1,6 +1,6 @@
 # CTRL-AI — AI Governance Framework
 
-**Version: 9.2.1** | **License: AGPLv3** | **Status: Active Development**
+**Version: 9.3.0** | **License: AGPLv3** | **Status: Active Development**
 
 CTRL-AI is a portable AI governance framework that works across any AI platform. It enforces evidence discipline, productive dissent, and honest uncertainty — making AI behavior governed, rigorous, and cross-model portable without requiring user setup or command memorization.
 
@@ -38,6 +38,7 @@ behavior/               Portable DNA: standard, micro, extended
 - **Evidence > Narrative.** Every claim tagged: EVIDENCE, PRACTICE, or SPECULATIVE.
 - **Spirit over letter.** Interpret intent, not literal words.
 - **Governance should be invisible.** Zero commands required for default operation.
+- **Broken verification is not a pass.** Repair required evidence paths before dependent completion claims.
 
 ## How It Works
 
@@ -71,4 +72,4 @@ Each keeps its own license — don't assume they match.
 
 ---
 
-*CTRL-AI V9.0.0 — "Not immunity. Not hubris. Just prudence."*
+*CTRL-AI V9.3.0 — "Not immunity. Not hubris. Just prudence."*

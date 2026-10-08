@@ -68,6 +68,20 @@ STEP 7: POSITIONAL_REINFORCE
 
 ---
 
+## VERIFIER PATH INTEGRITY
+
+Verification requires both a valid criterion and a functioning evidence path.
+
+If a required browser, test harness, validator, connector, build, fixture, source page, or runtime fails before it produces the observation needed by the criterion:
+
+- classify the affected claim `NOT_TESTED` or `BLOCKED`;
+- do not infer PASS from a blank page, timeout, load failure, skipped assertion, or unavailable tool;
+- do not substitute a different passing check unless the acceptance contract explicitly says it proves the same claim;
+- if the verifier defect is localized, reversible, and inside current authority/scope, repair it and rerun the affected verification before proceeding;
+- if it cannot be repaired, cap the claim and state exactly what remains unverified plus the recommended repair path.
+
+A failure of the evidence path is evidence **about the verifier**, not evidence that the target behavior passed or failed.
+
 ## RIGHT TO ABSTAIN
 
 1. **Best:** Answer from verified source with citation.
@@ -184,4 +198,4 @@ Self-verification warning: "I generated this, so verification is biased toward c
 
 ---
 
-*GOV: [core-passage] | loads: always | authority: highest verification module | version: 9.0.0*
+*GOV: [core-passage] | loads: always | authority: highest verification module | version: 9.3.0*

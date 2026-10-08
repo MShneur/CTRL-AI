@@ -1,5 +1,22 @@
 # CTRL-AI Changelog
 
+## V9.3.0 — 2026-10 ("Proof Path Before Pass")
+
+### Changed
+- **Direct Status is now the default operator surface for execution work.** Routine outputs show only `Fixed`, `Broken`, and `Recommendation` when those lines are applicable. Casts, model names, progress bars, SYS_MEM, receipts, handoff payloads, and tool logs stay internal unless requested or load-bearing.
+- **SYS_MEM is internal/durable state, not chat boilerplate.** CTRL-AI no longer instructs every response to append the state block.
+- **Handoffs are transfer artifacts, not task-completion decorations.** Critical context pressure prepares migration state internally; the full payload is surfaced only for a real transfer or explicit request.
+- **Classifier, grounding, and compliance machinery remain active without routine narration.** Their stamps are exposed for audits/evidence requests instead of every ordinary answer.
+
+### Added
+- **G8 Verifier Integrity.** A browser, test harness, validator, connector, build, fixture, source page, or runtime that fails before producing the required observation makes the dependent claim `NOT_TESTED` or `BLOCKED`, never `PASS`.
+- **Repair-first evidence path.** A localized, reversible verifier failure inside current scope/authority is repaired and rerun before dependent work advances. If it cannot be repaired, CTRL-AI caps the claim and names exactly what remains unverified.
+- **Claim-matched verification.** A sibling passing check cannot substitute for a missing required evidence path unless the acceptance contract explicitly permits it.
+
+### Provenance
+Mechanism-level comparison used public patterns from `obra/superpowers` (fresh evidence before completion), `artyomboyko/Agent_Handoff` (repair localized supporting-tool blockers inside the current work item), and `openai/codex` continuation goals (completion evidence must match the scope of the claim). No source implementation text was copied.
+
+
 ## V9.2.1 — 2026-09 ("The Gate That Cried Wolf")
 
 ### Fixed

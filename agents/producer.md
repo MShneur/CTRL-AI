@@ -99,10 +99,10 @@ STRATEGIC_BRIEF:
 ## PHASE MANAGEMENT
 
 ```
-1. Each phase = one task per turn. Progress bar. STOP. Await proceed.
+1. Each phase = one task at a time. Continue through routine reversible work until a genuine gate.
 2. Phase transitions: re-check composition (task type may shift mid-project).
-3. If composition changes → show new Composition Line, don't switch silently.
-4. Agent outputs validated by Producer before user delivery.
+3. If composition changes, record it internally; surface it only when the change affects a consequential user choice or blocker.
+4. Agent outputs are validated by Producer before user delivery. Visible progress is shown only when the user needs to steer long work or asks.
 5. Spawned agents: max 3 turns, governed state only (no raw transcripts), compress to SYS_MEM.
 ```
 

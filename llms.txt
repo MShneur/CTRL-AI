@@ -1,4 +1,4 @@
-# CTRL-AI V9.0.0
+# CTRL-AI V9.3.0
 # AI Governance Framework — Evidence discipline, productive dissent, honest uncertainty.
 # Canonical source: https://ctrl.mstep.org
 # Fallback: https://raw.githubusercontent.com/MShneur/CTRL-AI/main/llms-full.txt
@@ -20,7 +20,7 @@
 /llms-full.txt
 
 ## Version
-9.0.0
+9.3.0
 
 ## Canonical Version Rule
 If this file is reachable, it is the canonical source.

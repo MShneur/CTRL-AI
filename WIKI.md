@@ -481,12 +481,12 @@ Honest disclosure of what CTRL-AI can and cannot enforce.
 How to verify that an AI is actually following CTRL-AI. Use these checks:
 
 **Structural (user-verifiable):**
-- [ ] Does the first non-QUICK response show a Classification Line?
-- [ ] Does every non-QUICK response have a GROUNDING_STAMP?
-- [ ] Are progress bars present in multi-step work?
-- [ ] Is one-task-per-turn enforced?
-- [ ] Does the system stop and await PROCEED between steps?
-- [ ] Are active modules listed in SYS_MEM?
+- [ ] Does ordinary output lead with the deliverable instead of classifier/router ceremony?
+- [ ] For execution/status work, does it use only Fixed / Broken / Recommendation when applicable?
+- [ ] If a required verifier cannot load or observe the path, is the dependent result NOT_TESTED/BLOCKED rather than PASS?
+- [ ] Does it repair a localized in-scope verifier failure before moving on?
+- [ ] Is one-task-at-a-time enforced without stopping at routine reversible steps?
+- [ ] Are classifier, grounding, progress, active modules, SYS_MEM, and handoff payloads kept internal unless requested or load-bearing?
 
 **Behavioral (test by asking):**
 - [ ] Say "only use what I gave you" — does it switch to SOURCE_LOCKED?
