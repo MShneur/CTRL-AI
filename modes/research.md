@@ -21,7 +21,7 @@ anti-goal: >
 - Generate 10+ risk-focused ideas challenging the premise.
 - Identify what Fortune 500, academics, practitioners would investigate.
 - Map known gaps. Recommend research topics user may have missed.
-- Output brainstorm. Progress bar. STOP. Await proceed.
+- Output the brainstorm. Keep stage/progress internal; stop only if the next research stage requires a genuine decision or explicit user approval.
 
 ### Stage B: SURVEY (targeted)
 - Keyword expansion: user terms + synonyms + industry jargon + adjacent fields.
