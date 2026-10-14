@@ -1,22 +1,29 @@
 # CTRL-AI — AI Governance Framework
 
-**Version: 9.3.0** | **License: AGPLv3** | **Status: Active Development**
+**Version: 9.4.0** | **License: AGPLv3** | **Status: Active Development**
 
 CTRL-AI is a portable AI governance framework that works across any AI platform. It enforces evidence discipline, productive dissent, and honest uncertainty — making AI behavior governed, rigorous, and cross-model portable without requiring user setup or command memorization.
 
 ## Quick Start
 
-**Zero setup required.** Paste one of these into any AI:
+**Preferred activation is now progressive, not a full-context dump.**
 
-| Method | Where | File |
+For ChatGPT or another AI that can fetch URLs, say:
+
+`Read https://ctrl.mstep.org/ACTIVATE.md and activate the full CTRL stack, then continue with my task.`
+
+`ACTIVATE.md` boots CTRL-AI governance, R&Duck operation, and task-selected Agents of AI methods through the Showrunner harness. It loads only the capability the task needs. The full `llms-full.txt` bundle remains a compatibility fallback for clients that cannot follow progressive links.
+
+| Method | Where | Preferred file |
 |---|---|---|
-| Custom instructions | ChatGPT, Claude, Gemini | `behavior/standard.md` (~1800 chars) |
-| Tight slots | Gemini consumer | `behavior/micro.md` (~650 chars) |
-| System prompt | API, full room | `behavior/extended.md` (~3500 chars) |
-| Full governance | Claude Projects, GPTs | `CTRL-AI.md` (root activator) |
-| Single-file load | Any AI tool | `llms-full.txt` (auto-generated) |
+| Full CTRL stack | ChatGPT / Claude / Gemini / capable web AI | `ACTIVATE.md` |
+| ChatGPT persistent loader | Custom Instructions / project instructions | `behavior/chatgpt-boot.md` + `behavior/chatgpt-always.md` |
+| Reusable Skill bootstrap | Skill-capable agents | `activation/ctrl-stack/SKILL.md` |
+| Machine capability discovery | ARD-aware clients | `/.well-known/ai-catalog.json` |
+| CTRL-AI only | Projects / system prompts | `CTRL-AI.md` |
+| Full compatibility load | Legacy / one-shot clients | `llms-full.txt` |
 
-Then describe your task. Everything else is automatic.
+Then describe the task normally. Spirit Pass, Trajectory Quorum, verifier integrity, and human gates route automatically when applicable.
 
 ## Architecture
 
@@ -72,4 +79,4 @@ Each keeps its own license — don't assume they match.
 
 ---
 
-*CTRL-AI V9.3.0 — "Not immunity. Not hubris. Just prudence."*
+*CTRL-AI V9.4.0 — "Not immunity. Not hubris. Just prudence."*
