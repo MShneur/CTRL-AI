@@ -1,0 +1,24 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:ctrl.mstep.org:skill:ctrl-stack-bootstrap",
+      "displayName": "CTRL Stack Bootstrap",
+      "type": "application/agent-skills+md",
+      "url": "https://ctrl.mstep.org/activation/ctrl-stack/SKILL.md",
+      "capabilities": [
+        "AIGovernance",
+        "ProjectOrchestration",
+        "AgentHarnessRouting",
+        "CapabilityDiscovery"
+      ],
+      "description": "Progressive bootstrap for CTRL-AI governance, R&Duck project operation, and Agents of AI just-in-time methods.",
+      "representativeQueries": [
+        "activate CTRL-AI and R&Duck for this project",
+        "use the full CTRL stack and continue this work",
+        "activate the harness and find the right AI capability"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-14"
+    }
+  ]
+}
