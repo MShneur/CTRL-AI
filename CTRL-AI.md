@@ -432,4 +432,4 @@ Full failure mode taxonomy: `enforcement-ceiling.md`
 
 ---
 
-*GOV: root activator | loads: always | references: all files | version: 9.2.1*
+*GOV: root activator | loads: always | references: all files | version: 9.4.0*
