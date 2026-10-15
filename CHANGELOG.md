@@ -1,5 +1,20 @@
 # CTRL-AI Changelog
 
+## V9.4.0 — 2026-10 ("Bootstrap, Don't Dump")
+
+### Changed
+- **Progressive activation is the preferred path.** ChatGPT and other capable clients start from `ACTIVATE.md`, load CTRL-AI governance + R&Duck boot, then retrieve only task-selected Agents of AI methods. `llms-full.txt` remains a legacy/one-shot compatibility fallback.
+- **Showrunner is the harness/Superuser route.** Substantial multi-capability work keeps one accountable operator and loads Skills, tools, methods or specialists just in time instead of spawning a permanent swarm.
+- **Classification stays internal.** Routine activation no longer pauses to print a classifier tuple and ask for “ok?” before doing the task.
+
+### Added
+- **Spirit Pass activation.** “Take the spirit of what I'm saying” routes to AoA Outcome Reconciliation for project-level intent recovery, dictation/spelling tolerance and terminology repair while preserving literal authority boundaries.
+- **Trajectory Quorum activation.** Forecast/predictive Quorum routes through Quorum Trajectory Mode + Scenario Falsification before any predictive-skill claim.
+- **ARD discovery surface.** The public domain now publishes `/.well-known/ai-catalog.json` plus a legacy `/.well-known/ard.json` compatibility path and a standards-shaped Agent Skill bootstrap under `activation/ctrl-stack/SKILL.md`. Discovery does not grant trust, installation or permission.
+
+### Activation rule
+A catalog item, Skill, MCP server or named method is not active merely because it is discoverable. Count/load claims require actual retrieval/application; verifier failures remain `NOT_TESTED/BLOCKED`.
+
 ## V9.3.0 — 2026-10 ("Proof Path Before Pass")
 
 ### Changed

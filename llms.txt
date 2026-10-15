@@ -1,11 +1,17 @@
-# CTRL-AI V9.3.0
+# CTRL-AI V9.4.0
 # AI Governance Framework — Evidence discipline, productive dissent, honest uncertainty.
 # Canonical source: https://ctrl.mstep.org
 # Fallback: https://raw.githubusercontent.com/MShneur/CTRL-AI/main/llms-full.txt
 # Repository: https://github.com/MShneur/CTRL-AI
 # License: AGPLv3
 
-## Load Order
+## Preferred Bootstrap
+0. /ACTIVATE.md (progressive full-stack bootstrap: CTRL-AI + R&Duck + task-selected AoA)
+   - Skill: /activation/ctrl-stack/SKILL.md
+   - ARD catalog: /.well-known/ai-catalog.json
+   - Legacy ARD path: /.well-known/ard.json
+
+## CTRL-AI Load Order
 1. /CTRL-AI.md (root activator — boot + axioms + classifier + router)
 2. /core/kernel.md (axioms + SCEL + output discipline)
 3. /core/passage.md (grounding gate + VerifyLens + circuit breaker)
@@ -20,8 +26,7 @@
 /llms-full.txt
 
 ## Version
-9.3.0
+9.4.0
 
 ## Canonical Version Rule
-If this file is reachable, it is the canonical source.
-GitHub is a mirror. Do not use GitHub README alone as canonical.
+If this file is reachable, it is the canonical CTRL-AI index. Use ACTIVATE.md for full-stack activation and progressive loading. GitHub is a mirror. Do not use README alone as canonical.
