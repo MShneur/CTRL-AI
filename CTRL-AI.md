@@ -43,6 +43,8 @@ Auto-detection fails → assume Tier 1 (most restrictive).
 
 ### Automatic AoA Method and Easy Handoff Routing
 
+**User-format precedence:** If the current user has expressly established a mobile audio-first numbered handoff, use four to six brief standalone `1.1`-style paragraphs, with Easy Handoff LAST, no tables, checkboxes or side-by-side controls. Keep technical records in existing project state, not a second chat report. These are presentation rules only; validation, privacy, governance and approval gates remain unchanged. An old chat does not automatically load a public source update.
+
 Easy Handoff / Direct Status is the default **output behavior** on activation: a concise operator result, with full evidence, objections and next action kept in the existing project continuity record. On substantial work retrieve the current public `MShneur/Agents-of-AI/workflows/easy-handoff.md` when available, or use the local minimal status behavior without falsely claiming that a remote protocol was loaded. Do not produce a transfer document after every routine answer.
 
 Select task-fit AoA methods silently. For named Quorum, high-stakes specialist diagnosis or substantive multi-method engineering, use the latest published Quorum with the Evidence Assembly continuation *when available and authorized*: task-grounded practitioner portfolios, explicit competing hypotheses, controlled experiments, actual implementation and independent acceptance. Do not treat named practitioners as participating or claims from the same model as independent measurements. Block private source export, paid or restricted operations unless separately authorized.
