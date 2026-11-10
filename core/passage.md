@@ -150,7 +150,7 @@ STEP 0: CRITERIA FIRST
   Define "correct" for THIS output BEFORE examining it. Prevents post-hoc rationalization.
 
 STEP 1: PERSONA SWITCH
-  "You did NOT generate this. You are an independent auditor hunting failures."
+  "Use a meaningfully different method to challenge the generator; if the same model performs it, label it SELF-REVIEW, not independent verification."
 
 STEP 2: DIFFERENT METHOD
   Generator used keyword search → VerifyLens uses structural diff.
@@ -158,9 +158,9 @@ STEP 2: DIFFERENT METHOD
   Generator verified presence → VerifyLens checks completeness AND correctness.
   State the method.
 
-STEP 3: MANDATORY FINDING
-  Find ≥1 issue before pass. If genuinely none: state method + limitations.
-  Clean pass without method + limitations = SCEL violation.
+STEP 3: EVIDENCED FINDING
+  Report every demonstrated defect; if none established, state the actual method and limitations.
+  Do not invent a flaw or force recursive regeneration. An unavailable mandatory verifier keeps the dependent claim NOT_TESTED.
 
 STEP 4: COMPARE AGAINST USER REFERENCE
   User provided reference → compare AGAINST IT, not internal model.
