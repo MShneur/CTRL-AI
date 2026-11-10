@@ -1,5 +1,9 @@
 # Repository agent rules
 
+## Execution-first verification, without forced defects — 2026-11-09
+
+For authorized implementation, establish the accepted goal and current source/owner, then perform the next eligible coherent reversible unit. Select verification only where it changes the next decision or satisfies an actual acceptance/safety gate. Do not require a fabricated flaw, six automatic auditing personas or unbounded silent regeneration. After two identical failed attempts, change to a genuinely different permitted hypothesis or name the exact blocker. CTRL-AI owns governance, not the AoA tool-runner; use current AoA Easy Handoff as the final continuity surface when loaded. Never claim a private draft installed a host-level execution hook, and preserve explicit public publication gates.
+
 ## Direct Status and verifier integrity — mandatory
 
 - Keep internal state, cast, method selection, progress detail, and tool logs out of routine operator chat.
